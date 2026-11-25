@@ -1,0 +1,48 @@
+name: Pasqual Daily feed scan
+
+on:
+  schedule:
+    - cron: "7 13 * * *"   # 13:07 UTC = 5:07 AM Pacific in winter, 6:07 AM in summer.
+                           # GitHub often starts scheduled jobs late; this leaves 2+ hours before the 8:45 task.
+  workflow_dispatch: {}    # lets you run it by hand from the Actions tab
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-scan
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run scan
+        run: python3 rss_scan.py --hours 72 --out scan_output || echo "SCAN_UNHEALTHY=1" >> "$GITHUB_ENV"
+      - name: Keep only the last 7 days of scan files (by the date in the file name)
+        run: |
+          cutoff=$(TZ=America/Los_Angeles date -d "7 days ago" +%F)
+          for f in scan_output/*_????-??-??.*; do
+            [ -e "$f" ] || continue
+            d=$(basename "$f" | grep -oE '[0-9]{4}-[0-9]{2}-[0-9]{2}')
+            if [[ "$d" < "$cutoff" ]]; then git rm -q --ignore-unmatch "$f"; rm -f "$f"; fi
+          done
+      - name: Commit results
+        run: |
+          git config user.name "pasqual-daily-bot"
+          git config user.email "pasqual-daily-bot@users.noreply.github.com"
+          git add -A scan_output
+          if git diff --cached --quiet; then echo "Nothing to commit"; exit 0; fi
+          git commit -m "Daily scan $(TZ=America/Los_Angeles date +%F)"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
+      - name: Flag an unhealthy scan
+        if: env.SCAN_UNHEALTHY == '1'
+        run: |
+          echo "Fewer than 10 outlets were read. Check the coverage file." >&2
+          exit 1
