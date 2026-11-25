@@ -1,0 +1,2976 @@
+{
+ "generated_utc": "2026-11-25T21:29+00:00",
+ "pacific_date": "2026-11-25",
+ "window_hours": 72,
+ "outlet_status_counts": {
+  "reached": 18,
+  "stale": 2,
+  "needs_fetch": 4,
+  "failed": 1
+ },
+ "healthy": true,
+ "candidates": [
+  {
+   "outlet": "Variety",
+   "sections": "G",
+   "title": "‘Dancing With the Stars’ Season 35 Finale Attracts 9.2 Million Viewers",
+   "url": "https://variety.com/2026/tv/news/dancing-with-the-stars-season-35-finale-ratings-1236958264/",
+   "published_utc": "2026-11-25T21:30+00:00",
+   "age_hours": 0,
+   "window": "24h"
+  },
+  {
+   "outlet": "Motorsport.com F1",
+   "sections": "F",
+   "title": "Max Verstappen admits he would “rather stay at home” ahead of Qatar and Abu Dhabi",
+   "url": "https://www.motorsport.com/f1/news/verstappen-admits-he-would-rather-stay-at-home-ahead-of-qatar-and-abu-dhabi-despite-f1-safety-guara/10877645/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=www",
+   "published_utc": "2026-11-25T21:25+00:00",
+   "age_hours": 0.1,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "¿Qué tendrá Bakú que Gordon se sale siempre que juega allí?",
+   "url": "https://www.marca.com/futbol/2026/11/25/tendra-baku-gordon-sale-siempre-juega-video.html",
+   "published_utc": "2026-11-25T21:24+00:00",
+   "age_hours": 0.1,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "Gavi: “Mi mentalidad es única\"",
+   "url": "https://www.marca.com/futbol/2026/11/25/gavi-mi-mentalidad-unica-video.html",
+   "published_utc": "2026-11-25T21:24+00:00",
+   "age_hours": 0.1,
+   "window": "24h"
+  },
+  {
+   "outlet": "Variety",
+   "sections": "G",
+   "title": "New ‘Rocky’ Book Celebrates 50th Anniversary With Rare and Never-Seen-Before Paintings",
+   "url": "https://variety.com/2026/film/news/rocky-book-50th-anniversary-1236958344/",
+   "published_utc": "2026-11-25T21:25+00:00",
+   "age_hours": 0.1,
+   "window": "24h"
+  },
+  {
+   "outlet": "Variety",
+   "sections": "G",
+   "title": "Andy Taylor, Duran Duran Guitarist, Dies at 65",
+   "url": "https://variety.com/2026/music/news/andy-taylor-dead-duran-duran-guitarist-1236958437/",
+   "published_utc": "2026-11-25T21:24+00:00",
+   "age_hours": 0.1,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "Ada Colau llama a las mujeres a votar para frenar a Vox: \"Continúa negando la violencia machista\"",
+   "url": "https://www.marca.com/tiramillas/politica/elecciones-generales/2026/11/25/ada-colau-llama-mujeres-votar-frenar-vox-continua-negando-violencia-machista-lleva-agresores-listas.html",
+   "published_utc": "2026-11-25T21:17+00:00",
+   "age_hours": 0.2,
+   "window": "24h"
+  },
+  {
+   "outlet": "Deadline",
+   "sections": "G",
+   "title": "Thanksgiving Indie Preview: ‘Cliff Booth’ & ‘All Of A Sudden’ Aim For A Holiday Feast",
+   "url": "https://deadline.com/2026/11/indie-films-opening-thanksgiving-the-further-mis-adventures-of-cliff-booth-1237233498/",
+   "published_utc": "2026-11-25T21:15+00:00",
+   "age_hours": 0.2,
+   "window": "24h"
+  },
+  {
+   "outlet": "Variety",
+   "sections": "G",
+   "title": "‘Steven Universe’ Star Zyri Comes Out as Trans",
+   "url": "https://variety.com/2026/tv/news/zyri-steven-universe-trans-comes-out-1236958383/",
+   "published_utc": "2026-11-25T21:12+00:00",
+   "age_hours": 0.3,
+   "window": "24h"
+  },
+  {
+   "outlet": "The Hollywood Reporter",
+   "sections": "G",
+   "title": "Macy’s Thanksgiving Day Parade Postponed as Storm Descends on Northeast",
+   "url": "https://www.hollywoodreporter.com/tv/tv-news/2026-macys-thanksgiving-day-parade-postponed-nbc-saturday-1236763428/",
+   "published_utc": "2026-11-25T21:10+00:00",
+   "age_hours": 0.3,
+   "window": "24h"
+  },
+  {
+   "outlet": "Attractions Magazine",
+   "sections": "A,B,C",
+   "title": "Macy’s Thanksgiving Day Parade postponed: RIIZE’s debut, Tina Turkey and the balloon decision",
+   "url": "https://attractionsmagazine.com/macys-thanksgiving-day-parade-updates-status-2026/",
+   "published_utc": "2026-11-25T21:04+00:00",
+   "age_hours": 0.4,
+   "window": "24h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "Apple TV just won prestigious award for hit drama series",
+   "url": "https://9to5mac.com/2026/11/25/apple-tv-just-won-prestigious-award-for-hit-drama-series/",
+   "published_utc": "2026-11-25T21:04+00:00",
+   "age_hours": 0.4,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "UEFA arregla el reloj pero la lía en la megafonía... y deja a Julián sin celebración",
+   "url": "https://www.marca.com/futbol/champions-league/2026/11/25/uefa-arregla-reloj-lia-megafonia-deja-julian-alvarez-celebracion-gol-falta.html",
+   "published_utc": "2026-11-25T21:08+00:00",
+   "age_hours": 0.4,
+   "window": "24h"
+  },
+  {
+   "outlet": "Variety",
+   "sections": "G",
+   "title": "Macy’s Thanksgiving Day Parade Postponed to Saturday Due to Storm",
+   "url": "https://variety.com/2026/tv/news/macys-thanksgiving-day-parade-postponed-saturday-storm-1236957468/",
+   "published_utc": "2026-11-25T21:03+00:00",
+   "age_hours": 0.4,
+   "window": "24h"
+  },
+  {
+   "outlet": "The Hollywood Reporter",
+   "sections": "G",
+   "title": "With HBO Series ‘Scams for a Better Tomorrow,’ Oobah Butler Has a Language for Your Frustration",
+   "url": "https://www.hollywoodreporter.com/tv/tv-features/oobah-butler-scams-for-a-better-tomorrow-hbo-max-vice-1236763316/",
+   "published_utc": "2026-11-25T21:06+00:00",
+   "age_hours": 0.4,
+   "window": "24h"
+  },
+  {
+   "outlet": "The Hollywood Reporter",
+   "sections": "G",
+   "title": "Tony Romo Lands Post-CBS Gig With Betting App Betr as “Chief Predictions Officer” (Exclusive)",
+   "url": "https://www.hollywoodreporter.com/business/business-news/tony-romo-new-job-betr-app-chief-predictions-officer-1236762163/",
+   "published_utc": "2026-11-25T21:06+00:00",
+   "age_hours": 0.4,
+   "window": "24h"
+  },
+  {
+   "outlet": "TechRadar",
+   "sections": "E",
+   "title": "Refurbished iPhone sales are on the rise — here's why buying pre-owned is a great idea this Black Friday",
+   "url": "https://www.techradar.com/phones/iphone/refurbished-iphone-sales-are-on-the-rise-heres-why-buying-pre-owned-is-a-great-idea-and-why-ill-never-go-back-to-buying-new",
+   "published_utc": "2026-11-25T21:00+00:00",
+   "age_hours": 0.5,
+   "window": "24h"
+  },
+  {
+   "outlet": "Variety",
+   "sections": "G",
+   "title": "‘Gugu’s World’ Team on the Diversity of Brazilian Cinema and Championing Films That ‘Respect the Storyteller’",
+   "url": "https://variety.com/2026/biz/news/gugus-world-team-brazilian-cinema-diversity-storytelling-1236955739/",
+   "published_utc": "2026-11-25T21:00+00:00",
+   "age_hours": 0.5,
+   "window": "24h"
+  },
+  {
+   "outlet": "Variety",
+   "sections": "G",
+   "title": "‘Focker In-Law’ Director on Casting Ariana Grande, Why Barbra Streisand and Dustin Hoffman Didn’t Return and What the Ending Means for Another Sequel",
+   "url": "https://variety.com/2026/film/features/focker-in-law-director-ariana-grande-casting-next-sequel-1236953332/",
+   "published_utc": "2026-11-25T21:00+00:00",
+   "age_hours": 0.5,
+   "window": "24h"
+  },
+  {
+   "outlet": "Deadline",
+   "sections": "G",
+   "title": "Will Ferrell Comedy ‘The Hawk’ Canceled By Netflix After One Season",
+   "url": "https://deadline.com/2026/11/will-ferrell-the-hawk-canceled-netflix-one-season-1237233347/",
+   "published_utc": "2026-11-25T21:00+00:00",
+   "age_hours": 0.5,
+   "window": "24h"
+  },
+  {
+   "outlet": "The Hollywood Reporter",
+   "sections": "G",
+   "title": "Brad Pitt, Angelina Jolie Call It Quits on Years-long Legal Saga, Settle Case That Led to Abuse Claims",
+   "url": "https://www.hollywoodreporter.com/business/business-news/brad-pitt-angelina-jolie-lawsuit-settlement-abuse-claims-1236763219/",
+   "published_utc": "2026-11-25T21:00+00:00",
+   "age_hours": 0.5,
+   "window": "24h"
+  },
+  {
+   "outlet": "Deadline",
+   "sections": "G",
+   "title": "Macy’s Thanksgiving Day Parade Postponed To Saturday Due To Severe Weather; NBC Will Rerun 2025 Parade On Thursday",
+   "url": "https://deadline.com/2026/11/macys-thanksgiving-day-parade-postponed-1237233595/",
+   "published_utc": "2026-11-25T20:56+00:00",
+   "age_hours": 0.6,
+   "window": "24h"
+  },
+  {
+   "outlet": "Deadline",
+   "sections": "G",
+   "title": "Aaron Rodgers Released By NFL’s Pittsburgh Steelers Following ESPN Interview Where He Criticized Coach Mike McCarthy After Benching",
+   "url": "https://deadline.com/2026/11/aaron-rodgers-released-nfl-pittsburgh-steelers-espn-interview-1237233574/",
+   "published_utc": "2026-11-25T20:55+00:00",
+   "age_hours": 0.6,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "Alarma Víctor Muñoz",
+   "url": "https://www.marca.com/futbol/champions-league/2026/11/25/preocupante-lesion-victor-munoz-le-quedo-rodilla-clavada.html",
+   "published_utc": "2026-11-25T20:50+00:00",
+   "age_hours": 0.7,
+   "window": "24h"
+  },
+  {
+   "outlet": "Deadline",
+   "sections": "G",
+   "title": "Breaking Baz: ‘Bunker’ Writer-Director Florian Zeller Takes Us Behind The Scenes With Penélope Cruz, Javier Bardem, Stephen Graham & Dame Eileen Atkins",
+   "url": "https://deadline.com/2026/11/bunker-florian-zeller-penelope-cruz-javier-bardem-interview-1237233549/",
+   "published_utc": "2026-11-25T20:45+00:00",
+   "age_hours": 0.7,
+   "window": "24h"
+  },
+  {
+   "outlet": "The Hollywood Reporter",
+   "sections": "G",
+   "title": "BÉIS’ Black Friday Sale Drops Up to 50% Off Bags and Suitcases From Shay Mitchell’s Star-Loved Luggage Line",
+   "url": "https://www.hollywoodreporter.com/lifestyle/shopping/beis-black-friday-sale-2026-best-luggage-deals-discounts-1236763253/",
+   "published_utc": "2026-11-25T20:49+00:00",
+   "age_hours": 0.7,
+   "window": "24h"
+  },
+  {
+   "outlet": "The Hollywood Reporter",
+   "sections": "G",
+   "title": "Ariana Grande Says “Insane Perception” of “Petal” Music Video Felt Like ‘Black Mirror’ and Intention Was “Me Sharing a Vulnerable Thing”",
+   "url": "https://www.hollywoodreporter.com/music/music-news/ariana-grande-petal-music-video-insane-perception-black-mirror-1236763215/",
+   "published_utc": "2026-11-25T20:40+00:00",
+   "age_hours": 0.8,
+   "window": "24h"
+  },
+  {
+   "outlet": "TechRadar",
+   "sections": "E",
+   "title": "The Lenovo Legion Tower 5i is the streaming and editing PC I'd pick — now $1,440 off at $2,230 for Black Friday",
+   "url": "https://www.techradar.com/pro/lenovos-legion-tower-5i-with-an-rtx-5070-ti-drops-to-usd2-230-a-high-end-gaming-pc-for-usd1-400-less-than-its-estimated-value",
+   "published_utc": "2026-11-25T20:36+00:00",
+   "age_hours": 0.9,
+   "window": "24h"
+  },
+  {
+   "outlet": "The Hollywood Reporter",
+   "sections": "G",
+   "title": "Black Friday Streaming Deals 2026: Disney+, Hulu, Apple TV and More",
+   "url": "https://www.hollywoodreporter.com/lifestyle/shopping/black-friday-streaming-deals-2026-1236763158/",
+   "published_utc": "2026-11-25T20:38+00:00",
+   "age_hours": 0.9,
+   "window": "24h"
+  },
+  {
+   "outlet": "The Verge",
+   "sections": "E",
+   "title": "WhatsApp’s new scheduled messages let you choose the right time to send",
+   "url": "https://www.theverge.com/tech/1042532/whatsapp-scheduled-messages",
+   "published_utc": "2026-11-25T20:31+00:00",
+   "age_hours": 1.0,
+   "window": "24h"
+  },
+  {
+   "outlet": "Motorsport.com F1",
+   "sections": "F",
+   "title": "FIA filings reveal the Red Bull aero update behind Max Verstappen’s Las Vegas GP win",
+   "url": "https://www.motorsport.com/f1/news/fia-filings-reveal-the-lone-rb22-aero-update-behind-max-verstappens-las-vegas-gp-win/10877619/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=www",
+   "published_utc": "2026-11-25T20:31+00:00",
+   "age_hours": 1.0,
+   "window": "24h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "Report: Apple gains ground as Latin American smartphone shipments plunge 24% in Q3",
+   "url": "https://9to5mac.com/2026/11/25/report-apple-gains-ground-as-latin-american-smartphone-shipments-plunge-24-in-q3/",
+   "published_utc": "2026-11-25T20:22+00:00",
+   "age_hours": 1.1,
+   "window": "24h"
+  },
+  {
+   "outlet": "TechRadar",
+   "sections": "E",
+   "title": "Dell slashes $900 off the Alienware 16 Aurora — bringing this 16-inch RTX 5050 creator laptop down to $1,100 for Black Friday",
+   "url": "https://www.techradar.com/pro/dell-slashes-usd900-off-the-alienware-16-aurora-bringing-this-16-inch-rtx-5050-creator-laptop-down-to-usd1-100-for-black-friday",
+   "published_utc": "2026-11-25T20:24+00:00",
+   "age_hours": 1.1,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "\"Nos falta finura y tenemos un componente de ansiedad alto\"",
+   "url": "https://www.marca.com/futbol/villarreal/2026/11/25/inigo-falta-finura-componente-ansiedad-alto.html",
+   "published_utc": "2026-11-25T20:21+00:00",
+   "age_hours": 1.1,
+   "window": "24h"
+  },
+  {
+   "outlet": "The Hollywood Reporter",
+   "sections": "G",
+   "title": "‘GTA VI’ Just Might Turn Carly Rae Jepsen Into A “Late in Life Gamer”",
+   "url": "https://www.hollywoodreporter.com/music/music-features/gta-vi-carly-rae-jepsen-runaway-with-me-interview-1236763127/",
+   "published_utc": "2026-11-25T20:25+00:00",
+   "age_hours": 1.1,
+   "window": "24h"
+  },
+  {
+   "outlet": "The Hollywood Reporter",
+   "sections": "G",
+   "title": "Rosamund Pike On Starring in Spiky Stage Drama ‘Inter Alia’: “I Like to Do Things That Are Provocative”",
+   "url": "https://www.hollywoodreporter.com/lifestyle/arts/rosamund-pike-inter-alia-broadway-interview-1236762507/",
+   "published_utc": "2026-11-25T20:24+00:00",
+   "age_hours": 1.1,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "\"No es fácil estar por detrás de Raphinha\"",
+   "url": "https://www.marca.com/futbol/barcelona/2026/11/25/hansi-flick-contento-triunfo-gol-concedido.html",
+   "published_utc": "2026-11-25T20:08+00:00",
+   "age_hours": 1.3,
+   "window": "24h"
+  },
+  {
+   "outlet": "Variety",
+   "sections": "G",
+   "title": "How ‘Backrooms’ Artisans Transformed YouTube Series Into Cinema’s Favorite Liminal Space Using 30,000 Square Feet of Sets and Four Sound Stages",
+   "url": "https://variety.com/2026/artisans/news/backrooms-visual-effects-production-design-1236958246/",
+   "published_utc": "2026-11-25T20:14+00:00",
+   "age_hours": 1.3,
+   "window": "24h"
+  },
+  {
+   "outlet": "The Hollywood Reporter",
+   "sections": "G",
+   "title": "Amanda Seyfried Reveals Secret Elizabeth Holmes Role in ‘You Can See Everything’ Required a “Five-Factor Authentication App” to Read Script",
+   "url": "https://www.hollywoodreporter.com/movies/movie-news/amanda-seyfried-you-can-see-everything-script-elizabeth-1236763095/",
+   "published_utc": "2026-11-25T20:13+00:00",
+   "age_hours": 1.3,
+   "window": "24h"
+  },
+  {
+   "outlet": "TechRadar",
+   "sections": "E",
+   "title": "Building a workstation or studio PC? Here are 3 Black Friday high-airflow case deals from Fractal, Cooler Master, and Phanteks",
+   "url": "https://www.techradar.com/pro/building-a-workstation-or-studio-pc-here-are-3-black-friday-high-airflow-case-deals-from-fractal-cooler-master-and-phanteks",
+   "published_utc": "2026-11-25T20:05+00:00",
+   "age_hours": 1.4,
+   "window": "24h"
+  },
+  {
+   "outlet": "TechRadar",
+   "sections": "E",
+   "title": "I’ve tested 7 headsets over 130 hours of GTA 6 — here’s what I think of each of them for Rockstar’s open-world action-adventure behemoth",
+   "url": "https://www.techradar.com/gaming/ive-tested-7-headsets-over-130-hours-of-gta-6-heres-what-i-think-of-each-of-them-for-rockstars-open-world-action-adventure-behemoth",
+   "published_utc": "2026-11-25T20:00+00:00",
+   "age_hours": 1.5,
+   "window": "24h"
+  },
+  {
+   "outlet": "Motorsport.com F1",
+   "sections": "F",
+   "title": "Fred Vasseur is running out of answers at Ferrari, says Jolyon Palmer",
+   "url": "https://www.motorsport.com/f1/news/worn-out-fred-vasseur-is-running-out-of-answers-at-ferrari-says-jolyon-palmer-/10877422/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=www",
+   "published_utc": "2026-11-25T19:57+00:00",
+   "age_hours": 1.5,
+   "window": "24h"
+  },
+  {
+   "outlet": "Variety",
+   "sections": "G",
+   "title": "Disney+ and Hulu’s Black Friday Deal Is Here: Get Both Streamers for Just $4.99/Month for an Entire Year",
+   "url": "https://variety.com/2026/shopping/news/disney-hulu-bundle-black-friday-deal-2026-sign-up-online-1236958031/",
+   "published_utc": "2026-11-25T20:00+00:00",
+   "age_hours": 1.5,
+   "window": "24h"
+  },
+  {
+   "outlet": "Variety",
+   "sections": "G",
+   "title": "Jeff Goldblum Breaks Into ‘Wicked’ Song While Reflecting on His ‘Unexpectedly Enduring Career’ at Marrakech: ‘You Just Follow Your Curiosity and Your Heart’",
+   "url": "https://variety.com/2026/film/global/jeff-goldblum-sings-wicked-unexpected-career-marrakech-1236958123/",
+   "published_utc": "2026-11-25T19:57+00:00",
+   "age_hours": 1.5,
+   "window": "24h"
+  },
+  {
+   "outlet": "Deadline",
+   "sections": "G",
+   "title": "NFL On The Future Of Netflix’s Thanksgiving Eve Game & Starting A New Tradition: “We Are Committed”",
+   "url": "https://deadline.com/2026/11/nfl-future-netflix-thanksgiving-eve-game-tradition-1237233072/",
+   "published_utc": "2026-11-25T20:00+00:00",
+   "age_hours": 1.5,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "El Málaga garantiza a Funes su continuidad",
+   "url": "https://www.marca.com/futbol/malaga/2026/11/25/malaga-garantiza-funes-continuidad-banquillo.html",
+   "published_utc": "2026-11-25T19:54+00:00",
+   "age_hours": 1.6,
+   "window": "24h"
+  },
+  {
+   "outlet": "Deadline",
+   "sections": "G",
+   "title": "Veruschka Dies: German Supermodel Of The 1960s & ’70s Who Appeared In ‘Blow-Up’ Was 87",
+   "url": "https://deadline.com/2026/11/veruschka-dead-1237233496/",
+   "published_utc": "2026-11-25T19:55+00:00",
+   "age_hours": 1.6,
+   "window": "24h"
+  },
+  {
+   "outlet": "The Verge",
+   "sections": "E",
+   "title": "EPA reports ‘zero’ airborne lead following controlled Army detonation in Iowa",
+   "url": "https://www.theverge.com/science/1042109/us-army-detonation-lead-azide-explosives-iowa-ammunition-plant",
+   "published_utc": "2026-11-25T19:45+00:00",
+   "age_hours": 1.7,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "Slavia de Praga 0-1 Villarreal | Resumen",
+   "url": "https://www.marca.com/futbol/2026/11/25/slavia-praga-0-1-villarreal-resumen-video.html",
+   "published_utc": "2026-11-25T19:50+00:00",
+   "age_hours": 1.7,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "Sabah 1-4 Barcelona | Resumen",
+   "url": "https://www.marca.com/futbol/2026/11/25/sabah-1-4-barcelona-resumen-video.html",
+   "published_utc": "2026-11-25T19:48+00:00",
+   "age_hours": 1.7,
+   "window": "24h"
+  },
+  {
+   "outlet": "Deadline",
+   "sections": "G",
+   "title": "Doc Talk Podcast: ‘The Eyes Of Ghana’s Ben Proudfoot & Nana Frimpong On Their Oscar Contender Backed By The Obamas & IShowSpeed",
+   "url": "https://deadline.com/2026/11/eyes-of-ghana-directors-podcast-obama-ishowspeed-1237233501/",
+   "published_utc": "2026-11-25T19:45+00:00",
+   "age_hours": 1.7,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "El Villarreal no gana para sustos... pero gana",
+   "url": "https://www.marca.com/futbol/champions-league/cronica/2026/11/25/villarreal-gana-sustos-engancha-champions-fuerza.html",
+   "published_utc": "2026-11-25T19:43+00:00",
+   "age_hours": 1.8,
+   "window": "24h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "iOS 27.3 release date: Here’s when new iPhone features are coming",
+   "url": "https://9to5mac.com/2026/11/25/ios-27-3-release-date-heres-when-to-expect-new-iphone-features/",
+   "published_utc": "2026-11-25T19:38+00:00",
+   "age_hours": 1.9,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "Un paseíto por el fin del mundo",
+   "url": "https://www.marca.com/futbol/barcelona/cronica/2026/11/25/paseito-mundo.html",
+   "published_utc": "2026-11-25T19:35+00:00",
+   "age_hours": 1.9,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "Ha nacido un central",
+   "url": "https://www.marca.com/futbol/barcelona/2026/11/25/anthony-gordon-non-grato-azerbaiyan.html",
+   "published_utc": "2026-11-25T19:34+00:00",
+   "age_hours": 1.9,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "Grimaldo es un tesoro para el Atleti",
+   "url": "https://www.marca.com/futbol/atletico/2026/11/25/atletico-viking-valoracion-comentarios.html",
+   "published_utc": "2026-11-25T19:25+00:00",
+   "age_hours": 2.1,
+   "window": "24h"
+  },
+  {
+   "outlet": "Deadline",
+   "sections": "G",
+   "title": "‘The Pitt’ Sets Season 3 Premiere Date",
+   "url": "https://deadline.com/2026/11/the-pitt-season-3-premiere-date-1237233493/",
+   "published_utc": "2026-11-25T19:25+00:00",
+   "age_hours": 2.1,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "Duralavita analiza el GP de Portugal de MotoGP: \"Marc es la misma persona con presión y sin presión\"",
+   "url": "https://www.marca.com/motor/motogp/gp-portugal/2026/11/25/duralavita-analiza-gp-portugal-motogp-marc-persona-presion-presion-video.html",
+   "published_utc": "2026-11-25T19:17+00:00",
+   "age_hours": 2.2,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "\"Hay que cuidar a estos chicos, son superhéroes\"",
+   "url": "https://www.marca.com/baloncesto/basketfeb/2026/11/25/chus-mateo-hay-cuidar-chicos-son-superheroes.html",
+   "published_utc": "2026-11-25T19:17+00:00",
+   "age_hours": 2.2,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "Duralavita analiza el GP de Portugal de MotoGP: \"Se está maltratando a los equipos y a los sponsors\"",
+   "url": "https://www.marca.com/motor/motogp/gp-portugal/2026/11/25/duralavita-analiza-gp-portugal-motogp-maltratando-equipos-sponsors-video.html",
+   "published_utc": "2026-11-25T19:16+00:00",
+   "age_hours": 2.2,
+   "window": "24h"
+  },
+  {
+   "outlet": "TechRadar",
+   "sections": "E",
+   "title": "No Starlink, no problem, part deux: Ukrainian student invents autopilot system for UAV that works without GPS, receives \"The future of Ukraine\" presidential award",
+   "url": "https://www.techradar.com/pro/no-starlink-no-problem-part-deux-ukrainian-student-invents-autopilot-system-for-uav-that-works-without-gps-receives-the-future-of-ukraine-presidential-award",
+   "published_utc": "2026-11-25T19:10+00:00",
+   "age_hours": 2.3,
+   "window": "24h"
+  },
+  {
+   "outlet": "The Verge",
+   "sections": "E",
+   "title": "1Password breach leaked customer names and emails, but not passwords",
+   "url": "https://www.theverge.com/tech/1042409/1password-data-breach-leak",
+   "published_utc": "2026-11-25T19:10+00:00",
+   "age_hours": 2.3,
+   "window": "24h"
+  },
+  {
+   "outlet": "TechRadar",
+   "sections": "E",
+   "title": "SSD prices are soaring, so I picked 5 Black Friday NVMe deals actually worth buying from Samsung, Lexar, and Kingston",
+   "url": "https://www.techradar.com/pro/ssd-prices-are-soaring-so-i-picked-4-black-friday-nvme-deals-actually-worth-buying-from-samsung-lexar-and-kingston",
+   "published_utc": "2026-11-25T19:07+00:00",
+   "age_hours": 2.4,
+   "window": "24h"
+  },
+  {
+   "outlet": "TechRadar",
+   "sections": "E",
+   "title": "Urban VPN under legal scrutiny over claims it harvested users' private AI prompts",
+   "url": "https://www.techradar.com/vpn/vpn-services/urban-vpn-under-legal-scrutiny-over-claims-it-harvested-users-private-ai-prompts",
+   "published_utc": "2026-11-25T18:51+00:00",
+   "age_hours": 2.6,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "\"Lo que me mantiene motivado es recuperar mi cinturón\"",
+   "url": "https://www.marca.com/combates-ufc/2026/11/25/ilia-topuria-me-mantiene-motivado-2027-recuperar-mi-cinturon.html",
+   "published_utc": "2026-11-25T18:39+00:00",
+   "age_hours": 2.8,
+   "window": "24h"
+  },
+  {
+   "outlet": "ParkStop",
+   "sections": "A,C",
+   "title": "Epic Universe Update: Indoor Coaster Construction, Official Announcement, & Ride Rumors",
+   "url": "https://orlandoparkstop.com/news/theme-park-news/epic-universe-update-indoor-coaster-construction-official-announcement-ride-rumors/",
+   "published_utc": "2026-11-25T18:37+00:00",
+   "age_hours": 2.9,
+   "window": "24h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "WhatsApp launches highly requested new feature for sending messages later",
+   "url": "https://9to5mac.com/2026/11/25/whatsapp-launches-highly-requested-new-feature-for-sending-messages-later/",
+   "published_utc": "2026-11-25T18:32+00:00",
+   "age_hours": 3.0,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "¡El Lille da la vuelta al partido!",
+   "url": "https://www.marca.com/futbol/champions-league/2026/11/25/01-0103-20261125-429-156-directo.html",
+   "published_utc": "2026-11-25T18:30+00:00",
+   "age_hours": 3.0,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "¡Marca Muriqi!",
+   "url": "https://www.marca.com/futbol/champions-league/2026/11/25/01-0103-20261125-455-253-directo.html",
+   "published_utc": "2026-11-25T18:30+00:00",
+   "age_hours": 3.0,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "Bruno da la vuelta al partido en 'su' Alvalade",
+   "url": "https://www.marca.com/futbol/champions-league/2026/11/25/01-0103-20261125-255-1-directo.html",
+   "published_utc": "2026-11-25T18:30+00:00",
+   "age_hours": 3.0,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "Ojo con Víctor Muñoz...",
+   "url": "https://www.marca.com/futbol/champions-league/2026/11/25/01-0103-20261125-413-14-directo.html",
+   "published_utc": "2026-11-25T18:30+00:00",
+   "age_hours": 3.0,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "Sucic marca de penalti",
+   "url": "https://www.marca.com/futbol/champions-league/2026/11/25/01-0103-20261125-127-169-directo.html",
+   "published_utc": "2026-11-25T18:30+00:00",
+   "age_hours": 3.0,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "Remonta el PSG",
+   "url": "https://www.marca.com/futbol/champions-league/2026/11/25/01-0103-20261125-149-121-directo.html",
+   "published_utc": "2026-11-25T18:28+00:00",
+   "age_hours": 3.0,
+   "window": "24h"
+  },
+  {
+   "outlet": "Disney Parks Blog",
+   "sections": "A",
+   "title": "2026 Gift Guide: Deck the Halls with Disney Home Decor, Ornaments, and Kitchen Supplies",
+   "url": "https://disneyparksblog.com/products/gift-guide-disney-home-decor-ornaments-and-kitchen-supplies/",
+   "published_utc": "2026-11-25T18:16+00:00",
+   "age_hours": 3.2,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "¡Williams, sancionado!",
+   "url": "https://www.marca.com/motor/formula1/gp-qatar/2026/11/25/williams-sancionado-pasarse-presupuesto-2025.html",
+   "published_utc": "2026-11-25T18:20+00:00",
+   "age_hours": 3.2,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "Blanca Romero se inspira en Shakira tras los rumores de ruptura con Quique Sánchez Flores",
+   "url": "https://www.marca.com/tiramillas/sociedad/2026/11/25/blanca-romero-inspira-shakira-rumores-ruptura-quique-sanchez-flores-mujeres-defendernos.html",
+   "published_utc": "2026-11-25T18:16+00:00",
+   "age_hours": 3.2,
+   "window": "24h"
+  },
+  {
+   "outlet": "Deadline",
+   "sections": "G",
+   "title": "Takashi Miike’s ‘Bad Lieutenant: Tokyo’ From Neon Sets Spring Release",
+   "url": "https://deadline.com/2026/11/bad-lieutenant-tokyo-release-date-1237233449/",
+   "published_utc": "2026-11-25T18:20+00:00",
+   "age_hours": 3.2,
+   "window": "24h"
+  },
+  {
+   "outlet": "Deadline",
+   "sections": "G",
+   "title": "BlackStar’s Luminary Gala Returns For Fourth Edition; Mahershala Ali & Mara Brock Akil Among Honorary Award Winners",
+   "url": "https://deadline.com/2026/11/blackstar-luminary-gala-mahershala-ali-mara-brock-akil-2026-1237233236/",
+   "published_utc": "2026-11-25T18:18+00:00",
+   "age_hours": 3.2,
+   "window": "24h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "Apple touts ‘longest battery life ever in an iPhone’ in playful new 18 Pro Max ad",
+   "url": "https://9to5mac.com/2026/11/25/apple-touts-longest-battery-life-ever-in-an-iphone-in-playful-new-18-pro-max-ad/",
+   "published_utc": "2026-11-25T18:11+00:00",
+   "age_hours": 3.3,
+   "window": "24h"
+  },
+  {
+   "outlet": "TechRadar",
+   "sections": "E",
+   "title": "Hackers breach CIA system in possible ARTEX cyberattack and leak unclassified data",
+   "url": "https://www.techradar.com/pro/security/hackers-breach-cia-system-in-possible-artex-cyberattack-and-leak-unclassified-data",
+   "published_utc": "2026-11-25T18:05+00:00",
+   "age_hours": 3.4,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "Dani Carvajal y su ataque más directo al Gobierno de Pedro Sánchez: \"¿Algo más queda por corromper?\"",
+   "url": "https://www.marca.com/tiramillas/politica/2026/11/25/dani-carvajal-ataque-directo-gobierno-pedro-sanchez-queda-corromper.html",
+   "published_utc": "2026-11-25T18:08+00:00",
+   "age_hours": 3.4,
+   "window": "24h"
+  },
+  {
+   "outlet": "Deadline",
+   "sections": "G",
+   "title": "Jane Fonda, Robert De Niro & Other Figures Sign Letter Backing Chris Van Hollen For Majority Leader — Amid A Chuck Schumer Aide’s Prank",
+   "url": "https://deadline.com/2026/11/jane-fonda-robert-de-niro-chris-van-hollen-schumer-letter-1237233358/",
+   "published_utc": "2026-11-25T18:03+00:00",
+   "age_hours": 3.4,
+   "window": "24h"
+  },
+  {
+   "outlet": "TechRadar",
+   "sections": "E",
+   "title": "I’ve tested mechanical, analog, and membrane gaming keyboards — these are my top Black Friday picks",
+   "url": "https://www.techradar.com/computing/keyboards/ive-spent-years-testing-mechanical-analog-and-membrane-gaming-keyboards-these-are-my-top-picks-for-black-friday",
+   "published_utc": "2026-11-25T18:00+00:00",
+   "age_hours": 3.5,
+   "window": "24h"
+  },
+  {
+   "outlet": "The Verge",
+   "sections": "E",
+   "title": "The Fairphone 6 Plus is modular, repairable, and $100 off right now",
+   "url": "https://www.theverge.com/gadgets/1041460/fairphone-6-plus-repairable-phone-black-friday-2026-deal-sale",
+   "published_utc": "2026-11-25T18:00+00:00",
+   "age_hours": 3.5,
+   "window": "24h"
+  },
+  {
+   "outlet": "The Verge",
+   "sections": "E",
+   "title": "The loneliest peptide party in New York",
+   "url": "https://www.theverge.com/column/1041761/optimizer-peptide-parties-afterglow",
+   "published_utc": "2026-11-25T18:00+00:00",
+   "age_hours": 3.5,
+   "window": "24h"
+  },
+  {
+   "outlet": "TechRadar",
+   "sections": "E",
+   "title": "Nvidia's RTX 5090 costs $7,000 on its own — so Corsair's $2,600 Black Friday discount on this full 64GB PC is wild value",
+   "url": "https://www.techradar.com/pro/nvidias-rtx-5090-costs-usd7-000-on-its-own-so-corsairs-usd2-600-black-friday-discount-on-this-full-64gb-pc-is-wild-value",
+   "published_utc": "2026-11-25T17:55+00:00",
+   "age_hours": 3.6,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "El Atlético vuelve a acariciar el tercero",
+   "url": "https://www.marca.com/futbol/champions-league/2026/11/25/01-0103-20261125-175-312-directo.html",
+   "published_utc": "2026-11-25T17:55+00:00",
+   "age_hours": 3.6,
+   "window": "24h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "Apple TV hit comedy from Ted Lasso, Shrinking creator returns next week",
+   "url": "https://9to5mac.com/2026/11/25/apple-tv-hit-comedy-from-ted-lasso-shrinking-creator-returns-next-week/",
+   "published_utc": "2026-11-25T17:45+00:00",
+   "age_hours": 3.7,
+   "window": "24h"
+  },
+  {
+   "outlet": "TechRadar",
+   "sections": "E",
+   "title": "Amazon Autos is coming to the UK — with car reservations starting at £99",
+   "url": "https://www.techradar.com/vehicle-tech/hybrid-electric-vehicles/amazon-autos-is-about-to-change-the-way-you-buy-a-car-in-the-uk-as-experts-say-it-could-seriously-disrupt-rivals-like-autotrader",
+   "published_utc": "2026-11-25T17:42+00:00",
+   "age_hours": 3.8,
+   "window": "24h"
+  },
+  {
+   "outlet": "The Verge",
+   "sections": "E",
+   "title": "FCC signs off on SpaceX’s plan to put up to 1 million data center satellites into space",
+   "url": "https://www.theverge.com/science/1042278/spacex-fcc-starmind-ai-space-data-centers",
+   "published_utc": "2026-11-25T17:44+00:00",
+   "age_hours": 3.8,
+   "window": "24h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "Festivitas brings holiday cheer to your Mac with snow you can shovel",
+   "url": "https://9to5mac.com/2026/11/25/festivitas-brings-holiday-cheer-to-your-mac-with-snow-you-can-shovel/",
+   "published_utc": "2026-11-25T17:31+00:00",
+   "age_hours": 4.0,
+   "window": "24h"
+  },
+  {
+   "outlet": "TechRadar",
+   "sections": "E",
+   "title": "How to watch Sporting Lisbon vs Man Utd: Free streams, TV channels, Team news & kick-off time for Champions League 2026/27 fixture",
+   "url": "https://www.techradar.com/entertainment/football/how-to-watch-sporting-lisbon-vs-man-utd-free-streams-tv-channels-and-kick-off-time-for-champions-league-2026-27-fixture",
+   "published_utc": "2026-11-25T17:20+00:00",
+   "age_hours": 4.2,
+   "window": "24h"
+  },
+  {
+   "outlet": "TechRadar",
+   "sections": "E",
+   "title": "How to watch Club Brugge vs Liverpool: Live streams, TV channels, kick-off time & team news for Champions League 2026/27 fixture",
+   "url": "https://www.techradar.com/entertainment/football/how-to-watch-club-brugge-vs-liverpool-live-streams-tv-channels-and-kick-off-time-for-champions-league-2026-27-fixture",
+   "published_utc": "2026-11-25T17:20+00:00",
+   "age_hours": 4.2,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "Vuelven a Supera(rse): \"Convertiremos esta oportunidad en algo grande que merezca la pena\"",
+   "url": "https://www.marca.com/otros-deportes/2026/11/25/vuelven-supera-rse-convertiremos-oportunidad-grande-merezca-pena.html",
+   "published_utc": "2026-11-25T17:19+00:00",
+   "age_hours": 4.2,
+   "window": "24h"
+  },
+  {
+   "outlet": "Motorsport.com F1",
+   "sections": "F",
+   "title": "Five things to look out for at F1’s Qatar GP",
+   "url": "https://www.motorsport.com/f1/news/five-things-to-look-out-for-at-f1s-qatar-gp/10877727/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=www",
+   "published_utc": "2026-11-25T17:13+00:00",
+   "age_hours": 4.3,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "Gordon se hace notar... y mucho",
+   "url": "https://www.marca.com/futbol/barcelona/2026/11/25/barca-vs-sabah-valoracion-comentarios.html",
+   "published_utc": "2026-11-25T17:13+00:00",
+   "age_hours": 4.3,
+   "window": "24h"
+  },
+  {
+   "outlet": "TechRadar",
+   "sections": "E",
+   "title": "‘We are the most apolitical company,’ Jensen Huang reportedly tells Nvidia staff — as Trump says pardoning the CEO is ‘always an option’",
+   "url": "https://www.techradar.com/computing/gpu/we-are-the-most-apolitical-company-jensen-huang-reportedly-tells-nvidia-staff-as-trump-says-pardoning-the-ceo-is-always-an-option",
+   "published_utc": "2026-11-25T17:06+00:00",
+   "age_hours": 4.4,
+   "window": "24h"
+  },
+  {
+   "outlet": "TechRadar",
+   "sections": "E",
+   "title": "'You do increase the risk of something going wrong': Microsoft President Brad Smith says we should be prepared for mass outages to become the new normal",
+   "url": "https://www.techradar.com/pro/security/you-do-increase-the-risk-of-something-going-wrong-microsoft-president-brad-smith-says-we-should-be-prepared-for-mass-outages-to-become-the-new-normal",
+   "published_utc": "2026-11-25T17:05+00:00",
+   "age_hours": 4.4,
+   "window": "24h"
+  },
+  {
+   "outlet": "Theme Park Insider",
+   "sections": "A,B",
+   "title": "Which theme park attractions deserve more love?",
+   "url": "https://www.themeparkinsider.com/flume/202611/12787/",
+   "published_utc": "2026-11-25T17:00+00:00",
+   "age_hours": 4.5,
+   "window": "24h"
+  },
+  {
+   "outlet": "TechRadar",
+   "sections": "E",
+   "title": "Meta's Muse is now in your Instagram DMs",
+   "url": "https://www.techradar.com/ai-platforms-assistants/meta-slides-muse-ai-into-instagram-direct-messages-to-help-you-catch-up-on-memes-create-a-travel-itinerary-and-prep-meals-for-the-week-and-it-will-all-be-based-on-your-activity",
+   "published_utc": "2026-11-25T17:01+00:00",
+   "age_hours": 4.5,
+   "window": "24h"
+  },
+  {
+   "outlet": "TechRadar",
+   "sections": "E",
+   "title": "GTA 6 vice president of music says working with Justice was ‘the ideal opportunity’ and helped ‘bridge’ the classic Vice City ’80s aesthetic ‘with contemporary electronic production to create the perfect backdrop for Jason and Lucia’s story in the game’",
+   "url": "https://www.techradar.com/gaming/gta-6-dev-says-working-with-justice-was-the-ideal-opportunity-and-helped-bridge-the-classic-vice-city-80s-aesthetic-with-contemporary-electronic-production-to-create-the-perfect-backdrop-for-jason-and-lucias-story-in-the-game",
+   "published_utc": "2026-11-25T17:00+00:00",
+   "age_hours": 4.5,
+   "window": "24h"
+  },
+  {
+   "outlet": "The Verge",
+   "sections": "E",
+   "title": "The Verge’s guide to the best gifts under $100",
+   "url": "https://www.theverge.com/gadgets/1028004/best-gifts-under-100-2026",
+   "published_utc": "2026-11-25T17:00+00:00",
+   "age_hours": 4.5,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "Real Madrid - Zalgiris, en vivo",
+   "url": "https://www.marca.com/baloncesto/euroliga/2026/11/25/02-0203-20261125-6210-6397-directo.html",
+   "published_utc": "2026-11-25T16:56+00:00",
+   "age_hours": 4.6,
+   "window": "24h"
+  },
+  {
+   "outlet": "TechRadar",
+   "sections": "E",
+   "title": "Amazon Kindles vs non-Amazon ereaders: here’s which models I recommend",
+   "url": "https://www.techradar.com/tablets/ereaders/amazon-kindles-vs-non-amazon-ereaders-heres-how-they-differ-and-which-models-i-recommend-this-black-friday",
+   "published_utc": "2026-11-25T16:48+00:00",
+   "age_hours": 4.7,
+   "window": "24h"
+  },
+  {
+   "outlet": "TechRadar",
+   "sections": "E",
+   "title": "The best early Black Friday Apple Watch deals",
+   "url": "https://www.techradar.com/health-fitness/smartwatches/the-best-black-friday-apple-watch-deals-save-on-apple-watch-ultra-4-ultra-3-series-12-se-3-and-more-with-deals-picked-by-a-smartwatch-tester",
+   "published_utc": "2026-11-25T16:47+00:00",
+   "age_hours": 4.7,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "\"Los culés pueden estar tranquilos\"",
+   "url": "https://www.marca.com/radio/2026/11/25/patri-guijarro-habla-sobre-renovacion-barcelona-cules-tranquilos.html",
+   "published_utc": "2026-11-25T16:49+00:00",
+   "age_hours": 4.7,
+   "window": "24h"
+  },
+  {
+   "outlet": "TechRadar",
+   "sections": "E",
+   "title": "HMV’s 4K Blu-ray Black Friday sale has arrived — here are my top 12 picks, all of which I've tested",
+   "url": "https://www.techradar.com/televisions/blu-ray/hmvs-4k-blu-ray-black-friday-sale-has-arrived-ive-searched-through-and-here-are-the-top-12-discs-i-recommend-all-of-which-ive-personally-tested",
+   "published_utc": "2026-11-25T16:39+00:00",
+   "age_hours": 4.8,
+   "window": "24h"
+  },
+  {
+   "outlet": "TechRadar",
+   "sections": "E",
+   "title": "The colourful MacBook Neo at £619 brings Apple's budget laptop closer to its launch price",
+   "url": "https://www.techradar.com/pro/the-colourful-macbook-neo-at-gbp619-brings-apples-budget-laptop-closer-to-its-launch-price",
+   "published_utc": "2026-11-25T16:39+00:00",
+   "age_hours": 4.8,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "Las cuentas del Madrid para el 'top 8'",
+   "url": "https://www.marca.com/futbol/real-madrid/2026/11/25/madrid-acaricia-top-8-primera-vez.html",
+   "published_utc": "2026-11-25T16:41+00:00",
+   "age_hours": 4.8,
+   "window": "24h"
+  },
+  {
+   "outlet": "Disney Parks Blog",
+   "sections": "A",
+   "title": "From the Purple Carpet Premiere to Disney Parks: Inside the Spellbinding World of Disney’s ‘Hexed’",
+   "url": "https://disneyparksblog.com/disney-experiences/hexed-premiere-and-disney-parks/",
+   "published_utc": "2026-11-25T16:35+00:00",
+   "age_hours": 4.9,
+   "window": "24h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "Major MacBook Air ‘overhaul’ could launch next year, per Gurman",
+   "url": "https://9to5mac.com/2026/11/25/major-macbook-air-overhaul-could-launch-next-year-per-gurman/",
+   "published_utc": "2026-11-25T16:34+00:00",
+   "age_hours": 4.9,
+   "window": "24h"
+  },
+  {
+   "outlet": "TechRadar",
+   "sections": "E",
+   "title": "Philips Hue Essential vs standard: which smart lights should you pick this Black Friday?",
+   "url": "https://www.techradar.com/seasonal-sales/hue-essential-vs-hue-black-friday-2026-nov-25",
+   "published_utc": "2026-11-25T16:37+00:00",
+   "age_hours": 4.9,
+   "window": "24h"
+  },
+  {
+   "outlet": "Motorsport.com F1",
+   "sections": "F",
+   "title": "Williams, Alpine fall foul of F1's 2025 cost cap",
+   "url": "https://www.motorsport.com/f1/news/williams-breaches-2025-f1-cost-cap-reveals-penalty/10877740/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=www",
+   "published_utc": "2026-11-25T16:38+00:00",
+   "age_hours": 4.9,
+   "window": "24h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "Black Friday deals: PROLED touch MacBook $290 off, AirPods Pro 3 $100 off, OLED iPad mini $100 off, Watch, much more",
+   "url": "https://9to5mac.com/2026/11/25/black-friday-deals-proled-macbook-airpods-ipad-mini/",
+   "published_utc": "2026-11-25T16:29+00:00",
+   "age_hours": 5.0,
+   "window": "24h"
+  },
+  {
+   "outlet": "TechRadar",
+   "sections": "E",
+   "title": "Double discounts on TeamGroup's T-Force Delta memory saves you $110 on 32GB DDR5 with RGB lighting for your gaming PC project, now available for $440",
+   "url": "https://www.techradar.com/pro/double-discounts-on-teamgroups-t-force-delta-memory-saves-you-usd110-on-32gb-ddr5-with-rgb-lighting-for-your-gaming-pc-project-now-available-for-usd440",
+   "published_utc": "2026-11-25T16:22+00:00",
+   "age_hours": 5.1,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "Brahim, asistencia... para el Balón de Oro africano",
+   "url": "https://www.marca.com/futbol/real-madrid/2026/11/25/brahim-asistencia-balon-oro-africano.html",
+   "published_utc": "2026-11-25T16:26+00:00",
+   "age_hours": 5.1,
+   "window": "24h"
+  },
+  {
+   "outlet": "IAAPA news",
+   "sections": "B",
+   "title": "F&B 360° Virtual Forum Series",
+   "url": "https://iaapa.org/event/fb-360deg-virtual-forum-series",
+   "published_utc": "2026-11-25T16:20+00:00",
+   "age_hours": 5.2,
+   "window": "24h"
+  },
+  {
+   "outlet": "TechRadar",
+   "sections": "E",
+   "title": "Nvidia is rumored to be cutting GPU supply by up to 30%",
+   "url": "https://www.techradar.com/computing/gpu/rumor-suggests-nvidia-will-cut-gpu-supply-by-20-percent-to-30-percent-over-the-next-few-months-so-if-you-dont-buy-soon-prices-could-get-even-scarier",
+   "published_utc": "2026-11-25T16:11+00:00",
+   "age_hours": 5.3,
+   "window": "24h"
+  },
+  {
+   "outlet": "TechRadar",
+   "sections": "E",
+   "title": "CyberGhost has launched an improved Black Friday price — but it's still not the cheap deal I'd choose this Black Friday",
+   "url": "https://www.techradar.com/vpn/vpn-services/cyberghost-has-launched-an-improved-black-friday-price-but-its-still-not-the-cheap-deal-id-choose-this-black-friday",
+   "published_utc": "2026-11-25T16:10+00:00",
+   "age_hours": 5.3,
+   "window": "24h"
+  },
+  {
+   "outlet": "TechRadar",
+   "sections": "E",
+   "title": "Black Friday Kindle deals: save big on Paperwhite, Colorsoft, Kindle, and more models",
+   "url": "https://www.techradar.com/seasonal-sales/black-friday-kindle-deals-save-big-on-the-amazon-kindle-kindle-paperwhite-kindle-colorsoft-and-kindle-scribe",
+   "published_utc": "2026-11-25T16:08+00:00",
+   "age_hours": 5.4,
+   "window": "24h"
+  },
+  {
+   "outlet": "TechRadar",
+   "sections": "E",
+   "title": "Rackspace forced to shut down Spot cloud platform following security breach",
+   "url": "https://www.techradar.com/pro/security/rackspace-forced-to-shut-down-spot-cloud-platform-following-security-breach",
+   "published_utc": "2026-11-25T16:05+00:00",
+   "age_hours": 5.4,
+   "window": "24h"
+  },
+  {
+   "outlet": "IAAPA news",
+   "sections": "B",
+   "title": "IAAPA Meetup: Guadalajara",
+   "url": "https://iaapa.org/event/iaapa-meetup-guadalajara",
+   "published_utc": "2026-11-25T16:01+00:00",
+   "age_hours": 5.5,
+   "window": "24h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "My favorite accessories every iPhone Duo owner needs to try [Video]",
+   "url": "https://9to5mac.com/2026/11/25/my-favorite-accessories-every-iphone-duo-owner-needs-to-try-video/",
+   "published_utc": "2026-11-25T16:00+00:00",
+   "age_hours": 5.5,
+   "window": "24h"
+  },
+  {
+   "outlet": "TechRadar",
+   "sections": "E",
+   "title": "New York places five year ban on manufacture and sale of AI toys",
+   "url": "https://www.techradar.com/ai-platforms-assistants/there-are-toys-out-there-that-could-be-harmful-to-your-children-new-york-just-banned-ai-toys-from-being-made-and-sold-for-five-years-with-parents-told-to-play-with-children-in-a-way-that-stretches-their-imagination",
+   "published_utc": "2026-11-25T16:00+00:00",
+   "age_hours": 5.5,
+   "window": "24h"
+  },
+  {
+   "outlet": "TechRadar",
+   "sections": "E",
+   "title": "Now is as good a time as any to buy the Mac mini M5 Pro, with £200 off at Amazon this Black Friday",
+   "url": "https://www.techradar.com/pro/now-is-as-good-a-time-as-any-to-buy-the-mac-mini-m5-pro-with-gbp200-off-at-amazon-this-black-friday",
+   "published_utc": "2026-11-25T15:58+00:00",
+   "age_hours": 5.5,
+   "window": "24h"
+  },
+  {
+   "outlet": "The Verge",
+   "sections": "E",
+   "title": "Nothing offers a full look at its AI earbuds and charging case",
+   "url": "https://www.theverge.com/gadgets/1042162/nothing-ear-note-ai-earbuds-reveal",
+   "published_utc": "2026-11-25T16:00+00:00",
+   "age_hours": 5.5,
+   "window": "24h"
+  },
+  {
+   "outlet": "TechRadar",
+   "sections": "E",
+   "title": "Smart glasses face scrutiny as 'pervert glasses' becomes word of the year",
+   "url": "https://www.techradar.com/computing/virtual-reality-augmented-reality/pervert-glasses-named-word-of-the-year-in-fresh-blow-to-meta-as-dutch-regulator-urges-citizens-to-skip-ai-powered-smart-glasses",
+   "published_utc": "2026-11-25T15:56+00:00",
+   "age_hours": 5.6,
+   "window": "24h"
+  },
+  {
+   "outlet": "TechRadar",
+   "sections": "E",
+   "title": "The best Nintendo Switch 2 Black Friday deals in 2026 — consoles, bundles, games, microSD cards, controllers, and more",
+   "url": "https://www.techradar.com/live/news/nintendo-switch-black-friday-2026-nov-25",
+   "published_utc": "2026-11-25T15:51+00:00",
+   "age_hours": 5.6,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "Bagnaia no podrá despedirse en Valencia y entra Lecuona",
+   "url": "https://www.marca.com/motor/motogp/gp-valencia/2026/11/25/bagnaia-podra-despedirse-valencia-entra-lecuona.html",
+   "published_utc": "2026-11-25T15:55+00:00",
+   "age_hours": 5.6,
+   "window": "24h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "Here’s everything Apple still has left to launch in 2026",
+   "url": "https://9to5mac.com/2026/11/25/heres-everything-apple-still-has-left-to-launch-in-2026/",
+   "published_utc": "2026-11-25T15:45+00:00",
+   "age_hours": 5.7,
+   "window": "24h"
+  },
+  {
+   "outlet": "TechRadar",
+   "sections": "E",
+   "title": "Bosgame's Ryzen 9 P3 Pro is the best PC you can buy under £500 this Black Friday, and Reatan's A8 is a close second",
+   "url": "https://www.techradar.com/pro/bosgames-ryzen-9-p3-pro-is-the-best-pc-you-can-buy-under-gbp500-this-black-friday-and-reatans-a8-is-a-close-second",
+   "published_utc": "2026-11-25T15:48+00:00",
+   "age_hours": 5.7,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "España, campeona de las Series Mundiales de natación paralímpica",
+   "url": "https://www.marca.com/paralimpicos/2026/11/25/espana-campeona-series-mundiales-natacion-paralimpica.html",
+   "published_utc": "2026-11-25T15:42+00:00",
+   "age_hours": 5.8,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "Lluvia de millones de la NBA a Europa",
+   "url": "https://www.marca.com/baloncesto/nba/2026/11/25/nba-anuncia-10-000-millones-inversion-europa-vista-llegada-2027.html",
+   "published_utc": "2026-11-25T15:39+00:00",
+   "age_hours": 5.8,
+   "window": "24h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "iOS 27.3 introduces design changes for these Apple apps",
+   "url": "https://9to5mac.com/2026/11/25/ios-27-3-introduces-design-changes-for-these-apple-apps/",
+   "published_utc": "2026-11-25T15:32+00:00",
+   "age_hours": 6.0,
+   "window": "24h"
+  },
+  {
+   "outlet": "TechRadar",
+   "sections": "E",
+   "title": "Huawei found guilty of attempting to steal US trade secrets - but not guilty of conspiracy to obstruct justice or racketeeting",
+   "url": "https://www.techradar.com/pro/huawei-found-guilty-of-attempting-to-steal-us-trade-secrets",
+   "published_utc": "2026-11-25T15:20+00:00",
+   "age_hours": 6.2,
+   "window": "24h"
+  },
+  {
+   "outlet": "TechRadar",
+   "sections": "E",
+   "title": "Firefox 161 upgrades its free built-in VPN with custom per-site rules — but only on desktop",
+   "url": "https://www.techradar.com/vpn/vpn-services/firefox-161-upgrades-its-free-built-in-vpn-with-custom-per-site-rules-but-only-on-desktop",
+   "published_utc": "2026-11-25T15:15+00:00",
+   "age_hours": 6.2,
+   "window": "24h"
+  },
+  {
+   "outlet": "TechRadar",
+   "sections": "E",
+   "title": "MSI Vector 16 HX AI laptop with RTX 5070 Ti graphics gets 20% off for Black Friday",
+   "url": "https://www.techradar.com/pro/cheapest-rtx-5070-ti-laptop-this-black-friday-newegg-knocks-usd400-off-the-price-of-the-powerful-msi-vector-16-hx-ai",
+   "published_utc": "2026-11-25T15:12+00:00",
+   "age_hours": 6.3,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "'Pep'sadilla antes de Navidad en el City",
+   "url": "https://www.marca.com/futbol/champions-league/2026/11/25/pep-sadilla-navidad-city-pensando-10-anos-guardiola-cambiado.html",
+   "published_utc": "2026-11-25T15:11+00:00",
+   "age_hours": 6.3,
+   "window": "24h"
+  },
+  {
+   "outlet": "Disney Parks Blog",
+   "sections": "A",
+   "title": "Foodie Guide to Avengers: Doomsday",
+   "url": "https://disneyparksblog.com/disney-experiences/foodie-guide-to-avengers-doomsday/",
+   "published_utc": "2026-11-25T14:59+00:00",
+   "age_hours": 6.5,
+   "window": "24h"
+  },
+  {
+   "outlet": "TechRadar",
+   "sections": "E",
+   "title": "How to watch Sabah vs Barcelona for FREE: Live stream details, team news for Champions League early kick-off",
+   "url": "https://www.techradar.com/entertainment/football/watch-sabah-vs-barcelona-champions-league-2026-27-free",
+   "published_utc": "2026-11-25T15:00+00:00",
+   "age_hours": 6.5,
+   "window": "24h"
+  },
+  {
+   "outlet": "TechRadar",
+   "sections": "E",
+   "title": "The Disney+ and Hulu Black Friday streaming deal for just $5 has returned",
+   "url": "https://www.techradar.com/entertainment/disney-plus/the-disney-and-hulu-black-friday-deal-is-back-grab-it-before-a-potential-price-hike",
+   "published_utc": "2026-11-25T14:57+00:00",
+   "age_hours": 6.5,
+   "window": "24h"
+  },
+  {
+   "outlet": "TechRadar",
+   "sections": "E",
+   "title": "Work like it's 1998: Aura Displays' retro-inspired Bondi Blue Triple Aero ’98 Pro Max laptop screen extender gets a 16% discount for Black Friday",
+   "url": "https://www.techradar.com/pro/work-like-its-1998-aura-displays-retro-inspired-bondi-blue-triple-aero-98-pro-max-laptop-screen-extender-gets-a-16-percent-discount-for-black-friday",
+   "published_utc": "2026-11-25T14:57+00:00",
+   "age_hours": 6.5,
+   "window": "24h"
+  },
+  {
+   "outlet": "The Verge",
+   "sections": "E",
+   "title": "The Verge’s guide to affordable holiday gifts under $25",
+   "url": "https://www.theverge.com/gadgets/1023735/best-gifts-under-25-2026",
+   "published_utc": "2026-11-25T15:00+00:00",
+   "age_hours": 6.5,
+   "window": "24h"
+  },
+  {
+   "outlet": "TechRadar",
+   "sections": "E",
+   "title": "Unofficial GTA 6 PC ports are speeding ahead, with Chapter 1 now playable",
+   "url": "https://www.techradar.com/gaming/the-very-unofficial-gta-6-pc-ports-are-speeding-ahead-with-chapter-1-seemingly-now-playable-but-rockstar-is-rumored-to-be-playing-whack-a-mole-with-these-projects",
+   "published_utc": "2026-11-25T14:51+00:00",
+   "age_hours": 6.6,
+   "window": "24h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "Apple TV just added new movie to expanding lineup, more coming soon",
+   "url": "https://9to5mac.com/2026/11/25/apple-tv-just-added-new-movie-to-expanding-lineup-more-coming-soon/",
+   "published_utc": "2026-11-25T14:48+00:00",
+   "age_hours": 6.7,
+   "window": "24h"
+  },
+  {
+   "outlet": "TechRadar",
+   "sections": "E",
+   "title": "The best early Black Friday Garmin deals, picked by a smartwatch tester",
+   "url": "https://www.techradar.com/health-fitness/fitness-trackers/black-friday-garmin-deals-2026",
+   "published_utc": "2026-11-25T14:47+00:00",
+   "age_hours": 6.7,
+   "window": "24h"
+  },
+  {
+   "outlet": "TechRadar",
+   "sections": "E",
+   "title": "Newegg knocks $348 off its AMD Ryzen 7 5800X3D PC bundle for Black Friday",
+   "url": "https://www.techradar.com/pro/beat-rising-ram-and-ssd-prices-this-black-friday-one-simple-trick-knocks-usd348-off-this-four-piece-amd-pc-component-bundle-at-newegg",
+   "published_utc": "2026-11-25T14:46+00:00",
+   "age_hours": 6.7,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "Sin piedad con Fermín",
+   "url": "https://www.marca.com/futbol/barcelona/2026/11/25/dos-partidos-sancion-fermin-podra-jugar-atletico.html",
+   "published_utc": "2026-11-25T14:50+00:00",
+   "age_hours": 6.7,
+   "window": "24h"
+  },
+  {
+   "outlet": "TechRadar",
+   "sections": "E",
+   "title": "The best Black Friday Philips Hue deals: save on smart bulbs, string lights, and light strips",
+   "url": "https://www.techradar.com/seasonal-sales/black-friday-philips-hue-deals-2026-nov-25",
+   "published_utc": "2026-11-25T14:44+00:00",
+   "age_hours": 6.8,
+   "window": "24h"
+  },
+  {
+   "outlet": "TechRadar",
+   "sections": "E",
+   "title": "Black Friday discounts on Seagate's Expansion Desktop Hard Drive make it one of the cheapest of its kind, with discounts of up to 22% on higher storage capacities",
+   "url": "https://www.techradar.com/pro/black-friday-discounts-on-seagates-expansion-desktop-hard-drive-make-it-one-of-the-cheapest-of-its-kind-with-discounts-of-up-to-22-percent-on-higher-storage-capacities",
+   "published_utc": "2026-11-25T14:39+00:00",
+   "age_hours": 6.8,
+   "window": "24h"
+  },
+  {
+   "outlet": "TechRadar",
+   "sections": "E",
+   "title": "Get up to 50% off the best AI tools from the one-stop shop Network Solutions",
+   "url": "https://www.techradar.com/pro/website-hosting/get-up-to-50-percent-off-the-best-ai-tools-from-the-one-stop-shop-network-solutions",
+   "published_utc": "2026-11-25T14:34+00:00",
+   "age_hours": 6.9,
+   "window": "24h"
+  },
+  {
+   "outlet": "TechRadar",
+   "sections": "E",
+   "title": "Black Friday Sonos: the best deals on wireless speakers, soundbars and more",
+   "url": "https://www.techradar.com/audio/multi-room/black-friday-sonos-deals-2026",
+   "published_utc": "2026-11-25T14:34+00:00",
+   "age_hours": 6.9,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "DAZN F1 sí estará en el paddock de Qatar, donde habría un protocolo de emergencia preparado",
+   "url": "https://www.marca.com/motor/formula1/gp-qatar/2026/11/25/dazn-f1-estara-paddock-qatar-hay-cadenas-han-borrado.html",
+   "published_utc": "2026-11-25T14:34+00:00",
+   "age_hours": 6.9,
+   "window": "24h"
+  },
+  {
+   "outlet": "TechRadar",
+   "sections": "E",
+   "title": "Black Friday phone deals: 35 hand-picked deals on Apple iPhones, Pixels, Samsung phones, and more",
+   "url": "https://www.techradar.com/seasonal-sales/black-friday-phone-deals-35-hand-picked-deals-on-the-galaxy-s26-ultra-iphone-17-pro-pixel-11-pro-and-more",
+   "published_utc": "2026-11-25T14:19+00:00",
+   "age_hours": 7.2,
+   "window": "24h"
+  },
+  {
+   "outlet": "TechRadar",
+   "sections": "E",
+   "title": "Proton VPN vs Windscribe – which budget VPN deal should you choose?",
+   "url": "https://www.techradar.com/vpn/vpn-services/proton-vpn-vs-windscribe",
+   "published_utc": "2026-11-25T14:15+00:00",
+   "age_hours": 7.2,
+   "window": "24h"
+  },
+  {
+   "outlet": "The Verge",
+   "sections": "E",
+   "title": "Amazon is reportedly in talks to end Muse AI shopping block",
+   "url": "https://www.theverge.com/tech/1042071/meta-amazon-muse-ai-shopping-discussions",
+   "published_utc": "2026-11-25T14:12+00:00",
+   "age_hours": 7.3,
+   "window": "24h"
+  },
+  {
+   "outlet": "TechRadar",
+   "sections": "E",
+   "title": "Microsoft declared an internal 'Code Red' after historic M365 outage, notes 'our ‌work doesn't ⁠end when service is restored'",
+   "url": "https://www.techradar.com/pro/microsoft-declared-an-internal-code-red-after-historic-m365-outage-notes-our-work-doesnt-end-when-service-is-restored",
+   "published_utc": "2026-11-25T14:05+00:00",
+   "age_hours": 7.4,
+   "window": "24h"
+  },
+  {
+   "outlet": "TechRadar",
+   "sections": "E",
+   "title": "Apple's lightweight 2026 M5 MacBook Air gets $250 off for Black Friday",
+   "url": "https://www.techradar.com/pro/apples-2026-m5-macbook-air-is-the-best-lightweight-laptop-weve-ever-tested-for-work-and-its-now-usd250-off-at-amazon-and-walmart-for-black-friday",
+   "published_utc": "2026-11-25T14:04+00:00",
+   "age_hours": 7.4,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "BYD conquista a Elsa Pataky con el Denza B8: \"Puedo llevar a los niños, las cabras, los conejos, las gallinas...\"",
+   "url": "https://www.marca.com/coches-y-motos/2026/11/25/byd-conquista-elsa-pataky-denza-b8-llevar-ninos-cabras-conejos-gallinas.html",
+   "published_utc": "2026-11-25T14:03+00:00",
+   "age_hours": 7.4,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "Desirée Vila, contra la violencia digital: \"Un desconocido hablando de sexo y del cuerpo de una mujer no es humor\"",
+   "url": "https://www.marca.com/paralimpicos/2026/11/25/desiree-vila-violencia-digital-desconocido-hablando-sexo-cuerpo-mujer-humor.html",
+   "published_utc": "2026-11-25T13:55+00:00",
+   "age_hours": 7.6,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "La divertida reacción del hijo de Nadal al gol de Bellingham",
+   "url": "https://www.marca.com/futbol/champions-league/2026/11/25/divertida-reaccion-hijo-nadal-gol-bellingham-video.html",
+   "published_utc": "2026-11-25T13:47+00:00",
+   "age_hours": 7.7,
+   "window": "24h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "Apple has iPads running macOS already, but don’t get too excited",
+   "url": "https://9to5mac.com/2026/11/25/apple-has-ipads-running-macos-already-but-dont-get-too-excited/",
+   "published_utc": "2026-11-25T13:40+00:00",
+   "age_hours": 7.8,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "Aston Martin vuelve a bajar a Alonso",
+   "url": "https://www.marca.com/motor/formula1/gp-qatar/2026/11/25/aston-martin-vuelve-bajar-alonso-inicio-gran-premio.html",
+   "published_utc": "2026-11-25T13:41+00:00",
+   "age_hours": 7.8,
+   "window": "24h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "Apple accessory Black Friday deals: AirTag 2, Apple Pencil, CarPlay gear, more from $7",
+   "url": "https://9to5mac.com/2026/11/25/best-apple-accessory-black-friday-deals/",
+   "published_utc": "2026-11-25T13:33+00:00",
+   "age_hours": 7.9,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "Xabi Alonso, en una situación \"delicada\"",
+   "url": "https://www.marca.com/futbol/premier-league/2026/11/25/xabi-alonso-descubre-abucheos-stamford-bridge-entiendo-decepcion-compartimos.html",
+   "published_utc": "2026-11-25T13:28+00:00",
+   "age_hours": 8.0,
+   "window": "24h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "WhatsApp testing stickers with audio, including make-your-own option",
+   "url": "https://9to5mac.com/2026/11/25/whatsapp-testing-stickers-with-audio-including-make-your-own-option/",
+   "published_utc": "2026-11-25T13:16+00:00",
+   "age_hours": 8.2,
+   "window": "24h"
+  },
+  {
+   "outlet": "Motorsport.com F1",
+   "sections": "F",
+   "title": "Zak Brown rules out McLaren engine programme for F1 2030",
+   "url": "https://www.motorsport.com/f1/news/zak-brown-rules-out-mclaren-engine-programme-for-f1-2030/10877436/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=www",
+   "published_utc": "2026-11-25T13:15+00:00",
+   "age_hours": 8.2,
+   "window": "24h"
+  },
+  {
+   "outlet": "Blooloop features",
+   "sections": "B",
+   "title": "Why the AV industry needs to invest in talent",
+   "url": "https://blooloop.com/av-industry-invest-in-talent/",
+   "published_utc": "2026-11-25T13:14+00:00",
+   "age_hours": 8.3,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "El Málaga fulmina a Loren",
+   "url": "https://www.marca.com/futbol/malaga/2026/11/25/malaga-comunica-loren-juarros-despido.html",
+   "published_utc": "2026-11-25T13:12+00:00",
+   "age_hours": 8.3,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "Alcaraz y la operación de Sinner: \"El tenis y yo le echamos de menos, no le veo desde abril\"",
+   "url": "https://www.marca.com/tenis/copa-davis/2026/11/25/alcaraz-operacion-sinner-tenis-le-echamos-le-veo-abril.html",
+   "published_utc": "2026-11-25T13:10+00:00",
+   "age_hours": 8.3,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "¡A por el bote de 5.000 € en Freebets! Acierta tres resultados de LaLiga con «El 3 de Luckia»",
+   "url": "https://www.marca.com/apuestas-deportivas/predicciones/2026/11/25/bote-5-000-freebets-acierta-tres-resultados-laliga-3-luckia.html",
+   "published_utc": "2026-11-25T12:49+00:00",
+   "age_hours": 8.7,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "La Rafa Nadal Academy reunirá a las leyendas del tenis español en su décimo aniversario",
+   "url": "https://www.marca.com/tenis/2026/11/25/rafa-nadal-academy-reunira-leyendas-tenis-espanol-decimo-aniversario.html",
+   "published_utc": "2026-11-25T12:39+00:00",
+   "age_hours": 8.8,
+   "window": "24h"
+  },
+  {
+   "outlet": "Blooloop news",
+   "sections": "A,B",
+   "title": "How Disney’s brand loyalty inspires theme park careers",
+   "url": "https://www.forbes.com/sites/jefffromm/2026/11/20/how-disneys-brand-loyalty-inspires-theme-park-careers/",
+   "published_utc": "2026-11-25T12:28+00:00",
+   "age_hours": 9.0,
+   "window": "24h"
+  },
+  {
+   "outlet": "Blooloop news",
+   "sections": "A,B",
+   "title": "History-based theme park's transport plans backed",
+   "url": "https://www.bbc.co.uk/news/articles/cm36gxn1kkk1o",
+   "published_utc": "2026-11-25T12:26+00:00",
+   "age_hours": 9.0,
+   "window": "24h"
+  },
+  {
+   "outlet": "Blooloop news",
+   "sections": "A,B",
+   "title": "Disneyland plans $7 million parade route expansion",
+   "url": "https://www.dailynews.com/2026/11/24/disneyland-plans-7-million-parade-route-expansion/",
+   "published_utc": "2026-11-25T12:26+00:00",
+   "age_hours": 9.1,
+   "window": "24h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "Microsoft declares a Code Red in response to worst ever outage",
+   "url": "https://9to5mac.com/2026/11/25/microsoft-declares-a-code-red-in-response-to-worst-ever-outage/",
+   "published_utc": "2026-11-25T12:23+00:00",
+   "age_hours": 9.1,
+   "window": "24h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "An annoying ‘mistake’ in macOS was actually prep for the latest MacBook Pro",
+   "url": "https://9to5mac.com/2026/11/25/an-annoying-mistake-in-macos-was-actually-prep-for-the-latest-macbook-pro/",
+   "published_utc": "2026-11-25T12:00+00:00",
+   "age_hours": 9.5,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "Koundé rompe la regla de oro de Flick",
+   "url": "https://www.marca.com/futbol/champions-league/2026/11/25/kounde-rompe-regla-oro-flick-video.html",
+   "published_utc": "2026-11-25T11:43+00:00",
+   "age_hours": 9.8,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "Henry sabe cositas: \"Algo está pasando en el Real Madrid, cuidado\"",
+   "url": "https://www.marca.com/futbol/real-madrid/2026/11/25/henry-avisa-europa-pasando-real-madrid-cuidado.html",
+   "published_utc": "2026-11-25T11:29+00:00",
+   "age_hours": 10.0,
+   "window": "24h"
+  },
+  {
+   "outlet": "Blooloop news",
+   "sections": "A,B",
+   "title": "Universal Orlando set to open new Blumhouse-inspired horror make-up show",
+   "url": "https://blooloop.com/news/universal-horror-makeup-show-opening",
+   "published_utc": "2026-11-25T11:06+00:00",
+   "age_hours": 10.4,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "\"Blasi a los Juegos, Corti con papá VdP, Arrietazo...\"",
+   "url": "https://www.marca.com/ciclismo/2026/11/25/tumba-abierta-by-amix-gran-canaria-365-blasi-juegos-corti-papa-vdp-arrietazo.html",
+   "published_utc": "2026-11-25T11:01+00:00",
+   "age_hours": 10.5,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "Alcaraz no jugará los individuales frente a Austria",
+   "url": "https://www.marca.com/tenis/copa-davis/2026/11/25/alcaraz-entrena-dobles-granollers-sera-reservado-individuales.html",
+   "published_utc": "2026-11-25T10:17+00:00",
+   "age_hours": 11.2,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "\"Es difícil encontrar un jugador más en forma que Bellingham\"",
+   "url": "https://www.marca.com/radio/2026/11/25/latigo-serrano-dificil-encontrar-jugador-forma-bellingham-video.html",
+   "published_utc": "2026-11-25T10:04+00:00",
+   "age_hours": 11.4,
+   "window": "24h"
+  },
+  {
+   "outlet": "Attractions Magazine",
+   "sections": "A,B,C",
+   "title": "5 magical things to do before (or after) seeing Disney’s ‘Hexed’",
+   "url": "https://attractionsmagazine.com/disney-hexed-things-to-do-popcorn-drinks/",
+   "published_utc": "2026-11-25T09:45+00:00",
+   "age_hours": 11.7,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "Paul George 'parte' a un rival en uno de los dribblings del curso en la NBA",
+   "url": "https://www.marca.com/baloncesto/nba/2026/11/25/paul-george-parte-rival-dribblings-curso-nba-video.html",
+   "published_utc": "2026-11-25T09:37+00:00",
+   "age_hours": 11.9,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "Ducati ajusta cuentas tras el décimo Mundial de Márquez",
+   "url": "https://www.marca.com/motor/motogp/gp-valencia/2026/11/25/ducati-ajusta-cuentas-quedado-aun-claro-motivo-fichar-marquez.html",
+   "published_utc": "2026-11-25T09:32+00:00",
+   "age_hours": 12.0,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "La histórica gimnasta viral se pasa al sumo",
+   "url": "https://www.marca.com/otros-deportes/2026/11/25/historica-gimnasta-viral-pasa-sum-video.html",
+   "published_utc": "2026-11-25T09:31+00:00",
+   "age_hours": 12.0,
+   "window": "24h"
+  },
+  {
+   "outlet": "Motorsport.com F1",
+   "sections": "F",
+   "title": "Fernando Alonso: “We can't be competitive with the power unit we have”",
+   "url": "https://www.motorsport.com/f1/news/fernando-alonso-we-cant-be-competitive-with-the-power-unit-we-have/10877596/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=www",
+   "published_utc": "2026-11-25T09:12+00:00",
+   "age_hours": 12.3,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "\"El Bayern ha perdido 130 goles por las lesiones de Kane y Olise\"",
+   "url": "https://www.marca.com/futbol/champions-league/2026/11/25/kompany-bayern-perdido-130-goles-lesiones-kane-olis-video.html",
+   "published_utc": "2026-11-25T08:57+00:00",
+   "age_hours": 12.5,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "\"No me esperaba tener 12 puntos en Champions\"",
+   "url": "https://www.marca.com/futbol/champions-league/2026/11/25/fabregas-me-esperaba-12-puntos-champions-video.html",
+   "published_utc": "2026-11-25T08:54+00:00",
+   "age_hours": 12.6,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "Miguel Ángel Revilla renuncia a 'La cena de los idiotas' con Gonzalo Miró: \"Le metió la pistola en la cabeza\"",
+   "url": "https://www.marca.com/tiramillas/television/2026/11/25/miguel-angel-revilla-renuncia-cena-idiotas-gonzalo-miro-le-metio-pistola-cabeza.html",
+   "published_utc": "2026-11-25T08:14+00:00",
+   "age_hours": 13.3,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "La reacción de Jobe al golazo de Bellingham: \"¿Le ha dado con la espinilla?\"",
+   "url": "https://www.marca.com/futbol/champions-league/2026/11/25/reaccion-jobe-golazo-bellingham-le-dado-espinilla-video.html",
+   "published_utc": "2026-11-25T07:51+00:00",
+   "age_hours": 13.6,
+   "window": "24h"
+  },
+  {
+   "outlet": "Disney Company Newsroom",
+   "sections": "A,G",
+   "title": "How ‘Disney’s Hexed’ Builds on Disney Animation’s Rich Legacy of Magical Storytelling",
+   "url": "https://thewaltdisneycompany.com/news/disneys-hexed-history-of-magic/",
+   "published_utc": "2026-11-25T01:04+00:00",
+   "age_hours": 20.4,
+   "window": "24h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "PrismML’s Bonsai 2.5 brings better coding and tool use to on-device AI",
+   "url": "https://9to5mac.com/2026/11/24/prismmls-bonsai-2-5-brings-better-coding-and-tool-use-to-on-device-ai/",
+   "published_utc": "2026-11-25T01:08+00:00",
+   "age_hours": 20.4,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "Obradovic: 66 años, nueve Euroligas y la pasión del primer día",
+   "url": "https://www.marca.com/baloncesto/euroliga/2026/11/25/obradovic-66-anos-nueve-euroligas-pasion-primer-dia-video.html",
+   "published_utc": "2026-11-25T00:10+00:00",
+   "age_hours": 21.3,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "Mikkel Bro Hansen, la joya danesa de 17 años",
+   "url": "https://www.marca.com/futbol/youth-league/2026/11/25/mikkel-bro-hansen-joya-danesa-17-anos-video.html",
+   "published_utc": "2026-11-25T00:09+00:00",
+   "age_hours": 21.3,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "Bellingham se deshace en elogios hacia Vinicius",
+   "url": "https://www.marca.com/futbol/real-madrid/2026/11/25/bellingham-deshace-elogios-vinicius-video.html",
+   "published_utc": "2026-11-25T00:07+00:00",
+   "age_hours": 21.4,
+   "window": "24h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "9to5Mac Daily: November 24, 2026 – Apple Product(RED) gear is coming soon",
+   "url": "https://9to5mac.com/2026/11/24/daily-november-24-2026/",
+   "published_utc": "2026-11-24T23:58+00:00",
+   "age_hours": 21.5,
+   "window": "24h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "Apple Mail added four convenient new features in iOS 27",
+   "url": "https://9to5mac.com/2026/11/24/heres-everything-new-for-apple-mail-in-ios-27/",
+   "published_utc": "2026-11-24T23:56+00:00",
+   "age_hours": 21.6,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "¡El PSV no olvida a Dumfries! El emotivo recibimiento de su afición",
+   "url": "https://www.marca.com/futbol/real-madrid/2026/11/25/psv-olvida-dumfries-emotivo-recibimiento-aficion-video.html",
+   "published_utc": "2026-11-24T23:36+00:00",
+   "age_hours": 21.9,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "“Me gusta como jugador y más como persona”",
+   "url": "https://www.marca.com/futbol/real-madrid/2026/11/25/me-gusta-jugador-persona-video.html",
+   "published_utc": "2026-11-24T23:34+00:00",
+   "age_hours": 21.9,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "Mourinho desvela cómo cambió el partido en el vestuario",
+   "url": "https://www.marca.com/futbol/real-madrid/2026/11/25/mourinho-desvela-cambio-partido-vestuar-video.html",
+   "published_utc": "2026-11-24T23:33+00:00",
+   "age_hours": 21.9,
+   "window": "24h"
+  },
+  {
+   "outlet": "Motorsport.com F1",
+   "sections": "F",
+   "title": "Lando Norris expects 2030 F1 racing to surpass Las Vegas GP spectacle",
+   "url": "https://www.motorsport.com/f1/news/lando-norris-admits-some-of-the-overtakes-werent-overtakes-in-vegas-thriller-and-explains-why-2030-/10877443/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=www",
+   "published_utc": "2026-11-24T23:30+00:00",
+   "age_hours": 22.0,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "La maravilla de Milla para estrenarse como goleador con el Como... y en la Champions",
+   "url": "https://www.marca.com/futbol/champions-league/2026/11/25/luis-milla-clava-escuadra-fuera-area-video.html",
+   "published_utc": "2026-11-24T23:19+00:00",
+   "age_hours": 22.2,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "Manchester City 2-2 Nápoles | Resumen",
+   "url": "https://www.marca.com/futbol/2026/11/24/manchester-city-2-2-napoles-resumen-video.html",
+   "published_utc": "2026-11-24T22:36+00:00",
+   "age_hours": 22.9,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "Arsenal 1-1 Borussia Dortmund | Resumen",
+   "url": "https://www.marca.com/futbol/2026/11/24/arsenal-1-1-borussia-dortmund-resumen-video.html",
+   "published_utc": "2026-11-24T22:35+00:00",
+   "age_hours": 22.9,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "Slovan de Bratislava 0-2 Betis | Resumen",
+   "url": "https://www.marca.com/futbol/2026/11/24/slovan-bratislava-0-2-betis-resumen-video.html",
+   "published_utc": "2026-11-24T22:29+00:00",
+   "age_hours": 23.0,
+   "window": "24h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "Real Madrid 5-1 PSV | Resumen",
+   "url": "https://www.marca.com/futbol/2026/11/24/real-madrid-5-1-psv-resumen-video.html",
+   "published_utc": "2026-11-24T22:24+00:00",
+   "age_hours": 23.1,
+   "window": "24h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "2026 tech gift guide for Apple users",
+   "url": "https://9to5mac.com/2026/11/24/2026-tech-gift-guide-for-apple-users-personally-tested-and-recommended/",
+   "published_utc": "2026-11-24T22:07+00:00",
+   "age_hours": 23.4,
+   "window": "24h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "New Gemini setting lets you keep chat history, but turn off AI training [U]",
+   "url": "https://9to5google.com/2026/11/24/gemini-history-ai-training/",
+   "published_utc": "2026-11-24T21:11+00:00",
+   "age_hours": 24.3,
+   "window": "72h"
+  },
+  {
+   "outlet": "Motorsport.com F1",
+   "sections": "F",
+   "title": "Unaired Las Vegas radio reveals Red Bull considered giving up Max Verstappen's lead",
+   "url": "https://www.motorsport.com/f1/news/unaired-radio-reveals-red-bull-told-max-verstappen-to-consider-giving-antonelli-the-lead-before-las/10877450/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=www",
+   "published_utc": "2026-11-24T21:08+00:00",
+   "age_hours": 24.4,
+   "window": "72h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "Walmart drops Apple Pay support from its app and website",
+   "url": "https://9to5mac.com/2026/11/24/walmart-drops-apple-pay-support-from-its-app-and-website/",
+   "published_utc": "2026-11-24T21:01+00:00",
+   "age_hours": 24.5,
+   "window": "72h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "TikTok is currently down for some users",
+   "url": "https://9to5mac.com/2026/11/24/tiktok-is-currently-down-for-some-users/",
+   "published_utc": "2026-11-24T20:44+00:00",
+   "age_hours": 24.8,
+   "window": "72h"
+  },
+  {
+   "outlet": "Motorsport.com F1",
+   "sections": "F",
+   "title": "Jolyon Palmer: No rival could match Max Verstappen's fight against George Russell in Las Vegas",
+   "url": "https://www.motorsport.com/f1/news/jolyon-palmer-hails-max-verstappens-unbelievable-racecraft-in-george-russell-duel/10877407/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=www",
+   "published_utc": "2026-11-24T20:05+00:00",
+   "age_hours": 25.4,
+   "window": "72h"
+  },
+  {
+   "outlet": "Attractions Magazine",
+   "sections": "A,B,C",
+   "title": "Bloody ‘Werwulf’ popcorn bucket hits Regal Dec. 18 and AMC on Christmas Eve",
+   "url": "https://attractionsmagazine.com/werwulf-popcorn-bucket-2026/",
+   "published_utc": "2026-11-24T19:57+00:00",
+   "age_hours": 25.5,
+   "window": "72h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "Anthropic just gave Claude users a new way to make Mac apps",
+   "url": "https://9to5mac.com/2026/11/24/anthropic-just-gave-claude-users-a-new-way-to-make-mac-apps/",
+   "published_utc": "2026-11-24T19:56+00:00",
+   "age_hours": 25.6,
+   "window": "72h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "AirTag 2 has two big improvements that make it worth the upgrade",
+   "url": "https://9to5mac.com/2026/11/24/airtag-2-has-two-big-improvements-that-make-it-worth-the-upgrade/",
+   "published_utc": "2026-11-24T19:53+00:00",
+   "age_hours": 25.6,
+   "window": "72h"
+  },
+  {
+   "outlet": "Attractions Magazine",
+   "sections": "A,B,C",
+   "title": "News from IAAPA, Epic Universe annual passes, and more news! – The Attractions Podcast",
+   "url": "https://attractionsmagazine.com/attractions-podcast-11-23-2026/",
+   "published_utc": "2026-11-24T19:35+00:00",
+   "age_hours": 25.9,
+   "window": "72h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "La clasificación, en directo: el PSG supera al Madrid",
+   "url": "https://www.marca.com/futbol/champions-league/2026/11/24/clasificacion-champions-league-directo-real-madrid-busca-liderato-solitario.html",
+   "published_utc": "2026-11-24T19:19+00:00",
+   "age_hours": 26.2,
+   "window": "72h"
+  },
+  {
+   "outlet": "Inside Universal",
+   "sections": "B,C",
+   "title": "Universal Horror Make-Up Show featuring Blumhouse to open December 11 at Universal Studios Florida",
+   "url": "https://www.insideuniversal.net/2026/11/universal-horror-make-up-show-featuring-blumhouse-to-open-december-11-at-universal-studios-florida/?utm_source=rss&utm_medium=rss&utm_campaign=universal-horror-make-up-show-featuring-blumhouse-to-open-december-11-at-universal-studios-florida",
+   "published_utc": "2026-11-24T19:07+00:00",
+   "age_hours": 26.4,
+   "window": "72h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "¡De Jong alucina con la pregunta sobre Lamine y GTA VI!",
+   "url": "https://www.marca.com/futbol/barcelona/2026/11/24/jong-alucina-pregunta-sobre-lamine-gta-video.html",
+   "published_utc": "2026-11-24T19:03+00:00",
+   "age_hours": 26.4,
+   "window": "72h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "Disney+, HBO Max, Apple TV, more: Here are the best Black Friday deals",
+   "url": "https://9to5mac.com/2026/11/24/hbo-max-peacock-apple-tv-more-here-are-the-best-black-friday-deals/",
+   "published_utc": "2026-11-24T18:54+00:00",
+   "age_hours": 26.6,
+   "window": "72h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "Skip the knockoffs: Real PITAKA aramid fiber cases start at $18.99 this Black Friday",
+   "url": "https://9to5mac.com/2026/11/24/skip-the-knockoffs-real-pitaka-aramid-fiber-cases-start-at-18-99-this-black-friday/",
+   "published_utc": "2026-11-24T18:51+00:00",
+   "age_hours": 26.6,
+   "window": "72h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "Apple Home accessories: Here are my five top picks for your smart home",
+   "url": "https://9to5mac.com/2026/11/24/apple-home-accessories-here-are-my-five-top-picks-for-your-smart-home/",
+   "published_utc": "2026-11-24T18:43+00:00",
+   "age_hours": 26.8,
+   "window": "72h"
+  },
+  {
+   "outlet": "Attractions Magazine",
+   "sections": "A,B,C",
+   "title": "Sonesta Ocean Point Resort: An adults-only Caribbean escape with incredible views",
+   "url": "https://attractionsmagazine.com/review-sonesta-ocean-point-resort-adults-only/",
+   "published_utc": "2026-11-24T18:11+00:00",
+   "age_hours": 27.3,
+   "window": "72h"
+  },
+  {
+   "outlet": "Motorsport.com F1",
+   "sections": "F",
+   "title": "Decision time looms for Colton Herta after 2027 Cadillac F1 snub",
+   "url": "https://www.motorsport.com/f1/news/decision-time-looms-for-colton-herta-after-2027-cadillac-f1-snub/10877531/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=www",
+   "published_utc": "2026-11-24T17:57+00:00",
+   "age_hours": 27.5,
+   "window": "72h"
+  },
+  {
+   "outlet": "Theme Park Insider",
+   "sections": "A,B",
+   "title": "Universal's new Horror Make-Up Show sets opening date",
+   "url": "https://www.themeparkinsider.com/flume/202611/12786/",
+   "published_utc": "2026-11-24T17:20+00:00",
+   "age_hours": 28.2,
+   "window": "72h"
+  },
+  {
+   "outlet": "Attractions Magazine",
+   "sections": "A,B,C",
+   "title": "Universal Orlando announces new Horror Make-Up Show featuring Blumhouse opens Dec. 11",
+   "url": "https://attractionsmagazine.com/universal-orlando-new-horror-make-up-show-announcement/",
+   "published_utc": "2026-11-24T17:05+00:00",
+   "age_hours": 28.4,
+   "window": "72h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "Black Friday deals: AirPods Pro 3 $100 off, AirTag $18 all-time low, MacBooks $300 off, iPad $350 off, more",
+   "url": "https://9to5mac.com/2026/11/24/black-friday-deals-airpods-pro-3-airtag-2-macbook-pro/",
+   "published_utc": "2026-11-24T16:42+00:00",
+   "age_hours": 28.8,
+   "window": "72h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "CarPlay Ultra coming to these cars, according to Apple",
+   "url": "https://9to5mac.com/2026/11/24/carplay-ultra-automakers/",
+   "published_utc": "2026-11-24T16:41+00:00",
+   "age_hours": 28.8,
+   "window": "72h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "Leaks say Apple has four special edition products launching next week in red",
+   "url": "https://9to5mac.com/2026/11/24/leaks-say-apple-has-four-special-edition-products-launching-next-week-in-red/",
+   "published_utc": "2026-11-24T16:37+00:00",
+   "age_hours": 28.9,
+   "window": "72h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "Things 3.25 update brings new touch features to the MacBook Pro",
+   "url": "https://9to5mac.com/2026/11/24/things-3-25-update-brings-new-touch-features-to-the-macbook-pro/",
+   "published_utc": "2026-11-24T16:00+00:00",
+   "age_hours": 29.5,
+   "window": "72h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "PSA: AirPods Pro 3 are back in stock for $149 ($100 off)",
+   "url": "https://9to5mac.com/2026/11/24/airpods-pro-3-best-black-friday-price/",
+   "published_utc": "2026-11-24T15:39+00:00",
+   "age_hours": 29.8,
+   "window": "72h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "Here’s everything new Apple TV has coming in December",
+   "url": "https://9to5mac.com/2026/11/24/heres-everything-new-apple-tv-has-coming-in-december-2/",
+   "published_utc": "2026-11-24T15:37+00:00",
+   "age_hours": 29.9,
+   "window": "72h"
+  },
+  {
+   "outlet": "Motorsport.com F1",
+   "sections": "F",
+   "title": "The issue that cost Pierre Gasly a potential \"win\" at F1's Las Vegas GP",
+   "url": "https://www.motorsport.com/f1/news/the-issue-that-cost-pierre-gasly-a-potential-podium-at-f1s-las-vegas-gp/10877501/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=www",
+   "published_utc": "2026-11-24T15:38+00:00",
+   "age_hours": 29.9,
+   "window": "72h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "iPad Air vs iPad Pro: Which should you buy?",
+   "url": "https://9to5mac.com/2026/11/24/ipad-air-vs-ipad-pro-buying-guide/",
+   "published_utc": "2026-11-24T15:24+00:00",
+   "age_hours": 30.1,
+   "window": "72h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "iOS 27 adds new Messages app setting I instantly started using",
+   "url": "https://9to5mac.com/2026/11/24/ios-27-adds-new-messages-app-setting-i-instantly-started-using/",
+   "published_utc": "2026-11-24T15:05+00:00",
+   "age_hours": 30.4,
+   "window": "72h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "The best Mac Black Friday deals: $300 off MacBook Air, $220 off M6, PROLED, more",
+   "url": "https://9to5mac.com/2026/11/24/best-mac-black-friday-deals/",
+   "published_utc": "2026-11-24T14:34+00:00",
+   "age_hours": 30.9,
+   "window": "72h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "iOS 27 breaks 15 years of muscle memory on iPhone and iPad",
+   "url": "https://9to5mac.com/2026/11/24/ios-27-just-broke-15-years-of-muscle-memory-on-iphone-and-ipad/",
+   "published_utc": "2026-11-24T14:00+00:00",
+   "age_hours": 31.5,
+   "window": "72h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "Muse safety debate continues as the AI agent rolls out in the UK",
+   "url": "https://9to5mac.com/2026/11/24/muse-safety-debate-continues-as-the-ai-agent-rolls-out-in-the-uk/",
+   "published_utc": "2026-11-24T13:52+00:00",
+   "age_hours": 31.6,
+   "window": "72h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "iPhone Handoff: Here’s the latest on carrier availability and pricing",
+   "url": "https://9to5mac.com/2026/11/24/iphone-handoff-carriers-support-ios-27/",
+   "published_utc": "2026-11-24T13:40+00:00",
+   "age_hours": 31.8,
+   "window": "72h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "CAD images suggest iPhone 18e will have an odd new camera design",
+   "url": "https://9to5mac.com/2026/11/24/cad-images-suggest-iphone-18e-will-have-an-odd-new-camera-design/",
+   "published_utc": "2026-11-24T13:19+00:00",
+   "age_hours": 32.2,
+   "window": "72h"
+  },
+  {
+   "outlet": "Blooloop news + Blooloop features",
+   "sections": "A,B",
+   "title": "​BALPPA: the voice of the UK's attractions industry since 1936",
+   "url": "https://blooloop.com/balppa-90th-anniversary/",
+   "published_utc": "2026-11-24T13:06+00:00",
+   "age_hours": 32.4,
+   "window": "72h"
+  },
+  {
+   "outlet": "Blooloop news",
+   "sections": "A,B",
+   "title": "The Ship of Theseus: rethinking how experiences are designed",
+   "url": "https://blooloop.com/ship-of-theseus-experience-design/",
+   "published_utc": "2026-11-24T13:05+00:00",
+   "age_hours": 32.4,
+   "window": "72h"
+  },
+  {
+   "outlet": "Attractions Magazine",
+   "sections": "A,B,C",
+   "title": "Rudolph the Red-Nosed Reindeer gets his own Krispy Kreme doughnut collection",
+   "url": "https://attractionsmagazine.com/rudolph-the-red-nosed-reindeer-gets-his-own-krispy-kreme-doughnut-collection/",
+   "published_utc": "2026-11-24T13:08+00:00",
+   "age_hours": 32.4,
+   "window": "72h"
+  },
+  {
+   "outlet": "Motorsport.com F1",
+   "sections": "F",
+   "title": "F1 pundit calls for real consequences at Ferrari: \"I'd chuck Ollie Bearman in for a race\"",
+   "url": "https://www.motorsport.com/f1/news/chuck-bearman-in-for-a-race-james-hinchcliffe-calls-for-real-consequences-after-ferraris-latest-mel/10877438/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=www",
+   "published_utc": "2026-11-24T13:00+00:00",
+   "age_hours": 32.5,
+   "window": "72h"
+  },
+  {
+   "outlet": "Motorsport.com F1",
+   "sections": "F",
+   "title": "Juan Pablo Montoya explains how Red Bull outsmarted Mercedes at F1 Las Vegas GP",
+   "url": "https://www.motorsport.com/f1/news/juan-pablo-montoya-explains-how-red-bulls-deployment-trap-outsmarted-mercedes-in-las-vegas/10877399/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=www",
+   "published_utc": "2026-11-24T12:28+00:00",
+   "age_hours": 33.0,
+   "window": "72h"
+  },
+  {
+   "outlet": "Blooloop news",
+   "sections": "A,B",
+   "title": "Heartbreak as Southampton's Pleasure Park demolished",
+   "url": "https://www.dailyecho.co.uk/news/26748211.southampton-outdoor-sports-centre-pleasure-park-demolished/",
+   "published_utc": "2026-11-24T12:24+00:00",
+   "age_hours": 33.1,
+   "window": "72h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "TIME’s Top 100 Photos of 2026 list includes a shot taken on iPhone 18 Pro",
+   "url": "https://9to5mac.com/2026/11/24/times-top-100-photos-of-2026-list-includes-a-shot-taken-on-iphone-18-pro/",
+   "published_utc": "2026-11-24T12:18+00:00",
+   "age_hours": 33.2,
+   "window": "72h"
+  },
+  {
+   "outlet": "Blooloop news",
+   "sections": "A,B",
+   "title": "Dollywood expands Run Dollywood event to three race weekends in 2027",
+   "url": "https://blooloop.com/news/run-dollywood-three-race-weekends",
+   "published_utc": "2026-11-24T12:10+00:00",
+   "age_hours": 33.3,
+   "window": "72h"
+  },
+  {
+   "outlet": "Planet Coaster news (Frontier)",
+   "sections": "D",
+   "title": "Month Planet Coaster 2 November 2026 (title from link, open the post)",
+   "url": "https://www.planetcoaster.com/news/2026-11-24/month-planet-coaster-2-november-2026",
+   "published_utc": "2026-11-24 (date only)",
+   "age_hours": 33.5,
+   "window": "72h",
+   "note": "date-only; read the whole post, teasers sit in the last paragraph"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "Two billion credentials publicly exposed, including everything needed for identity theft",
+   "url": "https://9to5mac.com/2026/11/24/two-billion-credentials-publicly-exposed-including-everything-needed-for-identity-theft/",
+   "published_utc": "2026-11-24T11:59+00:00",
+   "age_hours": 33.5,
+   "window": "72h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "Apple @ Work Podcast: Smplify wants AI agents to manage your Macs, with a human approving every change.",
+   "url": "https://9to5mac.com/2026/11/24/smplify-wants-ai-agents-to-manage-your-macs-with-a-human-approving-every-change/",
+   "published_utc": "2026-11-24T11:58+00:00",
+   "age_hours": 33.5,
+   "window": "72h"
+  },
+  {
+   "outlet": "Blooloop news",
+   "sections": "A,B",
+   "title": "Xola",
+   "url": "https://blooloop.com/directory/xola-platform",
+   "published_utc": "2026-11-24T11:42+00:00",
+   "age_hours": 33.8,
+   "window": "72h"
+  },
+  {
+   "outlet": "Motorsport.com F1",
+   "sections": "F",
+   "title": "Isack Hadjar frustrated – What really happened on Red Bull's team radio in Las Vegas",
+   "url": "https://www.motorsport.com/f1/news/isack-hadjar-frustrated-what-really-happened-on-red-bulls-team-radio-in-las-vegas/10877375/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=www",
+   "published_utc": "2026-11-24T10:04+00:00",
+   "age_hours": 35.4,
+   "window": "72h"
+  },
+  {
+   "outlet": "Attractions Magazine",
+   "sections": "A,B,C",
+   "title": "Hershey’s 5-cent chocolate bar returns as Hersheypark turns 120",
+   "url": "https://attractionsmagazine.com/hersheys-5-cent-chocolate-bar-movie-promotion/",
+   "published_utc": "2026-11-24T09:10+00:00",
+   "age_hours": 36.3,
+   "window": "72h"
+  },
+  {
+   "outlet": "Theme Park Insider",
+   "sections": "A,B",
+   "title": "What's for Thanksgiving dinner at Disneyland?",
+   "url": "https://www.themeparkinsider.com/flume/202611/12785/",
+   "published_utc": "2026-11-24T05:01+00:00",
+   "age_hours": 40.5,
+   "window": "72h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "These are my two must-have iPhone Duo accessories",
+   "url": "https://9to5mac.com/2026/11/23/these-are-my-two-must-have-iphone-duo-accessories/",
+   "published_utc": "2026-11-24T01:30+00:00",
+   "age_hours": 44.0,
+   "window": "72h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "9to5Mac Daily: November 23, 2026 – Apple agentic AI, spring product rumors",
+   "url": "https://9to5mac.com/2026/11/23/daily-november-23-2026/",
+   "published_utc": "2026-11-24T01:04+00:00",
+   "age_hours": 44.4,
+   "window": "72h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "Apple Pay just got even better with four new features and more",
+   "url": "https://9to5mac.com/2026/11/23/apple-pay-is-getting-even-better-with-four-new-features/",
+   "published_utc": "2026-11-24T00:31+00:00",
+   "age_hours": 45.0,
+   "window": "72h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "iOS 27.2 upgraded Apple Photos in two ways, here’s what’s new",
+   "url": "https://9to5mac.com/2026/11/23/ios-27-2-just-upgraded-apple-photos-in-two-ways-heres-whats-new/",
+   "published_utc": "2026-11-24T00:19+00:00",
+   "age_hours": 45.2,
+   "window": "72h"
+  },
+  {
+   "outlet": "Attractions Magazine",
+   "sections": "A,B,C",
+   "title": "Things to do near Disney World this week: 15 events and activities",
+   "url": "https://attractionsmagazine.com/things-to-do-ideas-events-near-walt-disney-world/",
+   "published_utc": "2026-11-23T23:45+00:00",
+   "age_hours": 45.7,
+   "window": "72h"
+  },
+  {
+   "outlet": "Disney Company Newsroom",
+   "sections": "A,G",
+   "title": "A Magical Behind-the-Scenes Look at ‘Disney’s Hexed’ with Hailee Steinfeld, Rashida Jones, and Jodie Foster",
+   "url": "https://thewaltdisneycompany.com/news/hexed-hailee-steinfeld-rashida-jones-jodie-foster/",
+   "published_utc": "2026-11-23T23:15+00:00",
+   "age_hours": 46.2,
+   "window": "72h"
+  },
+  {
+   "outlet": "Attractions Magazine",
+   "sections": "A,B,C",
+   "title": "Dollywood expands running series with Christmas half marathon after successful debut",
+   "url": "https://attractionsmagazine.com/run-dollywood-2027-christmas-half-marathon/",
+   "published_utc": "2026-11-23T22:54+00:00",
+   "age_hours": 46.6,
+   "window": "72h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "ChatGPT expands GPT-6.2 Sol as OpenAI sets retirement date for two models",
+   "url": "https://9to5mac.com/2026/11/23/chatgpt-expands-gpt-6-2-sol-as-openai-sets-retirement-date-for-two-models/",
+   "published_utc": "2026-11-23T21:51+00:00",
+   "age_hours": 47.6,
+   "window": "72h"
+  },
+  {
+   "outlet": "Marca",
+   "sections": "F",
+   "title": "Alineaciones probables para la jornada 14 de LaLiga EA Sports",
+   "url": "https://www.marca.com/fantasy/2026/11/23/alineaciones-probables-jornada-14-laliga-ea-sports.html",
+   "published_utc": "2026-11-23T21:51+00:00",
+   "age_hours": 47.6,
+   "window": "72h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "YouTube’s iconic iOS app icon may soon return with new customizable icons [Gallery]",
+   "url": "https://9to5google.com/2026/11/23/youtube-custom-icons-ios-tv-return/",
+   "published_utc": "2026-11-23T21:46+00:00",
+   "age_hours": 47.7,
+   "window": "72h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "Kodak SlideTag is a $35 AirTag alternative with an E-Ink display for your photos",
+   "url": "https://9to5mac.com/2026/11/23/kodak-slidetag-e-ink-iphone-tracker-airtag/",
+   "published_utc": "2026-11-23T21:05+00:00",
+   "age_hours": 48.4,
+   "window": "72h"
+  },
+  {
+   "outlet": "Disney Parks Blog",
+   "sections": "A",
+   "title": "Book Spotlight: Must-Read Picks from Disney Publishing",
+   "url": "https://disneyparksblog.com/products/disney-book-of-the-month-must-read-picks/",
+   "published_utc": "2026-11-23T21:00+00:00",
+   "age_hours": 48.5,
+   "window": "72h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "Apple announces Ted Lasso season 5 is coming",
+   "url": "https://9to5mac.com/2026/11/23/apple-announces-ted-lasso-season-5-is-coming/",
+   "published_utc": "2026-11-23T21:01+00:00",
+   "age_hours": 48.5,
+   "window": "72h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "Anthropic launches new Claude Ship feature for builders",
+   "url": "https://9to5mac.com/2026/11/23/anthropic-launches-new-claude-ship-feature-for-builders/",
+   "published_utc": "2026-11-23T20:32+00:00",
+   "age_hours": 49.0,
+   "window": "72h"
+  },
+  {
+   "outlet": "ParkStop",
+   "sections": "A,C",
+   "title": "ParkStop Podcast: Episode 93 – IAAPA Expo 2026 & Epic Annual Passes",
+   "url": "https://orlandoparkstop.com/podcast/parkstop-podcast-episode-93-iaapa-expo-2026-epic-annual-passes/",
+   "published_utc": "2026-11-23T20:26+00:00",
+   "age_hours": 49.1,
+   "window": "72h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "Apple Watch SE 3 vs Series 12: Which should you buy this holiday season?",
+   "url": "https://9to5mac.com/2026/11/23/apple-watch-se-3-vs-series-12-which-should-you-buy-this-holiday-season/",
+   "published_utc": "2026-11-23T20:26+00:00",
+   "age_hours": 49.1,
+   "window": "72h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "MacBook Neo gets rare $100 price drop for Black Friday [Updated]",
+   "url": "https://9to5mac.com/2026/11/23/macbook-neo-gets-rare-50-price-drop-in-early-black-friday-deal/",
+   "published_utc": "2026-11-23T20:21+00:00",
+   "age_hours": 49.1,
+   "window": "72h"
+  },
+  {
+   "outlet": "Motorsport.com F1",
+   "sections": "F",
+   "title": "Max Verstappen jokes last time he won a race like F1 Las Vegas GP it was \"Mario Kart\"",
+   "url": "https://www.motorsport.com/f1/news/max-verstappen-the-last-time-i-won-a-race-like-las-vegas-was-on-mario-kart/10877295/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=www",
+   "published_utc": "2026-11-23T20:00+00:00",
+   "age_hours": 49.5,
+   "window": "72h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "MagSafe Monday: Anker’s MagGo Pro 2 has a built-in fan to keep 25W Qi2.2 charging from slowing down",
+   "url": "https://9to5mac.com/2026/11/23/anker-maggo-2-pro/",
+   "published_utc": "2026-11-23T19:51+00:00",
+   "age_hours": 49.6,
+   "window": "72h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "Apple releasing Product(RED) versions of two products soon, per report",
+   "url": "https://9to5mac.com/2026/11/23/apple-releasing-productred-homepod-mini-and-airpods-max-per-report/",
+   "published_utc": "2026-11-23T19:28+00:00",
+   "age_hours": 50.0,
+   "window": "72h"
+  },
+  {
+   "outlet": "Motorsport.com F1",
+   "sections": "F",
+   "title": "Laurent Mekies: Keeping his emotions in check is giving Isack Hadjar “lap time”",
+   "url": "https://www.motorsport.com/f1/news/laurent-mekies-keeping-his-emotions-in-check-is-giving-isack-hadjar-lap-time/10877211/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=www",
+   "published_utc": "2026-11-23T19:30+00:00",
+   "age_hours": 50.0,
+   "window": "72h"
+  },
+  {
+   "outlet": "Attractions Magazine",
+   "sections": "A,B,C",
+   "title": "Luna StoryTime Projector review: A quieter way to visit Arendelle and Motunui",
+   "url": "https://attractionsmagazine.com/review-luna-storytime-projector-disney-stories-moana-frozen/",
+   "published_utc": "2026-11-23T19:22+00:00",
+   "age_hours": 50.1,
+   "window": "72h"
+  },
+  {
+   "outlet": "IAAPA news",
+   "sections": "B",
+   "title": "How Slick City and Topgolf are Diversifying",
+   "url": "https://iaapa.org/news-funworld/diversifying-the-floor",
+   "published_utc": "2026-11-23T19:17+00:00",
+   "age_hours": 50.2,
+   "window": "72h"
+  },
+  {
+   "outlet": "Disney Company Newsroom",
+   "sections": "A,G",
+   "title": "ESPN, Disney, the NFL and IMAX to Bring the Super Bowl to IMAX for the First Time",
+   "url": "https://thewaltdisneycompany.com/news/espn-super-bowl-imax/",
+   "published_utc": "2026-11-23T19:03+00:00",
+   "age_hours": 50.4,
+   "window": "72h"
+  },
+  {
+   "outlet": "Motorsport.com F1",
+   "sections": "F",
+   "title": "Guenther Steiner expects Ferrari board to react after Lewis Hamilton-Charles Leclerc clash",
+   "url": "https://www.motorsport.com/f1/news/guenther-steiner-expects-ferrari-board-to-react-after-lewis-hamilton-charles-leclerc-clash/10877259/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=www",
+   "published_utc": "2026-11-23T19:00+00:00",
+   "age_hours": 50.5,
+   "window": "72h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "iOS 27 gave your iPhone an alarm feature that’s long been missing",
+   "url": "https://9to5mac.com/2026/11/23/ios-27-gave-your-iphone-an-alarm-feature-thats-long-been-missing/",
+   "published_utc": "2026-11-23T18:41+00:00",
+   "age_hours": 50.8,
+   "window": "72h"
+  },
+  {
+   "outlet": "Motorsport.com F1",
+   "sections": "F",
+   "title": "Toto Wolff: Las Vegas was “Indy 500, NASCAR and Formula 1 mixed”",
+   "url": "https://www.motorsport.com/f1/news/toto-wolff-las-vegas-was-indy-500-and-nascar-and-formula-1-mixed/10877232/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=www",
+   "published_utc": "2026-11-23T18:10+00:00",
+   "age_hours": 51.3,
+   "window": "72h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "Threads app for iPad launching ‘very soon’ [U: Now live]",
+   "url": "https://9to5mac.com/2026/11/23/threads-app-for-ipad-launching-very-soon/",
+   "published_utc": "2026-11-23T18:06+00:00",
+   "age_hours": 51.4,
+   "window": "72h"
+  },
+  {
+   "outlet": "Motorsport.com F1",
+   "sections": "F",
+   "title": "Max Verstappen’s deadpan reaction to winning F1’s Overtake of the Month award",
+   "url": "https://www.motorsport.com/f1/news/max-verstappens-deadpan-reaction-to-winning-f1s-overtake-of-the-month-award/10877217/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=www",
+   "published_utc": "2026-11-23T17:51+00:00",
+   "age_hours": 51.6,
+   "window": "72h"
+  },
+  {
+   "outlet": "Motorsport.com F1",
+   "sections": "F",
+   "title": "Max Verstappen reveals he is considering 2027 Daytona 24 Hours entry",
+   "url": "https://www.motorsport.com/f1/news/max-verstappen-reveals-he-is-considering-2027-daytona-24-hours-entry/10877155/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=www",
+   "published_utc": "2026-11-23T17:42+00:00",
+   "age_hours": 51.8,
+   "window": "72h"
+  },
+  {
+   "outlet": "Disney Parks Blog",
+   "sections": "A",
+   "title": "Bucky Barnes and Yelena Belova Debut in Avengers Campus",
+   "url": "https://disneyparksblog.com/disney-experiences/avengers-doomsday-at-disney-parks/",
+   "published_utc": "2026-11-23T17:33+00:00",
+   "age_hours": 51.9,
+   "window": "72h"
+  },
+  {
+   "outlet": "Motorsport.com F1",
+   "sections": "F",
+   "title": "Andrea Stella warns against knee-jerk reaction as Las Vegas reshapes 2030 debate",
+   "url": "https://www.motorsport.com/f1/news/andrea-stella-warns-f1-against-polarised-verdicts-after-record-352-overtake-las-vegas-spectacle/10877202/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=www",
+   "published_utc": "2026-11-23T17:38+00:00",
+   "age_hours": 51.9,
+   "window": "72h"
+  },
+  {
+   "outlet": "Motorsport.com F1",
+   "sections": "F",
+   "title": "Lando Norris: \"Looking at the battery more than where I'm going\" in Las Vegas",
+   "url": "https://www.motorsport.com/f1/news/lando-norris-looking-at-the-battery-more-than-where-im-going-in-las-vegas/10877274/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=www",
+   "published_utc": "2026-11-23T17:04+00:00",
+   "age_hours": 52.4,
+   "window": "72h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "Apple has three products coming next year that I’m very excited for",
+   "url": "https://9to5mac.com/2026/11/23/apple-has-three-products-coming-next-year-that-im-very-excited-for/",
+   "published_utc": "2026-11-23T16:52+00:00",
+   "age_hours": 52.6,
+   "window": "72h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "The latest on Apple Wallet ID support in three long-promised states",
+   "url": "https://9to5mac.com/2026/11/23/apple-wallet-id-support-coming-soon-to-connecticut/",
+   "published_utc": "2026-11-23T16:32+00:00",
+   "age_hours": 53.0,
+   "window": "72h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "Black Friday deals: AirPods Pro 3 $100 off, Series 12 $100 off, MacBook Air $310 off, Apple Pencil (USB-C) $49, more",
+   "url": "https://9to5mac.com/2026/11/23/black-friday-deals-airpods-pro-3-series-12-macbook-air/",
+   "published_utc": "2026-11-23T16:08+00:00",
+   "age_hours": 53.4,
+   "window": "72h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "iOS 27.3 adds new features in six iPhone apps, details here",
+   "url": "https://9to5mac.com/2026/11/23/ios-27-3-adds-new-features-in-six-iphone-apps-details-here/",
+   "published_utc": "2026-11-23T16:06+00:00",
+   "age_hours": 53.4,
+   "window": "72h"
+  },
+  {
+   "outlet": "Motorsport.com F1",
+   "sections": "F",
+   "title": "F1 Qatar GP 2026: start time, schedule and how to watch",
+   "url": "https://www.motorsport.com/f1/news/f1-qatar-gp-2026-start-time-schedule-how-to-watch/10877085/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=www",
+   "published_utc": "2026-11-23T16:06+00:00",
+   "age_hours": 53.4,
+   "window": "72h"
+  },
+  {
+   "outlet": "Disney Company Newsroom",
+   "sections": "A,G",
+   "title": "Movie Ticketing Feature Comes to Disney+ for ‘Avengers: Doomsday’",
+   "url": "https://thewaltdisneycompany.com/news/movie-ticketing-disney-plus-avengers-doomsday/",
+   "published_utc": "2026-11-23T16:00+00:00",
+   "age_hours": 53.5,
+   "window": "72h"
+  },
+  {
+   "outlet": "Attractions Magazine",
+   "sections": "A,B,C",
+   "title": "‘Holiday Ever After’ review: Disney magic, Hallmark romance and a few surprises",
+   "url": "https://attractionsmagazine.com/review-holiday-ever-after-disney-hallmark-movie/",
+   "published_utc": "2026-11-23T16:00+00:00",
+   "age_hours": 53.5,
+   "window": "72h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "iOS 27 basically turns your iPhone and AirPods into an Apple Watch at the gym",
+   "url": "https://9to5mac.com/2026/11/23/ios-27-basically-turns-your-iphone-and-airpods-into-an-apple-watch-at-the-gym/",
+   "published_utc": "2026-11-23T16:00+00:00",
+   "age_hours": 53.5,
+   "window": "72h"
+  },
+  {
+   "outlet": "Motorsport.com F1",
+   "sections": "F",
+   "title": "F1 Qatar GP 2026: UK times, schedule and how to watch",
+   "url": "https://www.motorsport.com/f1/news/f1-qatar-gp-2026-uk-times-schedule-how-to-watch/10877083/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=www",
+   "published_utc": "2026-11-23T16:00+00:00",
+   "age_hours": 53.5,
+   "window": "72h"
+  },
+  {
+   "outlet": "Motorsport.com F1",
+   "sections": "F",
+   "title": "F1 2027 grid: Who will be racing and where?",
+   "url": "https://www.motorsport.com/f1/news/f1-2027-grid-how-many-spots-are-confirmed/10847586/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=www",
+   "published_utc": "2026-11-23T15:46+00:00",
+   "age_hours": 53.7,
+   "window": "72h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "AirPods Pro 3 were worth the upgrade for one standout feature",
+   "url": "https://9to5mac.com/2026/11/23/airpods-pro-3-were-worth-the-upgrade-for-one-standout-feature/",
+   "published_utc": "2026-11-23T15:18+00:00",
+   "age_hours": 54.2,
+   "window": "72h"
+  },
+  {
+   "outlet": "Disney Parks Blog",
+   "sections": "A",
+   "title": "Behind the Scenes: New Gingerbread Towers Bring Sweet Holiday Magic to Disney Cruise Line",
+   "url": "https://disneyparksblog.com/dcl/behind-the-scenes-new-gingerbread-towers-disney-cruise-line/",
+   "published_utc": "2026-11-23T14:59+00:00",
+   "age_hours": 54.5,
+   "window": "72h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "Will Siri AI threaten Apple’s environmental target, given Google and Meta admissions?",
+   "url": "https://9to5mac.com/2026/11/23/will-siri-ai-threaten-apples-environmental-target-given-google-and-meta-admissions/",
+   "published_utc": "2026-11-23T14:44+00:00",
+   "age_hours": 54.8,
+   "window": "72h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "RayNeo Black Friday deals: AR smart glasses that turn your Mac and iPhone into a 307-inch screen",
+   "url": "https://9to5mac.com/2026/11/23/rayneo-black-friday-cyber-monday-deals-2026/",
+   "published_utc": "2026-11-23T14:30+00:00",
+   "age_hours": 55.0,
+   "window": "72h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "Apple TV announces TIMBERLAKE series coming soon",
+   "url": "https://9to5mac.com/2026/11/23/apple-tv-announces-timberlake-series-coming-soon/",
+   "published_utc": "2026-11-23T14:22+00:00",
+   "age_hours": 55.1,
+   "window": "72h"
+  },
+  {
+   "outlet": "Attractions Magazine",
+   "sections": "A,B,C",
+   "title": "Tropical Americas construction update | ‘Encanto,’ Indiana Jones rides at Disney’s Animal Kingdom",
+   "url": "https://attractionsmagazine.com/disneys-animal-kingdom-construction-photos-tropical-americas-dinoland-encanto-indiana-jones/",
+   "published_utc": "2026-11-23T14:20+00:00",
+   "age_hours": 55.2,
+   "window": "72h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "Jensen Huang reinstated as CEO of Nvidia, stock up 30%",
+   "url": "https://9to5mac.com/2026/11/23/jensen-huang-reinstated-as-ceo-of-nvidia-despite-companys-previous-statement/",
+   "published_utc": "2026-11-23T14:08+00:00",
+   "age_hours": 55.4,
+   "window": "72h"
+  },
+  {
+   "outlet": "Motorsport.com F1",
+   "sections": "F",
+   "title": "Lewis Hamilton: Ferrari’s top-speed deficit was “brutal” at F1 Las Vegas GP",
+   "url": "https://www.motorsport.com/f1/news/lewis-hamilton-ferraris-top-speed-deficit-was-brutal-at-f1-las-vegas-gp/10876908/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=www",
+   "published_utc": "2026-11-23T14:03+00:00",
+   "age_hours": 55.4,
+   "window": "72h"
+  },
+  {
+   "outlet": "Attractions Magazine",
+   "sections": "A,B,C",
+   "title": "After years of Mattel City delays, owner explains why it’ll be worth the wait",
+   "url": "https://attractionsmagazine.com/mattel-city-delays-vai-resort-owner-response/",
+   "published_utc": "2026-11-23T13:45+00:00",
+   "age_hours": 55.7,
+   "window": "72h"
+  },
+  {
+   "outlet": "Blooloop features",
+   "sections": "B",
+   "title": "​How to create a sustainable water park: closed loops, low-to-grade rides and smart systems",
+   "url": "https://blooloop.com/features/how-to-sustainable-water-park",
+   "published_utc": "2026-11-23T13:44+00:00",
+   "age_hours": 55.8,
+   "window": "72h"
+  },
+  {
+   "outlet": "Motorsport.com F1",
+   "sections": "F",
+   "title": "Guenther Steiner warns George Russell: Do not \"poke the bear\" Max Verstappen",
+   "url": "https://www.motorsport.com/f1/news/guenther-steiner-warns-george-russell-do-not-poke-the-bear-max-verstappen/10877209/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=www",
+   "published_utc": "2026-11-23T13:16+00:00",
+   "age_hours": 56.2,
+   "window": "72h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "Newest Apple Watch Series 12 and Ultra 4 now $100 off for Black Friday, more from just $179",
+   "url": "https://9to5mac.com/2026/11/23/best-apple-watch-black-friday-deals-2/",
+   "published_utc": "2026-11-23T13:02+00:00",
+   "age_hours": 56.5,
+   "window": "72h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "As Apple works on AI agent features, banks are already blocking them",
+   "url": "https://9to5mac.com/2026/11/23/as-apple-works-on-ai-agent-features-banks-are-already-blocking-them/",
+   "published_utc": "2026-11-23T12:55+00:00",
+   "age_hours": 56.6,
+   "window": "72h"
+  },
+  {
+   "outlet": "Motorsport.com F1",
+   "sections": "F",
+   "title": "Max Verstappen \"would rather stay home\" but trusts F1's safety guarantees for Middle East races",
+   "url": "https://www.motorsport.com/f1/news/max-verstappen-would-rather-stay-home-but-trusts-f1s-safety-guarantees-for-middle-east-races/10876730/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=www",
+   "published_utc": "2026-11-23T12:47+00:00",
+   "age_hours": 56.7,
+   "window": "72h"
+  },
+  {
+   "outlet": "Blooloop news",
+   "sections": "A,B",
+   "title": "Two dolphins died weeks apart at a Northern California amusement park",
+   "url": "https://www.miamiherald.com/entertainment/article318183017.html",
+   "published_utc": "2026-11-23T12:40+00:00",
+   "age_hours": 56.8,
+   "window": "72h"
+  },
+  {
+   "outlet": "Blooloop news",
+   "sections": "A,B",
+   "title": "Plans for Mattel Adventure Park in Bonner Springs move forward",
+   "url": "https://fox4kc.com/news/plans-for-mattel-adventure-park-in-bonner-springs-move-forward/",
+   "published_utc": "2026-11-23T12:38+00:00",
+   "age_hours": 56.9,
+   "window": "72h"
+  },
+  {
+   "outlet": "Motorsport.com F1",
+   "sections": "F",
+   "title": "Why Ferrari believes written rules won't help manage Charles Leclerc and Lewis Hamilton",
+   "url": "https://www.motorsport.com/f1/news/why-ferrari-believes-written-rules-wont-help-manage-charles-leclerc-and-lewis-hamilton/10877145/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=www",
+   "published_utc": "2026-11-23T12:15+00:00",
+   "age_hours": 57.2,
+   "window": "72h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "Five recent tech outages were not due to AI; the next round will be",
+   "url": "https://9to5mac.com/2026/11/23/five-recent-tech-outages-were-not-due-to-ai-the-next-round-will-be/",
+   "published_utc": "2026-11-23T12:06+00:00",
+   "age_hours": 57.4,
+   "window": "72h"
+  },
+  {
+   "outlet": "Blooloop news",
+   "sections": "A,B",
+   "title": "Disney World reveals Pirates of the Caribbean ride updates ahead of 2027 closure",
+   "url": "https://blooloop.com/news/disney-world-pirates-caribbean-closure",
+   "published_utc": "2026-11-23T11:57+00:00",
+   "age_hours": 57.5,
+   "window": "72h"
+  },
+  {
+   "outlet": "Blooloop news",
+   "sections": "A,B",
+   "title": "Alterface announces new-generation pointing technology",
+   "url": "https://blooloop.com/alterface-new-generation-pointing-technology/",
+   "published_utc": "2026-11-23T11:35+00:00",
+   "age_hours": 57.9,
+   "window": "72h"
+  },
+  {
+   "outlet": "Motorsport.com F1",
+   "sections": "F",
+   "title": "Who slept best last night: Max Verstappen",
+   "url": "https://www.motorsport.com/f1/news/who-slept-best-last-night-max-verstappen-10877167/10877167/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=www",
+   "published_utc": "2026-11-23T11:23+00:00",
+   "age_hours": 58.1,
+   "window": "72h"
+  },
+  {
+   "outlet": "Motorsport.com F1",
+   "sections": "F",
+   "title": "Who slept worst last night: Charles Leclerc",
+   "url": "https://www.motorsport.com/f1/news/who-slept-worst-last-night-charles-leclerc-10877136/10877136/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=www",
+   "published_utc": "2026-11-23T10:00+00:00",
+   "age_hours": 59.5,
+   "window": "72h"
+  },
+  {
+   "outlet": "Motorsport.com F1",
+   "sections": "F",
+   "title": "Colton Herta replaced at Hitech to end poor F2 season early",
+   "url": "https://www.motorsport.com/fia-f2/news/colton-herta-replaced-at-hitech-to-end-poor-f2-season-early/10877134/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=www",
+   "published_utc": "2026-11-23T09:38+00:00",
+   "age_hours": 59.9,
+   "window": "72h"
+  },
+  {
+   "outlet": "Motorsport.com F1",
+   "sections": "F",
+   "title": "Salary dispute holding up Oliver Bearman’s new Haas F1 deal",
+   "url": "https://www.motorsport.com/f1/news/salary-dispute-holding-up-oliver-bearmans-new-haas-f1-deal/10877064/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=www",
+   "published_utc": "2026-11-23T09:02+00:00",
+   "age_hours": 60.4,
+   "window": "72h"
+  },
+  {
+   "outlet": "Theme Park Insider",
+   "sections": "A,B",
+   "title": "Rope Drop: Happy Thanksgiving week",
+   "url": "https://www.themeparkinsider.com/flume/202611/12784/",
+   "published_utc": "2026-11-23T05:27+00:00",
+   "age_hours": 64.0,
+   "window": "72h"
+  },
+  {
+   "outlet": "Attractions Magazine",
+   "sections": "A,B,C",
+   "title": "Haunted Mansion-inspired sneakers include details from the ride’s wallpaper, costumes and ghosts",
+   "url": "https://attractionsmagazine.com/haunted-mansion-inspired-sneakers-bull-airs/",
+   "published_utc": "2026-11-23T05:03+00:00",
+   "age_hours": 64.4,
+   "window": "72h"
+  },
+  {
+   "outlet": "Attractions Magazine",
+   "sections": "A,B,C",
+   "title": "‘Monsters, Inc.’ roller coaster construction update | Disney’s Hollywood Studios",
+   "url": "https://attractionsmagazine.com/monsters-inc-doors-suspended-roller-coaster-construction-monstropolis-muppets-disney-world-hollywood-studios/",
+   "published_utc": "2026-11-23T02:50+00:00",
+   "age_hours": 66.7,
+   "window": "72h"
+  },
+  {
+   "outlet": "Attractions Magazine",
+   "sections": "A,B,C",
+   "title": "(Interview) Blue Man Group’s first holiday show takes on Christmas consumerism, director reveals",
+   "url": "https://attractionsmagazine.com/interview-blue-man-group-holiday-show/",
+   "published_utc": "2026-11-23T02:12+00:00",
+   "age_hours": 67.3,
+   "window": "72h"
+  },
+  {
+   "outlet": "9to5Mac",
+   "sections": "E",
+   "title": "iOS 27 has a clever fix for unreliable Wi-Fi connections",
+   "url": "https://9to5mac.com/2026/11/22/ios-27-has-a-clever-fix-for-unreliable-wi-fi-connections/",
+   "published_utc": "2026-11-22T22:02+00:00",
+   "age_hours": 71.5,
+   "window": "72h"
+  }
+ ]
+}
