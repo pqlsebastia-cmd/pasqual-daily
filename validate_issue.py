@@ -5,6 +5,7 @@ Pasqual Daily - check picks.json and the built issue.html before anything is sen
 Prints OK and exits 0, or prints one problem per line and exits 1.
 """
 import json
+from datetime import datetime
 import re
 import sys
 from urllib.parse import urlparse
@@ -22,7 +23,7 @@ READS = {"full", "snippet", "headline-only"}
 MAX = {"A": 10, "B": 15, "C": 10, "D": 5, "E": 7, "F": 7, "G": 7}
 
 
-def check_records(stories):
+def check_records(stories, issue_date=None):
     E = []
     seen = set()
     for i, s in enumerate(stories, 1):
@@ -51,6 +52,16 @@ def check_records(stories):
         if sec == "A" and s.get("family") not in ("Disney", "Miral"): E.append(f"{who}: A needs Disney or Miral")
         if sec == "C" and fl != "Unconfirmed": E.append(f"{who}: C items must be Unconfirmed")
         if sec in ("B", "C") and s.get("family") == "None": E.append(f"{who}: B/C need a family")
+        if issue_date:
+            try:
+                pub = datetime.strptime(str(s.get("published", ""))[:10], "%Y-%m-%d").date()
+                limit = 14 if s.get("category") == "Deep Dive" else 3
+                if (issue_date - pub).days > limit:
+                    E.append(f"{who}: published {pub}, older than {limit} days")
+                if pub > issue_date:
+                    E.append(f"{who}: published date is in the future")
+            except ValueError:
+                E.append(f"{who}: published must start with YYYY-MM-DD")
         if s.get("read") == "headline-only" and len(s.get("take", "").split()) > 25:
             E.append(f"{who}: headline-only take is too long; it may only restate the headline")
     for k in MAX:
@@ -91,6 +102,16 @@ if __name__ == "__main__":
     h = open(sys.argv[1], encoding="utf-8").read()
     data = json.load(open(sys.argv[2], encoding="utf-8"))
     stories = number([dict(s) for s in data["stories"]])
-    errors = check_records(stories) + check_html(h, stories)
+    try:
+        issue_date = datetime.strptime(data["date"], "%A, %B %d, %Y").date()
+    except (KeyError, ValueError):
+        issue_date = None
+    errors = check_records(stories, issue_date) + check_html(h, stories)
+    if issue_date is None:
+        errors.append('date must look like "Thursday, November 26, 2026"')
+    if not data.get("coverage"):
+        errors.append("coverage report is missing")
+    if len(data.get("top3_urls", [])) != 3:
+        errors.append("top3_urls needs exactly 3 story links")
     print("\n".join(errors) or "OK")
     sys.exit(1 if errors else 0)
