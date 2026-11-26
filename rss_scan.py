@@ -36,7 +36,7 @@ from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 from html.parser import HTMLParser
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlparse
 from urllib.request import Request, urlopen
 import xml.etree.ElementTree as ET
 
@@ -51,6 +51,8 @@ TIMEOUT = 20
 MIN_REACHED = 10
 PRIORITY_HOURS = 30      # priority outlets (Blooloop, IAAPA): every item this fresh must be used or explained
 VILLARREAL_RE = re.compile(r"villarreal|submarino groguet|groguets|estadio de la cer[aá]mica", re.I)
+BOILER_RE = re.compile(r"^(for [\w .&'-]{2,30} fans\.|want to bookmark|this is read by an automated voice|sign up|subscribe)"
+                       r"|has over \d+ years'? experience|graduated from the university", re.I)
 SCORE_RE = re.compile(r"\b\d{1,2}\s?-\s?\d{1,2}\b|\b(vence|gana|cae|pierde|empata|golea|derrota|victoria|empate|resumen|cr[oó]nica)\b", re.I)
 EXCERPT_HOURS = 48       # article pages fetched for an excerpt when the item is this fresh
 EXCERPT_MAX = 260        # cap on article fetches per run
@@ -386,14 +388,7 @@ def article_excerpt(url):
     raw = fetch(url)[:1_500_000].decode("utf-8", errors="replace")
     p = ArticleText()
     p.feed(raw)
-    paras = p.art_ps or p.all_ps
-    body, out = 0, []
-    for t in paras[:6]:
-        out.append(t)
-        body += len(t)
-        if body > 900:
-            break
-    return p.meta[:400], " ".join(out)[:1000]
+    return p.meta[:400], (p.art_ps or p.all_ps)[:10]
 
 
 def add_excerpts(cands):
@@ -401,22 +396,45 @@ def add_excerpts(cands):
     todo = [c for c in cands if c["age_hours"] <= EXCERPT_HOURS and "news.google.com" not in c["url"]
             and "(date only)" not in c["published_utc"]][:EXCERPT_MAX]
 
+    pages = {}
+
     def one(c):
         try:
-            meta, body = article_excerpt(c["url"])
+            pages[c["url"]] = article_excerpt(c["url"])
         except Exception as exc:
             c["excerpt_error"] = str(exc)[:80]
-            return 0
-        if body or meta:
-            c["excerpt"] = body or meta
-            if meta and meta not in c["excerpt"]:
-                c["excerpt_meta"] = meta
-            return 1
-        c["excerpt_error"] = "no article text found"
-        return 0
 
     with ThreadPoolExecutor(max_workers=8) as pool:
-        got = sum(pool.map(one, todo))
+        list(pool.map(one, todo))
+
+    # Paragraphs that repeat across 3+ pages of one site are boilerplate (author bios, section blurbs, paywall notes).
+    seen = {}
+    for url, (_, paras) in pages.items():
+        dom = urlparse(url).netloc
+        for t in set(x[:60] for x in paras):
+            seen[(dom, t)] = seen.get((dom, t), 0) + 1
+    got = 0
+    for c in todo:
+        if c["url"] not in pages:
+            continue
+        meta, paras = pages[c["url"]]
+        dom = urlparse(c["url"]).netloc
+        keep, size = [], 0
+        for t in paras:
+            if seen.get((dom, t[:60]), 0) >= 3 or BOILER_RE.search(t):
+                continue
+            keep.append(t)
+            size += len(t)
+            if size > 900:
+                break
+        body = " ".join(keep)[:1000]
+        if body or meta:
+            c["excerpt"] = body or meta
+            if meta and body and meta[:60] not in body:
+                c["excerpt_meta"] = meta
+            got += 1
+        else:
+            c["excerpt_error"] = "no article text found"
     return got, len(todo)
 
 
