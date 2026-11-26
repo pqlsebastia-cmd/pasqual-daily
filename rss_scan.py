@@ -201,6 +201,15 @@ def _fix_entities(xml_text):
     return re.sub(r"&([A-Za-z][A-Za-z0-9]*);", rep, xml_text)
 
 
+def strip_tracking(u):
+    """Drop utm_* tracking parameters so links are clean and match the archive."""
+    if "?" not in u or "news.google.com" in u:
+        return u
+    base, q = u.split("?", 1)
+    keep = [x for x in q.split("&") if x and not x.lower().startswith("utm_")]
+    return base + ("?" + "&".join(keep) if keep else "")
+
+
 def clean_text(raw):
     """Feed descriptions often hold HTML. Return plain text, whitespace collapsed."""
     txt = re.sub(r"<[^>]+>", " ", html.unescape(raw or ""))
@@ -449,7 +458,7 @@ def _keep(outlet, items, now, hours, res, extra_note=False):
         age = (now - pub).total_seconds() / 3600
         row = {
             "outlet": outlet["name"], "sections": outlet["sections"], "title": it["title"],
-            "url": it["url"],
+            "url": strip_tracking(it["url"]),
             "published_utc": (pub.date().isoformat() + " (date only)") if extra_note
             else pub.isoformat(timespec="minutes"),
             "age_hours": round(max(age, 0), 1), "window": "24h" if age <= 24 else "72h",
