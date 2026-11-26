@@ -12,6 +12,8 @@ picks.json:
   "test": true,                                # adds [TEST] banner line under the masthead
   "top3_urls": ["https://...", "https://...", "https://..."],   # Today in 30 seconds (by URL)
   "coverage": [["Reached", "..."], ["Not reached", "..."], ["Notes", "..."]],
+  "skipped": [{"url": "...", "title": "...", "reason": "repeat: 2026-11-27 #4"}],   # every must_account scan item not used
+  "villarreal_note": "",                       # optional line under F, only when no Villarreal story runs and none qualified
   "stories": [
     {"section": "A", "region": "Americas", "family": "Disney", "emoji": "🏗️",
      "category": "Business", "headline": "...", "take": "...", "outlet": "Blooloop",
@@ -86,14 +88,14 @@ def line(text, bold=False):
             f'font-weight:{weight};color:{color};">{e(text)}</td></tr>')
 
 
-def section(key, items):
+def section(key, items, note_f=""):
     name, col, minimum = SECTIONS[key]
     rows = ""
     if key == "E" and not any(s["emoji"] == "🍏" for s in items):
         rows += line("Quiet Apple cycle; strongest non-Apple tech follows.")
     rows += "".join(card(s) for s in items)
-    if key == "F" and not any(s["emoji"] == "⚽" for s in items):
-        rows += line("No verified Villarreal story in the last 72 hours.")
+    if key == "F" and note_f:
+        rows += line(note_f)
     if len(items) < minimum:
         rows += line("Low News Today", bold=True)
     return (f'<tr><td style="padding:22px 16px 0 16px;">'
@@ -108,6 +110,14 @@ def part(title):
             f'letter-spacing:2px;color:#0F6E78;text-transform:uppercase;">{title}</div>{rule(2, "#111417", "margin-top:10px")}</td></tr>')
 
 
+def skipped_rows(data):
+    """Priority items (Blooloop, IAAPA) the run did not use, with its reason, so nothing disappears silently."""
+    sk = data.get("skipped", [])
+    if not sk:
+        return []
+    return [["Not used from Blooloop and IAAPA", "; ".join(f'{x.get("title", "")[:70]} ({x.get("reason", "")})' for x in sk)]]
+
+
 def build(data):
     stories = number([dict(s) for s in data["stories"]])
     by = {k: [s for s in stories if s["section"] == k] for k in SECTIONS}
@@ -120,7 +130,8 @@ def build(data):
         f'<td style="font-family:{SANS};font-size:14px;color:#111417;padding:4px 0;line-height:20px;">{e(s["headline"])}</td></tr>' for s in top)
     test = (f'<tr><td style="padding:10px 16px 0 16px;font-family:{SANS};font-size:12px;font-weight:700;color:#8E1F2F;">'
             f'TEST ISSUE: not logged to Notion.</td></tr>') if data.get("test") else ""
-    cov = "".join(f'<p style="margin:0 0 8px 0;"><b style="color:#111417;">{e(a)}:</b> {e(b)}</p>' for a, b in data.get("coverage", []))
+    cov_rows = list(data.get("coverage", [])) + skipped_rows(data)
+    cov = "".join(f'<p style="margin:0 0 8px 0;"><b style="color:#111417;">{e(a)}:</b> {e(b)}</p>' for a, b in cov_rows)
     counts = " · ".join(f"{k} {len(by[k])}" for k in SECTIONS)
     body = (
         f'<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
@@ -139,7 +150,7 @@ def build(data):
         f'<div style="font-family:{SANS};font-size:11px;font-weight:800;letter-spacing:2px;color:#0F6E78;text-transform:uppercase;margin-bottom:6px;">Today in 30 seconds</div>'
         f'<table {T}>{brief}</table></td></tr></table></td></tr>'
         + part("🎢 Daily Themed Industry Digest") + "".join(section(k, by[k]) for k in "ABCD")
-        + part("☕ Pasqual Daily Coffee") + "".join(section(k, by[k]) for k in "EFG")
+        + part("☕ Pasqual Daily Coffee") + "".join(section(k, by[k], data.get("villarreal_note", "")) for k in "EFG")
         + f'<tr><td style="padding:40px 16px 30px 16px;">{rule(2, "#111417", "margin-bottom:14px")}'
         f'<div style="font-family:{SANS};font-size:11px;font-weight:800;letter-spacing:2px;color:#0F6E78;text-transform:uppercase;margin-bottom:8px;">Coverage</div>'
         f'<div style="font-family:{SANS};font-size:12px;line-height:18px;color:#5F676D;">'
@@ -154,7 +165,7 @@ def build(data):
             fl = f" [{s['flags']}]" if s.get("flags") else ""
             text += [f"{s['n']:02d}. {s['headline']}{fl}", f"    {s['take']}", f"    {s['outlet']}: {s['url']}"]
         text.append("")
-    text += [f"{a}: {b}" for a, b in data.get("coverage", [])]
+    text += [f"{a}: {b}" for a, b in cov_rows]
     return body, "\n".join(text), stories
 
 

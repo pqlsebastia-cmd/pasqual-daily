@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Pasqual Daily - check picks.json and the built issue.html before anything is sent.
-    python3 validate_issue.py issue.html picks.json
+    python3 validate_issue.py issue.html picks.json scan_output/candidates_YYYY-MM-DD.json
 Prints OK and exits 0, or prints one problem per line and exits 1.
 """
 import json
@@ -19,7 +19,9 @@ EMOJI = {
 REGIONS = {"Americas", "Europe", "Asia", "Middle East", "Global"}
 FAMILIES = {"Disney", "Universal", "Competitors", "Miral", "None"}
 CATEGORIES = {"Business", "Tech", "Deep Dive", "Rumor", "Gaming", "Sports", "Film-TV"}
-READS = {"full", "snippet", "headline-only"}
+READS = {"full", "excerpt", "snippet", "headline-only"}
+FIRST_LIVE = "2026-11-26"   # issues before this were setup tests and never count as history
+SKIP_REASONS = ("repeat", "same story as", "not relevant", "duplicate")
 MAX = {"A": 10, "B": 15, "C": 10, "D": 5, "E": 7, "F": 7, "G": 7}
 
 
@@ -43,6 +45,8 @@ def check_records(stories, issue_date=None):
         if fl.startswith("Update:") and len(fl[7:].split()) > 12: E.append(f"{who}: update clause over 12 words")
         u = s.get("url", "")
         p = urlparse(u)
+        if "news.google.com" in p.netloc:
+            E.append(f"{who}: Google News link; link the original article")
         if p.scheme not in ("http", "https") or p.path in ("", "/"):
             E.append(f"{who}: URL is not an article link")
         key = p.netloc + p.path.rstrip("/")
@@ -98,6 +102,46 @@ def check_html(h, stories):
     return E
 
 
+def norm(u):
+    p = urlparse(u or "")
+    return (p.netloc.replace("www.", "") + p.path).rstrip("/").lower()
+
+
+def check_scan(data, stories, cands, issue_date):
+    """Nothing from the priority outlets may disappear silently, and Villarreal news must be covered."""
+    E = []
+    picked = {norm(s["url"]) for s in stories}
+    skipped = {norm(x.get("url", "")): x for x in data.get("skipped", [])}
+    for c in cands:
+        if not c.get("must_account"):
+            continue
+        k = norm(c["url"])
+        if k in picked:
+            continue
+        x = skipped.get(k)
+        if not x:
+            E.append(f"scan item not used and not explained in skipped: {c['outlet']}: {c['title'][:60]}")
+            continue
+        r = x.get("reason", "").strip().lower()
+        if not r.startswith(SKIP_REASONS):
+            E.append(f"skipped reason must start with repeat / same story as / not relevant / duplicate: {c['title'][:50]}")
+        if r.startswith("repeat"):
+            dates = re.findall(r"\d{4}-\d{2}-\d{2}", r)
+            if not dates or any(d < FIRST_LIVE or (issue_date and d >= issue_date.isoformat()) for d in dates):
+                E.append(f"repeat must name the earlier live issue date ({FIRST_LIVE} or later, before today): {c['title'][:50]}")
+    has_vcf = any(s.get("section") == "F" and s.get("emoji") == "⚽" for s in stories)
+    if any(c.get("match_result") for c in cands) and not has_vcf:
+        E.append("Villarreal played: the scan has a match result within 30h but section F has no ⚽ story")
+    elif any(c.get("villarreal") and c["age_hours"] <= 30 for c in cands) and not has_vcf and not data.get("villarreal_note"):
+        E.append("Villarreal news in the scan within 30h but no ⚽ story and no villarreal_note explaining why")
+    by_url = {norm(c["url"]): c for c in cands}
+    for s in stories:
+        c = by_url.get(norm(s["url"]))
+        if c and c.get("excerpt") and s.get("read") == "headline-only":
+            E.append(f"story {s['n']}: the scan has an article excerpt; read must be excerpt or better, not headline-only")
+    return E
+
+
 if __name__ == "__main__":
     h = open(sys.argv[1], encoding="utf-8").read()
     data = json.load(open(sys.argv[2], encoding="utf-8"))
@@ -107,6 +151,9 @@ if __name__ == "__main__":
     except (KeyError, ValueError):
         issue_date = None
     errors = check_records(stories, issue_date) + check_html(h, stories)
+    if len(sys.argv) > 3:
+        cands = json.load(open(sys.argv[3], encoding="utf-8")).get("candidates", [])
+        errors += check_scan(data, stories, cands, issue_date)
     if issue_date is None:
         errors.append('date must look like "Thursday, November 26, 2026"')
     if not data.get("coverage"):

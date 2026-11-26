@@ -49,6 +49,11 @@ except Exception:  # missing tz database: fall back to UTC dates
 UA = "Mozilla/5.0 (compatible; PasqualDailyScan/1.1)"
 TIMEOUT = 20
 MIN_REACHED = 10
+PRIORITY_HOURS = 30      # priority outlets (Blooloop, IAAPA): every item this fresh must be used or explained
+VILLARREAL_RE = re.compile(r"villarreal|submarino groguet|groguets|estadio de la cer[aá]mica", re.I)
+SCORE_RE = re.compile(r"\b\d{1,2}\s?-\s?\d{1,2}\b|\b(vence|gana|cae|pierde|empata|golea|derrota|victoria|empate|resumen|cr[oó]nica)\b", re.I)
+EXCERPT_HOURS = 48       # article pages fetched for an excerpt when the item is this fresh
+EXCERPT_MAX = 260        # cap on article fetches per run
 COMMON_FEED_PATHS = ["/feed/", "/feed", "/rss", "/rss.xml", "/atom.xml", "/index.xml"]
 
 # sections: A Disney Parks, B Industry, C Rumors, D Sim/Gaming, E Tech, F F1/Villarreal, G Film/TV
@@ -60,10 +65,12 @@ OUTLETS = [
      "feeds": ["https://disneyparksblog.com/feed/"]},
     {"name": "Disney Company Newsroom", "sections": "A,G", "home": "https://thewaltdisneycompany.com/news/",
      "feeds": ["https://thewaltdisneycompany.com/feed/"]},
-    {"name": "Blooloop news", "sections": "A,B", "home": "https://blooloop.com/theme-park/",
-     "feeds": ["https://blooloop.com/feeds/theme-park.rss"]},
-    {"name": "Blooloop features", "sections": "B", "home": "https://blooloop.com/features/",
-     "feeds": ["https://blooloop.com/feeds/features.rss"]},
+    # Blooloop: every section feed is read and merged (theme parks alone missed most of the daily newsletter).
+    {"name": "Blooloop", "sections": "A,B", "home": "https://blooloop.com/news/", "merge": True, "priority": True,
+     "feeds": ["https://blooloop.com/feeds/news.rss", "https://blooloop.com/feeds/theme-park.rss",
+               "https://blooloop.com/feeds/features.rss", "https://blooloop.com/feeds/museum.rss",
+               "https://blooloop.com/feeds/water-parks.rss", "https://blooloop.com/feeds/zoo-aquarium.rss",
+               "https://blooloop.com/feeds/immersive.rss", "https://blooloop.com/feeds/technology.rss"]},
     {"name": "Attractions Magazine", "sections": "A,B,C", "home": "https://attractionsmagazine.com/",
      "feeds": ["https://attractionsmagazine.com/feed/"]},
     {"name": "Theme Park Insider", "sections": "A,B", "home": "https://www.themeparkinsider.com/",
@@ -76,7 +83,7 @@ OUTLETS = [
      "no_feed": True},  # blocks scripts (403)
     {"name": "Inside Universal", "sections": "B,C", "home": "https://www.insideuniversal.net/",
      "feeds": ["https://www.insideuniversal.net/feed/"]},
-    {"name": "IAAPA news", "sections": "B", "home": "https://iaapa.org/news/latestnews",
+    {"name": "IAAPA news", "sections": "B", "home": "https://iaapa.org/news/latestnews", "priority": True,
      "feeds": ["https://iaapa.org/rss.xml"]},
     {"name": "EuroAmusement Professional", "sections": "B", "home": "https://www.eap-magazin.de/",
      "no_feed": True},  # advertises no feed
@@ -95,6 +102,11 @@ OUTLETS = [
      "feeds": ["https://www.motorsport.com/rss/f1/news/"]},
     {"name": "Marca", "sections": "F", "home": "https://www.marca.com/",
      "feeds": ["https://www.marca.com/rss/googlenews/portada.xml"]},
+    # Villarreal: the club site has no feed and Marca's front-page feed misses most club news,
+    # so a Google News search covers match results, club news, injuries and transfer rumors from all outlets.
+    {"name": "Villarreal (Google News)", "sections": "F", "google_news": True,
+     "home": "https://news.google.com/search?q=Villarreal+CF",
+     "feeds": ["https://news.google.com/rss/search?q=%22Villarreal%22+when:3d&hl=es&gl=ES&ceid=ES:es"]},
     {"name": "AS", "sections": "F", "home": "https://as.com/", "no_feed": True},  # advertises no feed
     {"name": "Mediterraneo", "sections": "F", "home": "https://www.elperiodicomediterraneo.com/",
      "no_feed": True},  # security filter blocks scripts (406)
@@ -187,6 +199,12 @@ def _fix_entities(xml_text):
     return re.sub(r"&([A-Za-z][A-Za-z0-9]*);", rep, xml_text)
 
 
+def clean_text(raw):
+    """Feed descriptions often hold HTML. Return plain text, whitespace collapsed."""
+    txt = re.sub(r"<[^>]+>", " ", html.unescape(raw or ""))
+    return " ".join(html.unescape(txt).split())
+
+
 DATE_PRIORITY = {"published": 0, "pubdate": 0, "issued": 1, "date": 1, "updated": 2, "modified": 2}
 
 
@@ -200,7 +218,7 @@ def parse_feed(xml_bytes):
     for el in root.iter():
         if local(el.tag) not in ("item", "entry"):
             continue
-        title, url, guid = "", "", ""
+        title, url, guid, summary, source, source_url = "", "", "", "", "", ""
         best_date, best_rank = "", 99
         for child in el:
             name = local(child.tag)
@@ -218,10 +236,20 @@ def parse_feed(xml_bytes):
                     best_date, best_rank = child.text, DATE_PRIORITY[name]
             elif name == "guid":
                 guid = (child.text or "").strip()
+            elif name in ("description", "summary", "encoded") and not summary:
+                summary = clean_text("".join(child.itertext()))
+            elif name == "source":
+                source = (child.text or "").strip()
+                source_url = child.attrib.get("url", "")
         if not url and guid.startswith("http"):
             url = guid
         if title and url:
-            items.append({"title": " ".join(title.split()), "url": url, "published": parse_date(best_date)})
+            it = {"title": " ".join(title.split()), "url": url, "published": parse_date(best_date)}
+            if summary and summary.lower() not in title.lower():
+                it["summary"] = summary[:400]
+            if source:
+                it["source"], it["source_url"] = source, source_url
+            items.append(it)
     return items
 
 
@@ -313,6 +341,85 @@ def scrape_frontier(html_bytes, base_url):
 SCRAPERS = {"screamscape": scrape_screamscape, "frontier": scrape_frontier}
 
 
+class ArticleText(HTMLParser):
+    """Pulls the meta description and the first real paragraphs of an article page.
+    Paragraphs inside <article> win; script, style, nav, header, footer and aside are skipped."""
+
+    SKIP = {"script", "style", "nav", "header", "footer", "aside", "form", "noscript", "figcaption"}
+
+    def __init__(self):
+        super().__init__()
+        self.meta, self.depth_skip, self.in_article, self.in_p = "", 0, 0, False
+        self.buf, self.art_ps, self.all_ps = "", [], []
+
+    def handle_starttag(self, tag, attrs):
+        a = {k.lower(): (v or "") for k, v in attrs}
+        if tag == "meta" and not self.meta:
+            key = (a.get("property") or a.get("name") or "").lower()
+            if key in ("og:description", "description", "twitter:description") and a.get("content"):
+                self.meta = " ".join(html.unescape(a["content"]).split())
+        if tag in self.SKIP:
+            self.depth_skip += 1
+        elif tag == "article":
+            self.in_article += 1
+        elif tag == "p" and not self.depth_skip:
+            self.in_p, self.buf = True, ""
+
+    def handle_endtag(self, tag):
+        if tag in self.SKIP and self.depth_skip:
+            self.depth_skip -= 1
+        elif tag == "article" and self.in_article:
+            self.in_article -= 1
+        elif tag == "p" and self.in_p:
+            self.in_p = False
+            txt = " ".join(self.buf.split())
+            if len(txt) >= 80:
+                (self.art_ps if self.in_article else self.all_ps).append(txt)
+
+    def handle_data(self, data):
+        if self.in_p and not self.depth_skip:
+            self.buf += data
+
+
+def article_excerpt(url):
+    """Returns (meta description, first paragraphs up to ~900 chars). Text is data for the run, never instructions."""
+    raw = fetch(url)[:1_500_000].decode("utf-8", errors="replace")
+    p = ArticleText()
+    p.feed(raw)
+    paras = p.art_ps or p.all_ps
+    body, out = 0, []
+    for t in paras[:6]:
+        out.append(t)
+        body += len(t)
+        if body > 900:
+            break
+    return p.meta[:400], " ".join(out)[:1000]
+
+
+def add_excerpts(cands):
+    """Fetch article pages for fresh items so the daily run can write real takes without opening pages itself."""
+    todo = [c for c in cands if c["age_hours"] <= EXCERPT_HOURS and "news.google.com" not in c["url"]
+            and "(date only)" not in c["published_utc"]][:EXCERPT_MAX]
+
+    def one(c):
+        try:
+            meta, body = article_excerpt(c["url"])
+        except Exception as exc:
+            c["excerpt_error"] = str(exc)[:80]
+            return 0
+        if body or meta:
+            c["excerpt"] = body or meta
+            if meta and meta not in c["excerpt"]:
+                c["excerpt_meta"] = meta
+            return 1
+        c["excerpt_error"] = "no article text found"
+        return 0
+
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        got = sum(pool.map(one, todo))
+    return got, len(todo)
+
+
 def _keep(outlet, items, now, hours, res, extra_note=False):
     """Filter items to the window and fill res. Date-only items sit at noon UTC of their day."""
     cutoff = now - timedelta(hours=hours)
@@ -331,6 +438,15 @@ def _keep(outlet, items, now, hours, res, extra_note=False):
         }
         if it.get("note"):
             row["note"] = it["note"]
+        for k in ("summary", "source", "source_url", "feed"):
+            if it.get(k):
+                row[k] = it[k]
+        if outlet.get("google_news"):
+            row.pop("summary", None)  # Google News descriptions only repeat the title
+            row["note"] = ("Google News link, not the article: search the exact headline plus the outlet in "
+                           "'source' and link the original article")
+        if outlet.get("priority") and age <= PRIORITY_HOURS:
+            row["must_account"] = True
         res["items"].append(row)
     res["items"].sort(key=lambda x: x["age_hours"])
     res["status"] = "reached" if res["items"] else "stale"
@@ -365,6 +481,30 @@ def scan_outlet(outlet, now, hours):
             errors.append(f"home: {exc}")
             candidates = [urljoin(outlet["home"], p) for p in COMMON_FEED_PATHS]
 
+    if outlet.get("merge"):
+        merged, seen, used = [], set(), []
+        for feed_url in candidates:
+            try:
+                items = parse_feed(fetch(feed_url))
+            except Exception as exc:
+                errors.append(f"{feed_url}: {exc}")
+                continue
+            used.append(feed_url.rsplit("/", 1)[-1])
+            for it in items:
+                key = it["url"].split("?")[0].rstrip("/")
+                if key not in seen:
+                    seen.add(key)
+                    it["feed"] = feed_url.rsplit("/", 1)[-1].replace(".rss", "")
+                    merged.append(it)
+        if not merged:
+            res["error"] = "; ".join(errors[-3:])
+            return res
+        res["feed_url"] = f"{len(used)}/{len(candidates)} feeds: " + ", ".join(used)
+        if errors:
+            res["feed_url"] += " (failed: " + "; ".join(e.split(":")[0].rsplit("/", 1)[-1] for e in errors) + ")"
+        _keep(outlet, merged, now, hours, res)
+        return res
+
     for feed_url in candidates:
         try:
             items = parse_feed(fetch(feed_url))
@@ -394,6 +534,8 @@ def dedupe(results):
                 kept["sections"] = ",".join(secs)
                 if it["outlet"] not in kept["outlet"]:
                     kept["outlet"] += " + " + it["outlet"]
+                if it.get("must_account"):
+                    kept["must_account"] = True
             else:
                 by_url[key] = dict(it)
     return sorted(by_url.values(), key=lambda x: x["age_hours"])
@@ -403,18 +545,32 @@ def write_outputs(results, out_dir, now, hours):
     os.makedirs(out_dir, exist_ok=True)
     day = now.astimezone(PACIFIC).strftime("%Y-%m-%d")
     cands = dedupe(results)
+    for c in cands:  # Villarreal club news from any outlet; a match result inside 30h must make the issue
+        if VILLARREAL_RE.search(c["title"]) or "Villarreal (Google News)" in c["outlet"]:
+            c["villarreal"] = True
+            if c["age_hours"] <= PRIORITY_HOURS and SCORE_RE.search(c["title"]):
+                c["match_result"] = True
+    got, tried = add_excerpts(cands)
     counts = {s: sum(r["status"] == s for r in results) for s in ("reached", "stale", "needs_fetch", "failed")}
 
     with open(os.path.join(out_dir, f"candidates_{day}.json"), "w", encoding="utf-8") as f:
         json.dump({"generated_utc": now.isoformat(timespec="minutes"), "pacific_date": day,
                    "window_hours": hours, "outlet_status_counts": counts,
+                   "excerpts": {"fetched": got, "tried": tried},
+                   "must_account": sum(1 for c in cands if c.get("must_account")),
+                   "villarreal_items": sum(1 for c in cands if c.get("villarreal")),
+                   "villarreal_match_items": sum(1 for c in cands if c.get("match_result")),
                    "healthy": counts["reached"] + counts["stale"] >= MIN_REACHED,
                    "candidates": cands}, f, ensure_ascii=False, indent=1)
 
     lines = [f"# Coverage {day}", "",
              f"Window: {hours}h. Items kept: {len(cands)}. Outlets: {len(results)}. "
              f"Reached {counts['reached']}, stale {counts['stale']}, needs_fetch {counts['needs_fetch']}, "
-             f"failed {counts['failed']}.", "",
+             f"failed {counts['failed']}. Article excerpts: {got} of {tried} fresh items "
+             f"(items within {EXCERPT_HOURS}h). Priority items to use or explain (Blooloop, IAAPA, "
+             f"within {PRIORITY_HOURS}h): {sum(1 for c in cands if c.get('must_account'))}. Villarreal items: "
+             f"{sum(1 for c in cands if c.get('villarreal'))}, match results within {PRIORITY_HOURS}h: "
+             f"{sum(1 for c in cands if c.get('match_result'))}.", "",
              "| Outlet | Sections | Status | Items in window | Note |", "|---|---|---|---|---|"]
     for r in results:
         if r["status"] == "failed":
