@@ -49,13 +49,15 @@ except Exception:  # missing tz database: fall back to UTC dates
 UA = "Mozilla/5.0 (compatible; PasqualDailyScan/1.1)"
 TIMEOUT = 20
 MIN_REACHED = 10
+MARCA_KEEP = re.compile(r"\bF1\b|f[oó]rmula 1|alonso|aston martin|villarreal", re.I)
+MATCH_HOURS = 24         # a Villarreal result this fresh must run; older results were in yesterday's issue
 PRIORITY_HOURS = 30      # priority outlets (Blooloop, IAAPA): every item this fresh must be used or explained
 VILLARREAL_RE = re.compile(r"villarreal|submarino groguet|groguets|estadio de la cer[aá]mica", re.I)
 BOILER_RE = re.compile(r"^(for [\w .&'-]{2,30} fans\.|want to bookmark|this is read by an automated voice|sign up|subscribe)"
                        r"|has over \d+ years'? experience|graduated from the university", re.I)
-SCORE_RE = re.compile(r"\b\d{1,2}\s?-\s?\d{1,2}\b|\b(vence|gana|cae|pierde|empata|golea|derrota|victoria|empate|resumen|cr[oó]nica)\b", re.I)
+SCORE_RE = re.compile(r"\b\d{1,2}\s?[-–]\s?\d{1,2}\b|\b(vence|gana|cae|pierde|empata|golea|remonta|derrota|victoria|empate|resumen|cr[oó]nica)\b", re.I)
 EXCERPT_HOURS = 48       # article pages fetched for an excerpt when the item is this fresh
-EXCERPT_MAX = 260        # cap on article fetches per run
+EXCERPT_MAX = 340        # cap on article fetches per run
 COMMON_FEED_PATHS = ["/feed/", "/feed", "/rss", "/rss.xml", "/atom.xml", "/index.xml"]
 
 # sections: A Disney Parks, B Industry, C Rumors, D Sim/Gaming, E Tech, F F1/Villarreal, G Film/TV
@@ -106,9 +108,10 @@ OUTLETS = [
      "feeds": ["https://www.marca.com/rss/googlenews/portada.xml"]},
     # Villarreal: the club site has no feed and Marca's front-page feed misses most club news,
     # so a Google News search covers match results, club news, injuries and transfer rumors from all outlets.
-    {"name": "Villarreal (Google News)", "sections": "F", "google_news": True,
+    {"name": "Villarreal (Google News)", "sections": "F", "google_news": True, "merge": True,
      "home": "https://news.google.com/search?q=Villarreal+CF",
-     "feeds": ["https://news.google.com/rss/search?q=%22Villarreal%22+when:3d&hl=es&gl=ES&ceid=ES:es"]},
+     "feeds": ["https://news.google.com/rss/search?q=%22Villarreal%22+when:1d&hl=es&gl=ES&ceid=ES:es",
+               "https://news.google.com/rss/search?q=Villarreal+(fichaje+OR+lesi%C3%B3n+OR+renovaci%C3%B3n+OR+rumor)+when:2d&hl=es&gl=ES&ceid=ES:es"]},
     {"name": "AS", "sections": "F", "home": "https://as.com/", "no_feed": True},  # advertises no feed
     {"name": "Mediterraneo", "sections": "F", "home": "https://www.elperiodicomediterraneo.com/",
      "no_feed": True},  # security filter blocks scripts (406)
@@ -122,7 +125,7 @@ OUTLETS = [
 def fetch(url):
     req = Request(url, headers={"User-Agent": UA, "Accept": "*/*"})
     with urlopen(req, timeout=TIMEOUT) as resp:
-        return resp.read()
+        return resp.read(4_000_000)  # cap: a page or feed larger than 4 MB is cut
 
 
 class FeedLinkFinder(HTMLParser):
@@ -352,6 +355,9 @@ def scrape_frontier(html_bytes, base_url):
 SCRAPERS = {"screamscape": scrape_screamscape, "frontier": scrape_frontier}
 
 
+VOID = {"meta", "link", "img", "br", "hr", "input", "source", "wbr", "area", "base", "col", "embed", "track"}
+
+
 class ArticleText(HTMLParser):
     """Pulls the meta description and the first real paragraphs of an article page.
     Paragraphs inside <article> win; script, style, nav, header, footer and aside are skipped."""
@@ -361,6 +367,7 @@ class ArticleText(HTMLParser):
     def __init__(self):
         super().__init__()
         self.meta, self.depth_skip, self.in_article, self.in_p = "", 0, 0, False
+        self.skip_stack = []
         self.buf, self.art_ps, self.all_ps = "", [], []
 
     def handle_starttag(self, tag, attrs):
@@ -369,15 +376,20 @@ class ArticleText(HTMLParser):
             key = (a.get("property") or a.get("name") or "").lower()
             if key in ("og:description", "description", "twitter:description") and a.get("content"):
                 self.meta = " ".join(html.unescape(a["content"]).split())
-        if tag in self.SKIP:
+        style = a.get("style", "").replace(" ", "").lower()
+        hidden = ("display:none" in style or "visibility:hidden" in style or "hidden" in a
+                  or a.get("aria-hidden") == "true")
+        if tag in self.SKIP or (hidden and tag not in VOID):
             self.depth_skip += 1
+            self.skip_stack.append(tag)
         elif tag == "article":
             self.in_article += 1
         elif tag == "p" and not self.depth_skip:
             self.in_p, self.buf = True, ""
 
     def handle_endtag(self, tag):
-        if tag in self.SKIP and self.depth_skip:
+        if self.skip_stack and tag == self.skip_stack[-1]:
+            self.skip_stack.pop()
             self.depth_skip -= 1
         elif tag == "article" and self.in_article:
             self.in_article -= 1
@@ -403,7 +415,10 @@ def article_excerpt(url):
 def add_excerpts(cands):
     """Fetch article pages for fresh items so the daily run can write real takes without opening pages itself."""
     todo = [c for c in cands if c["age_hours"] <= EXCERPT_HOURS and "news.google.com" not in c["url"]
-            and "(date only)" not in c["published_utc"]][:EXCERPT_MAX]
+            and "(date only)" not in c["published_utc"]
+            and not (c["outlet"] == "Marca" and not MARCA_KEEP.search(c["title"]))]
+    todo.sort(key=lambda c: (not c.get("must_account"), not c.get("villarreal"), c["age_hours"]))
+    todo = todo[:EXCERPT_MAX]
 
     pages = {}
 
@@ -527,9 +542,10 @@ def scan_outlet(outlet, now, hours):
             res["error"] = "; ".join(errors[-3:])
             return res
         res["feed_url"] = f"{len(used)}/{len(candidates)} feeds: " + ", ".join(used)
-        if errors:
-            res["feed_url"] += " (failed: " + "; ".join(e.split(":")[0].rsplit("/", 1)[-1] for e in errors) + ")"
         _keep(outlet, merged, now, hours, res)
+        if errors:
+            res["feed_url"] += " FAILED: " + ", ".join(e.split(": ")[0] for e in errors)
+            res["status"] = "partial"
         return res
 
     for feed_url in candidates:
@@ -575,10 +591,10 @@ def write_outputs(results, out_dir, now, hours):
     for c in cands:  # Villarreal club news from any outlet; a match result inside 30h must make the issue
         if VILLARREAL_RE.search(c["title"]) or "Villarreal (Google News)" in c["outlet"]:
             c["villarreal"] = True
-            if c["age_hours"] <= PRIORITY_HOURS and SCORE_RE.search(c["title"]):
+            if c["age_hours"] <= MATCH_HOURS and SCORE_RE.search(c["title"]):
                 c["match_result"] = True
     got, tried = add_excerpts(cands)
-    counts = {s: sum(r["status"] == s for r in results) for s in ("reached", "stale", "needs_fetch", "failed")}
+    counts = {s: sum(r["status"] == s for r in results) for s in ("reached", "partial", "stale", "needs_fetch", "failed")}
 
     with open(os.path.join(out_dir, f"candidates_{day}.json"), "w", encoding="utf-8") as f:
         json.dump({"generated_utc": now.isoformat(timespec="minutes"), "pacific_date": day,
@@ -587,16 +603,16 @@ def write_outputs(results, out_dir, now, hours):
                    "must_account": sum(1 for c in cands if c.get("must_account")),
                    "villarreal_items": sum(1 for c in cands if c.get("villarreal")),
                    "villarreal_match_items": sum(1 for c in cands if c.get("match_result")),
-                   "healthy": counts["reached"] + counts["stale"] >= MIN_REACHED,
+                   "healthy": counts["reached"] + counts["partial"] + counts["stale"] >= MIN_REACHED,
                    "candidates": cands}, f, ensure_ascii=False, indent=1)
 
     lines = [f"# Coverage {day}", "",
              f"Window: {hours}h. Items kept: {len(cands)}. Outlets: {len(results)}. "
-             f"Reached {counts['reached']}, stale {counts['stale']}, needs_fetch {counts['needs_fetch']}, "
+             f"Reached {counts['reached']}, partial {counts['partial']}, stale {counts['stale']}, needs_fetch {counts['needs_fetch']}, "
              f"failed {counts['failed']}. Article excerpts: {got} of {tried} fresh items "
              f"(items within {EXCERPT_HOURS}h). Priority items to use or explain (Blooloop, IAAPA, "
              f"within {PRIORITY_HOURS}h): {sum(1 for c in cands if c.get('must_account'))}. Villarreal items: "
-             f"{sum(1 for c in cands if c.get('villarreal'))}, match results within {PRIORITY_HOURS}h: "
+             f"{sum(1 for c in cands if c.get('villarreal'))}, match results within {MATCH_HOURS}h: "
              f"{sum(1 for c in cands if c.get('match_result'))}.", "",
              "| Outlet | Sections | Status | Items in window | Note |", "|---|---|---|---|---|"]
     for r in results:
@@ -631,7 +647,7 @@ def main(argv=None):
     if failed:
         print("Failed: " + ", ".join(failed))
     print(f"Files written to {os.path.abspath(args.out)}")
-    if counts["reached"] + counts["stale"] < MIN_REACHED:
+    if counts["reached"] + counts["partial"] + counts["stale"] < MIN_REACHED:
         print(f"WARNING: fewer than {MIN_REACHED} outlets read. Network problem?", file=sys.stderr)
         return 1
     return 0

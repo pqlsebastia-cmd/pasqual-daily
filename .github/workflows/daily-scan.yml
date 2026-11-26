@@ -5,9 +5,6 @@ on:
     - cron: "7 13 * * *"   # 13:07 UTC = 5:07 AM Pacific in winter, 6:07 AM in summer.
                            # GitHub often starts scheduled jobs late; this leaves 2+ hours before the 8:45 task.
   workflow_dispatch: {}    # lets you run it by hand from the Actions tab
-  push:
-    branches: [main]
-    paths: ["rss_scan.py", ".github/workflows/daily-scan.yml"]   # also runs when the scanner itself changes
 
 permissions:
   contents: write

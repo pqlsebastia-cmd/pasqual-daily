@@ -56,8 +56,8 @@ def tags(s):
     mode = TAGGED.get(s["section"])
     t = []
     if mode == "both":
-        t.append("#" + s["region"].replace(" ", ""))
-    if mode in ("both", "family") and s["family"] not in ("None", ""):
+        t.append("#" + (s.get("region") or "Global").replace(" ", ""))
+    if mode in ("both", "family") and (s.get("family") or "None") not in ("None", ""):
         t.append("#" + s["family"])
     return t
 
@@ -65,11 +65,11 @@ def tags(s):
 def card(s):
     col = SECTIONS[s["section"]][1]
     meta = "&nbsp; ".join(f'<span style="color:{col};font-weight:700;">{e(x)}</span>' for x in tags(s))
-    if "Unconfirmed" in s.get("flags", ""):
+    if "Unconfirmed" in (s.get("flags") or ""):
         meta += ("&nbsp; " if meta else "") + '<span style="color:#8E1F2F;font-weight:800;letter-spacing:0.5px;">UNCONFIRMED</span>'
     meta += ("&nbsp; " if meta else "") + e(s["emoji"])
     take = s["take"]
-    if s.get("flags", "").startswith("Update:") and s["flags"][7:].strip() not in take:
+    if (s.get("flags") or "").startswith("Update:") and s["flags"][7:].strip() not in take:
         take = take.rstrip() + " " + s["flags"][7:].strip()
     return (
         f'<tr><td style="padding:18px 0;border-top:1px solid #E6E2DA;"><table {T}><tr>'
@@ -111,11 +111,22 @@ def part(title):
 
 
 def skipped_rows(data):
-    """Priority items (Blooloop, IAAPA) the run did not use, with its reason, so nothing disappears silently."""
-    sk = data.get("skipped", [])
+    """Priority items (Blooloop, IAAPA) the run did not use, with its reason, for the plain-text footer."""
+    sk = data.get("skipped") or []
     if not sk:
         return []
-    return [["Not used from Blooloop and IAAPA", "; ".join(f'{x.get("title", "")[:70]} ({x.get("reason", "")})' for x in sk)]]
+    return [["Not used from Blooloop and IAAPA", "; ".join(f'{(x.get("title") or "")[:70]} ({x.get("reason") or ""}) {x.get("url") or ""}' for x in sk)]]
+
+
+def skipped_html(data):
+    """Same list in the email, each headline linked, so the Blooloop newsletter is fully replaced."""
+    sk = data.get("skipped") or []
+    if not sk:
+        return ""
+    items = "".join(f'<li style="margin:0 0 4px 0;"><a href="{e(x.get("url") or "")}" style="color:#3E454B;">{e((x.get("title") or "")[:90])}</a> '
+                    f'<span style="color:#8A9197;">({e(x.get("reason") or "")})</span></li>' for x in sk)
+    return (f'<p style="margin:10px 0 4px 0;"><b style="color:#111417;">Also from Blooloop and IAAPA, not in today\'s picks:</b></p>'
+            f'<ul style="margin:0;padding-left:18px;">{items}</ul>')
 
 
 def build(data):
@@ -130,8 +141,8 @@ def build(data):
         f'<td style="font-family:{SANS};font-size:14px;color:#111417;padding:4px 0;line-height:20px;">{e(s["headline"])}</td></tr>' for s in top)
     test = (f'<tr><td style="padding:10px 16px 0 16px;font-family:{SANS};font-size:12px;font-weight:700;color:#8E1F2F;">'
             f'TEST ISSUE: not logged to Notion.</td></tr>') if data.get("test") else ""
-    cov_rows = list(data.get("coverage", [])) + skipped_rows(data)
-    cov = "".join(f'<p style="margin:0 0 8px 0;"><b style="color:#111417;">{e(a)}:</b> {e(b)}</p>' for a, b in cov_rows)
+    cov_rows = list(data.get("coverage") or []) + skipped_rows(data)
+    cov = "".join(f'<p style="margin:0 0 8px 0;"><b style="color:#111417;">{e(str(a))}:</b> {e(str(b))}</p>' for a, b in (data.get("coverage") or [])) + skipped_html(data)
     counts = " · ".join(f"{k} {len(by[k])}" for k in SECTIONS)
     body = (
         f'<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
