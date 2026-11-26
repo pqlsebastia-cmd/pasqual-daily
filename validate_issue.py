@@ -108,6 +108,41 @@ def check_html(h, stories):
     return E
 
 
+DISNEY_RE = re.compile(r"disney|imagineer|epcot|magic kingdom|hollywood studios|animal kingdom|\bdca\b|disney cruise|\bdcl\b", re.I)
+RIVAL_RE = re.compile(r"universal|epic universe|six flags|seaworld|busch gardens|merlin|legoland|alton towers|cedar fair|dollywood|"
+                      r"europa.?park|efteling|port ?aventura|puy du fou|chimelong|fantawild|miral|sea ?world|knott|hersheypark", re.I)
+APPLE_RE = re.compile(r"apple|iphone|ipad|\bmac|macos|ios\b|airpods|vision pro|watchos|app store|tim cook", re.I)
+DIGEST, COFFEE = set("ABCD"), set("EFG")
+
+
+def check_placement(stories, cands):
+    """Every story must sit in the right section: Disney only in A, no Disney-only story in B,
+    Villarreal and Apple emoji only on those stories, and park outlets' items never land in Tech, F1 or Film."""
+    E = []
+    by_url = {norm(c["url"]): c for c in (cands or [])}
+    for s in stories:
+        sec, txt = s.get("section"), " ".join(str(s.get(k) or "") for k in ("headline", "take", "url"))
+        who = f"story {s.get('n')} ({(s.get('headline') or '?')[:40]})"
+        if sec == "A" and RIVAL_RE.search(txt) and not DISNEY_RE.search(txt) and s.get("family") != "Miral":
+            E.append(f"{who}: names a competitor but no Disney park; move it to B")
+        if sec == "B" and DISNEY_RE.search(s.get("headline") or "") and not RIVAL_RE.search(txt):
+            E.append(f"{who}: a Disney story in B; move it to A or G")
+        if s.get("emoji") == "⚽" and "villarreal" not in txt.lower():
+            E.append(f"{who}: ⚽ is only for Villarreal stories")
+        if s.get("emoji") == "🍏" and not APPLE_RE.search(txt):
+            E.append(f"{who}: 🍏 is only for Apple stories")
+        if sec != "F" and re.search(r"villarreal", s.get("headline") or "", re.I):
+            E.append(f"{who}: Villarreal stories go in F")
+        c = by_url.get(norm(s.get("url")))
+        if c:
+            secs = set((c.get("sections") or "").replace(" ", "").split(","))
+            if secs and secs <= DIGEST and sec in COFFEE and not DISNEY_RE.search(txt):
+                E.append(f"{who}: a theme park outlet's item placed in {sec}")
+            if secs and secs <= COFFEE and sec in DIGEST and sec != "A":
+                E.append(f"{who}: a {','.join(sorted(secs))} outlet's item placed in {sec}")
+    return E
+
+
 def norm(u):
     p = urlparse(u or "")
     return (p.netloc.replace("www.", "") + p.path).rstrip("/").lower()
@@ -164,6 +199,7 @@ if __name__ == "__main__":
     except (KeyError, ValueError):
         issue_date = None
     errors = check_records(stories, issue_date) + check_html(h, stories)
+    cands = None
     if len(sys.argv) > 3:
         try:
             cands = json.load(open(sys.argv[3], encoding="utf-8")).get("candidates", [])
@@ -172,6 +208,7 @@ if __name__ == "__main__":
             print(f"WARNING: scan file not readable ({exc}); scan checks skipped. Say so in the coverage notes.")
         if cands is not None:
             errors += check_scan(data, stories, cands, issue_date)
+    errors += check_placement(stories, cands)
     if issue_date is None:
         errors.append('date must look like "Thursday, November 26, 2026"')
     if not data.get("coverage"):
