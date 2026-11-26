@@ -115,7 +115,7 @@ def skipped_rows(data):
     sk = data.get("skipped") or []
     if not sk:
         return []
-    return [["Not used from Blooloop and IAAPA", "; ".join(f'{(x.get("title") or "")[:70]} ({x.get("reason") or ""}) {x.get("url") or ""}' for x in sk)]]
+    return [["Not used from Blooloop, IAAPA and gaming sources", "; ".join(f'{(x.get("title") or "")[:70]} ({x.get("reason") or ""}) {x.get("url") or ""}' for x in sk)]]
 
 
 def skipped_html(data):
@@ -125,7 +125,7 @@ def skipped_html(data):
         return ""
     items = "".join(f'<li style="margin:0 0 4px 0;"><a href="{e(x.get("url") or "")}" style="color:#3E454B;">{e((x.get("title") or "")[:90])}</a> '
                     f'<span style="color:#8A9197;">({e(x.get("reason") or "")})</span></li>' for x in sk)
-    return (f'<p style="margin:10px 0 4px 0;"><b style="color:#111417;">Also from Blooloop and IAAPA, not in today\'s picks:</b></p>'
+    return (f'<p style="margin:10px 0 4px 0;"><b style="color:#111417;">Also from Blooloop, IAAPA and gaming sources, not in today\'s picks:</b></p>'
             f'<ul style="margin:0;padding-left:18px;">{items}</ul>')
 
 

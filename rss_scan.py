@@ -92,9 +92,18 @@ OUTLETS = [
     {"name": "EuroAmusement Professional", "sections": "B", "home": "https://www.eap-magazin.de/",
      "no_feed": True},  # advertises no feed
     {"name": "Screamscape", "sections": "B,C", "home": "https://www.screamscape.com/", "scrape": "screamscape"},
-    {"name": "Planet Coaster news (Frontier)", "sections": "D", "home": "https://www.planetcoaster.com/news",
+    {"name": "Planet Coaster news (Frontier)", "sections": "D", "home": "https://www.planetcoaster.com/news", "priority_hours": 72,
      "scrape": "frontier"},
-    {"name": "Steam news: Planet Coaster 2", "sections": "D", "home": "https://store.steampowered.com/app/2688950/",
+    # Gaming: low volume, so every item in the window must be used or explained (priority_hours = full window).
+    {"name": "Sim games (Google News)", "sections": "D", "google_news": True, "merge": True, "priority_hours": 72,
+     "home": "https://news.google.com/search?q=Planet+Coaster+2",
+     "feeds": ["https://news.google.com/rss/search?q=%22Planet+Coaster%22+when:3d&hl=en-US&gl=US&ceid=US:en",
+               "https://news.google.com/rss/search?q=(Parkitect+OR+%22Theme+Park+Tycoon+2%22+OR+Metaparks+OR+%22NoLimits+2%22+OR+%22RollerCoaster+Tycoon%22)+when:3d&hl=en-US&gl=US&ceid=US:en"]},
+    {"name": "Steam news: Parkitect", "sections": "D", "home": "https://store.steampowered.com/app/453090/", "priority_hours": 72,
+     "feeds": ["https://store.steampowered.com/feeds/news/app/453090/"]},
+    {"name": "Steam news: NoLimits 2", "sections": "D", "home": "https://store.steampowered.com/app/301320/", "priority_hours": 72,
+     "feeds": ["https://store.steampowered.com/feeds/news/app/301320/"]},
+    {"name": "Steam news: Planet Coaster 2", "sections": "D", "home": "https://store.steampowered.com/app/2688950/", "priority_hours": 72,
      "feeds": ["https://store.steampowered.com/feeds/news/app/2688950/"]},
     # r/PlanetCoaster removed: Reddit refuses scripts (404 / 429). Community leads come from searches.
     {"name": "9to5Mac", "sections": "E", "home": "https://9to5mac.com/", "feeds": ["https://9to5mac.com/feed/"]},
@@ -487,7 +496,7 @@ def _keep(outlet, items, now, hours, res, extra_note=False):
             row.pop("summary", None)  # Google News descriptions only repeat the title
             row["note"] = ("Google News link, not the article: search the exact headline plus the outlet in "
                            "'source' and link the original article")
-        if outlet.get("priority") and age <= PRIORITY_HOURS:
+        if (outlet.get("priority") and age <= PRIORITY_HOURS) or age <= outlet.get("priority_hours", -1):
             row["must_account"] = True
         res["items"].append(row)
     res["items"].sort(key=lambda x: x["age_hours"])
