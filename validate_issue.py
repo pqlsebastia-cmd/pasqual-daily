@@ -157,7 +157,10 @@ def check_placement(stories, cands):
 
 def norm(u):
     p = urlparse(u or "")
-    return (p.netloc.replace("www.", "") + p.path).rstrip("/").lower()
+    key = (p.netloc.replace("www.", "") + p.path).rstrip("/").lower()
+    if "youtube.com" in p.netloc or "news.google.com" in p.netloc:
+        key += "?" + p.query  # the query is the item id there
+    return key
 
 
 def check_scan(data, stories, cands, issue_date):

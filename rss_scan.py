@@ -227,6 +227,13 @@ def _fix_entities(xml_text):
     return re.sub(r"&([A-Za-z][A-Za-z0-9]*);", rep, xml_text)
 
 
+def url_key(u):
+    """Dedupe key: URL without query string, except where the query names the item (YouTube ?v=)."""
+    if "youtube.com/watch" in u or "news.google.com" in u:
+        return strip_tracking(u)
+    return u.split("?")[0].rstrip("/")
+
+
 def strip_tracking(u):
     """Drop utm_* tracking parameters so links are clean and match the archive."""
     if "?" not in u or "news.google.com" in u:
@@ -591,7 +598,7 @@ def scan_outlet(outlet, now, hours):
             used.append(feed_url.rsplit("/", 1)[-1][-26:] + f" ({len(items)}, newest {max(dates):%m-%d})" if dates
                         else feed_url.rsplit("/", 1)[-1][-26:] + f" ({len(items)}, undated)")
             for it in items:
-                key = it["url"].split("?")[0].rstrip("/")
+                key = url_key(it["url"])
                 if key not in seen:
                     seen.add(key)
                     it["feed"] = feed_url.rsplit("/", 1)[-1].replace(".rss", "")
@@ -628,7 +635,7 @@ def dedupe(results):
     by_url = {}
     for r in results:
         for it in r["items"]:
-            key = it["url"].split("?")[0].rstrip("/")
+            key = url_key(it["url"])
             if key in by_url:
                 kept = by_url[key]
                 secs = sorted(set(kept["sections"].split(",")) | set(it["sections"].split(",")))
