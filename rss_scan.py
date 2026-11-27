@@ -677,7 +677,7 @@ def write_outputs(results, out_dir, now, hours):
         elif r["status"] == "needs_fetch":
             note = "open page directly: " + r["page"]
         elif r["status"] == "stale":
-            note = f"nothing in window ({r['total_items']} older items); check page: {r['page']}"
+            note = f"nothing in window ({r['total_items']} older items); " + (r['feed_url'] if 'feeds:' in r.get('feed_url', '') else f"check page: {r['page']}")
         else:
             note = r["feed_url"]
         lines.append(f"| {r['name']} | {r['sections']} | {r['status']} | {len(r['items'])} | {note} |")
