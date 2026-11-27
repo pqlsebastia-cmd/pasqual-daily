@@ -115,8 +115,8 @@ OUTLETS = [
                "https://www.youtube.com/feeds/videos.xml?channel_id=UCpiDZsC79K1_tWqHMgRW3Pw",  # Tagi
                "https://www.youtube.com/feeds/videos.xml?channel_id=UCc7iDc94kkK7C_nG19Y7A9g",  # PixelWess89
      ]},
-    # Park news creators: leads for A, B and C (reveals, construction, rumors). Link the written source when one exists.
-    {"name": "Park news creators (YouTube)", "sections": "A,B,C", "merge": True, "home": "https://www.youtube.com/@DSNYNewscast",
+    # Park news creators: leads for A and B only (reveals, construction), not a rumor source. Link the written source when one exists.
+    {"name": "Park news creators (YouTube)", "sections": "A,B", "merge": True, "home": "https://www.youtube.com/@DSNYNewscast",
      "feeds": [
                "https://www.youtube.com/feeds/videos.xml?channel_id=UCRH49DSFyl8oPwsiHyZ9O0g",  # DSNY Newscast
                "https://www.youtube.com/feeds/videos.xml?channel_id=UCy9i4O3Bvdc5fHG6LgtnP5g",  # Theme Park Stop
