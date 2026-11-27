@@ -31,11 +31,13 @@ import html
 import json
 import os
 import re
+import time
 import sys
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 from html.parser import HTMLParser
+from urllib.error import HTTPError
 from urllib.parse import urljoin, urlparse
 from urllib.request import Request, urlopen
 import xml.etree.ElementTree as ET
@@ -145,10 +147,18 @@ OUTLETS = [
 ]
 
 
-def fetch(url):
-    req = Request(url, headers={"User-Agent": UA, "Accept": "*/*"})
-    with urlopen(req, timeout=TIMEOUT) as resp:
-        return resp.read(4_000_000)  # cap: a page or feed larger than 4 MB is cut
+def fetch(url, tries=3):
+    """GET with a size cap. Google News and Reddit answer 429/503 when busy, so those retry with a pause."""
+    for n in range(tries):
+        req = Request(url, headers={"User-Agent": UA, "Accept": "*/*"})
+        try:
+            with urlopen(req, timeout=TIMEOUT) as resp:
+                return resp.read(4_000_000)  # cap: a page or feed larger than 4 MB is cut
+        except HTTPError as exc:
+            if exc.code in (429, 503) and n < tries - 1:
+                time.sleep(15 * (n + 1))
+                continue
+            raise
 
 
 class FeedLinkFinder(HTMLParser):
