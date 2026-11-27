@@ -99,6 +99,14 @@ OUTLETS = [
      "home": "https://news.google.com/search?q=Planet+Coaster+2",
      "feeds": ["https://news.google.com/rss/search?q=%22Planet+Coaster%22+when:3d&hl=en-US&gl=US&ceid=US:en",
                "https://news.google.com/rss/search?q=(Parkitect+OR+%22Theme+Park+Tycoon+2%22+OR+Metaparks+OR+%22NoLimits+2%22+OR+%22RollerCoaster+Tycoon%22)+when:3d&hl=en-US&gl=US&ceid=US:en"]},
+    # Creators Pasqual follows: leads for D. A video counts only with an official tie (preview access, teaser, reveal);
+    # otherwise it stays a lead, Unconfirmed, or is skipped as creator chatter.
+    {"name": "Sim creators (YouTube)", "sections": "D", "merge": True, "priority_hours": 30, "home": "https://www.youtube.com/@PlanetCoaster",
+     "youtube": ["PlanetCoaster", "BenjisAdventures", "RudiRennkamel", "NerdChacho", "Geekism", "Channel5Gaming",
+                 "DigitalDan", "Silvarret", "PixelWess", "MaskedBandit", "JLWGames", "Corvus"]},
+    {"name": "Reddit (sim games)", "sections": "D", "merge": True, "priority_hours": 30, "home": "https://www.reddit.com/r/PlanetCoaster/",
+     "feeds": ["https://www.reddit.com/r/PlanetCoaster/top/.rss?t=week", "https://www.reddit.com/r/ThemeParkTycoon2/top/.rss?t=week",
+               "https://www.reddit.com/r/Parkitect/top/.rss?t=week"]},
     {"name": "Steam news: Parkitect", "sections": "D", "home": "https://store.steampowered.com/app/453090/", "priority_hours": 72,
      "feeds": ["https://store.steampowered.com/feeds/news/app/453090/"]},
     {"name": "Steam news: NoLimits 2", "sections": "D", "home": "https://store.steampowered.com/app/301320/", "priority_hours": 72,
@@ -275,6 +283,10 @@ def parse_feed(xml_bytes):
                 guid = (child.text or "").strip()
             elif name in ("description", "summary", "encoded") and not summary:
                 summary = clean_text("".join(child.itertext()))
+            elif name == "group" and not summary:
+                for g in child:
+                    if local(g.tag) == "description":
+                        summary = clean_text("".join(g.itertext()))[:600]
             elif name == "source":
                 source = (child.text or "").strip()
                 source_url = child.attrib.get("url", "")
@@ -539,13 +551,28 @@ def scan_outlet(outlet, now, hours):
 
     candidates = list(outlet.get("feeds", []))
     errors = []
-    if not candidates:
+    if not candidates and not outlet.get("youtube"):
         try:
             candidates = discover_feeds(fetch(outlet["home"]), outlet["home"])
         except Exception as exc:
             errors.append(f"home: {exc}")
             candidates = [urljoin(outlet["home"], p) for p in COMMON_FEED_PATHS]
 
+    if outlet.get("youtube") and not outlet.get("feeds"):
+        feeds, bad = [], []
+        for h in outlet["youtube"]:
+            try:
+                page = fetch(f"https://www.youtube.com/@{h}/videos")[:600_000].decode("utf-8", "replace")
+                m = re.search(r'"(?:externalId|channelId)":"(UC[\w-]{22})"', page) or re.search(r"channel_id=(UC[\w-]{22})", page)
+                if m:
+                    feeds.append(f"https://www.youtube.com/feeds/videos.xml?channel_id={m.group(1)}")
+                else:
+                    bad.append(h)
+            except Exception:
+                bad.append(h)
+        candidates = feeds
+        if bad:
+            errors.append("handles not found: " + ", ".join(bad))
     if outlet.get("merge"):
         merged, seen, used = [], set(), []
         for feed_url in candidates:
