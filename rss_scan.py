@@ -236,7 +236,21 @@ def parse_feed(xml_bytes):
     try:
         root = ET.fromstring(xml_bytes)
     except ET.ParseError:
-        root = ET.fromstring(_fix_entities(xml_bytes.decode("utf-8", errors="replace")).encode("utf-8"))
+        text = _fix_entities(xml_bytes.decode("utf-8", errors="replace"))
+        try:
+            root = ET.fromstring(text.encode("utf-8"))
+        except ET.ParseError:
+            # Broken feed (e.g. one bad item or a stray tag): parse each item on its own and keep the good ones.
+            good = []
+            for m in re.finditer(r"<(item|entry)\b.*?</\1>", text, re.S):
+                try:
+                    ET.fromstring(re.sub(r"<(\w+):", r"<\1_", re.sub(r"</(\w+):", r"</\1_", m.group(0))).encode("utf-8"))
+                    good.append(re.sub(r"<(\w+):", r"<\1_", re.sub(r"</(\w+):", r"</\1_", m.group(0))))
+                except ET.ParseError:
+                    continue
+            if not good:
+                raise
+            root = ET.fromstring(("<rss><channel>" + "".join(good) + "</channel></rss>").encode("utf-8"))
     items = []
     for el in root.iter():
         if local(el.tag) not in ("item", "entry"):

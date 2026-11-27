@@ -115,6 +115,10 @@ APPLE_RE = re.compile(r"apple|iphone|ipad|\bmac|macos|ios\b|airpods|vision pro|w
 DIGEST, COFFEE = set("ABCD"), set("EFG")
 
 
+from datetime import date as _date
+ISSUE_DAY = None
+
+
 def check_placement(stories, cands):
     """Every story must sit in the right section: Disney only in A, no Disney-only story in B,
     Villarreal and Apple emoji only on those stories, and park outlets' items never land in Tech, F1 or Film."""
@@ -133,6 +137,14 @@ def check_placement(stories, cands):
             E.append(f"{who}: 🍏 is only for Apple stories")
         if sec != "F" and re.search(r"villarreal", s.get("headline") or "", re.I):
             E.append(f"{who}: Villarreal stories go in F")
+        m = re.search(r"/(20\d\d)[/-](\d{1,2})[/-](\d{1,2})/", s.get("url") or "")
+        if m and ISSUE_DAY and s.get("category") != "Deep Dive":
+            try:
+                age = (ISSUE_DAY - _date(int(m[1]), int(m[2]), int(m[3]))).days
+                if age > 3:
+                    E.append(f"{who}: the article URL is dated {m[1]}-{m[2]}-{m[3]}, {age} days old (limit 3 days unless Deep Dive)")
+            except ValueError:
+                pass
         c = by_url.get(norm(s.get("url")))
         if c:
             secs = set((c.get("sections") or "").replace(" ", "").split(","))
@@ -208,6 +220,7 @@ if __name__ == "__main__":
             print(f"WARNING: scan file not readable ({exc}); scan checks skipped. Say so in the coverage notes.")
         if cands is not None:
             errors += check_scan(data, stories, cands, issue_date)
+    ISSUE_DAY = issue_date
     errors += check_placement(stories, cands)
     if issue_date is None:
         errors.append('date must look like "Thursday, November 26, 2026"')
