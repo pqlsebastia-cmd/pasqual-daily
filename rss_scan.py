@@ -83,8 +83,9 @@ OUTLETS = [
      "feeds": ["https://www.themeparkinsider.com/news/rss.xml"]},
     {"name": "ParkStop", "sections": "A,C", "home": "https://orlandoparkstop.com/",
      "feeds": ["https://orlandoparkstop.com/feed/"]},
-    {"name": "Boardwalk Times", "sections": "A,C", "home": "https://boardwalkstoriesfromtheseashore.substack.com/",
-     "feeds": ["https://boardwalkstoriesfromtheseashore.substack.com/feed"]},
+    {"name": "Boardwalk Times", "sections": "A,C", "merge": True, "home": "https://boardwalkstoriesfromtheseashore.substack.com/",
+     "feeds": ["https://boardwalkstoriesfromtheseashore.substack.com/feed",  # Substack often answers 403 to the scan
+               "https://news.google.com/rss/search?q=%22Boardwalk+Times%22+theme+park+when:3d&hl=en-US&gl=US&ceid=US:en"]},
     {"name": "Orlando Business Journal", "sections": "A,B", "home": "https://www.bizjournals.com/orlando/",
      "no_feed": True},  # blocks scripts (403)
     {"name": "Inside Universal", "sections": "B,C", "home": "https://www.insideuniversal.net/",
@@ -116,10 +117,19 @@ OUTLETS = [
                "https://www.youtube.com/feeds/videos.xml?channel_id=UCc7iDc94kkK7C_nG19Y7A9g",  # PixelWess89
      ]},
     # Park news creators: leads for A and B only (reveals, construction), not a rumor source. Link the written source when one exists.
-    {"name": "Park news creators (YouTube)", "sections": "A,B", "merge": True, "home": "https://www.youtube.com/@DSNYNewscast",
+    {"name": "Theme Park Stop (YouTube, Alicia Stella)", "sections": "A,B,C", "home": "https://www.youtube.com/@ThemeParkStop",
+     "feeds": ["https://www.youtube.com/feeds/videos.xml?channel_id=UCy9i4O3Bvdc5fHG6LgtnP5g"]},
+    # Rumor Watch: X/Twitter cannot be read by the scan, so these cover the same people and threads.
+    {"name": "Scott Gustin", "sections": "A,C", "merge": True, "home": "https://scottgustin.substack.com/",
+     "feeds": ["https://bsky.app/profile/scottgustin.com/rss", "https://scottgustin.substack.com/feed"]},
+    {"name": "WDWMagic forums", "sections": "A,C", "home": "https://forums.wdwmagic.com/",
+     "feeds": ["https://forums.wdwmagic.com/forums/-/index.rss", "https://forums.wdwmagic.com/index.rss"]},
+    {"name": "Rumor search (Google News)", "sections": "C", "google_news": True, "merge": True,
+     "home": "https://news.google.com/search?q=theme+park+rumor",
+     "feeds": ["https://news.google.com/rss/search?q=(%22theme+park%22+OR+Disney+OR+Universal+OR+%22Six+Flags%22+OR+Merlin+OR+SeaWorld+OR+Efteling+OR+%22Europa-Park%22)+(rumor+OR+rumored+OR+reportedly+OR+%22sources+say%22+OR+permit+OR+leak)+when:2d&hl=en-US&gl=US&ceid=US:en"]},
+    {"name": "Park news creators (YouTube)", "sections": "A,B,C", "merge": True, "home": "https://www.youtube.com/@DSNYNewscast",
      "feeds": [
                "https://www.youtube.com/feeds/videos.xml?channel_id=UCRH49DSFyl8oPwsiHyZ9O0g",  # DSNY Newscast
-               "https://www.youtube.com/feeds/videos.xml?channel_id=UCy9i4O3Bvdc5fHG6LgtnP5g",  # Theme Park Stop
                "https://www.youtube.com/feeds/videos.xml?channel_id=UCcTXq3_bEm_XOVukujbNFfA",  # coasterradio
      ]},
     {"name": "Reddit (sim games)", "sections": "D", "merge": True, "priority_hours": 30, "home": "https://www.reddit.com/r/PlanetCoaster/",
