@@ -135,9 +135,6 @@ OUTLETS = [
                "https://www.youtube.com/feeds/videos.xml?channel_id=UCRH49DSFyl8oPwsiHyZ9O0g",  # DSNY Newscast
                "https://www.youtube.com/feeds/videos.xml?channel_id=UCcTXq3_bEm_XOVukujbNFfA",  # coasterradio
      ]},
-    {"name": "Reddit (sim games)", "sections": "D", "merge": True, "priority_hours": 30, "home": "https://www.reddit.com/r/PlanetCoaster/",
-     "feeds": ["https://www.reddit.com/r/PlanetCoaster/top/.rss?t=week", "https://www.reddit.com/r/ThemeParkTycoon2/top/.rss?t=week",
-               "https://www.reddit.com/r/Parkitect/top/.rss?t=week"]},
     {"name": "Steam news: Parkitect", "sections": "D", "home": "https://store.steampowered.com/app/453090/", "priority_hours": 72,
      "feeds": ["https://store.steampowered.com/feeds/news/app/453090/"]},
     {"name": "Steam news: NoLimits 2", "sections": "D", "home": "https://store.steampowered.com/app/301320/", "priority_hours": 72,
