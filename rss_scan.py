@@ -129,7 +129,7 @@ OUTLETS = [
      "feeds": ["https://forums.wdwmagic.com/forums/-/index.rss", "https://forums.wdwmagic.com/index.rss"]},
     {"name": "Rumor search (Google News)", "sections": "C", "google_news": True, "merge": True,
      "home": "https://news.google.com/search?q=theme+park+rumor",
-     "feeds": ["https://news.google.com/rss/search?q=(%22theme+park%22+OR+%22Magic+Kingdom%22+OR+EPCOT+OR+%22Epic+Universe%22+OR+Disneyland+OR+%22Universal+Studios%22+OR+%22Six+Flags%22+OR+%22Europa-Park%22+OR+Efteling)+(rumor+OR+rumored+OR+reportedly+OR+%22sources+say%22+OR+permit+OR+leak)+when:2d&hl=en-US&gl=US&ceid=US:en"]},
+     "feeds": ["https://news.google.com/rss/search?q=%22theme+park%22+rumor+when:2d&hl=en-US&gl=US&ceid=US:en", "https://news.google.com/rss/search?q=%22theme+park%22+reportedly+when:2d&hl=en-US&gl=US&ceid=US:en", "https://news.google.com/rss/search?q=Disney+World+rumor+when:2d&hl=en-US&gl=US&ceid=US:en", "https://news.google.com/rss/search?q=Universal+Orlando+rumor+when:2d&hl=en-US&gl=US&ceid=US:en", "https://news.google.com/rss/search?q=Disneyland+rumor+when:2d&hl=en-US&gl=US&ceid=US:en", "https://news.google.com/rss/search?q=theme+park+permit+filing+when:2d&hl=en-US&gl=US&ceid=US:en"]},
     {"name": "Park news creators (YouTube)", "sections": "A,B,C", "merge": True, "home": "https://www.youtube.com/@DSNYNewscast",
      "feeds": [
                "https://www.youtube.com/feeds/videos.xml?channel_id=UCRH49DSFyl8oPwsiHyZ9O0g",  # DSNY Newscast
