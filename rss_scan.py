@@ -587,7 +587,9 @@ def scan_outlet(outlet, now, hours):
             except Exception as exc:
                 errors.append(f"{feed_url}: {exc}")
                 continue
-            used.append(feed_url.rsplit("/", 1)[-1])
+            dates = [i["published"] for i in items if i.get("published")]
+            used.append(feed_url.rsplit("/", 1)[-1][-26:] + f" ({len(items)}, newest {max(dates):%m-%d})" if dates
+                        else feed_url.rsplit("/", 1)[-1][-26:] + f" ({len(items)}, undated)")
             for it in items:
                 key = it["url"].split("?")[0].rstrip("/")
                 if key not in seen:
