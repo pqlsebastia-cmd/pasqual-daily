@@ -102,8 +102,14 @@ OUTLETS = [
     # Creators Pasqual follows: leads for D. A video counts only with an official tie (preview access, teaser, reveal);
     # otherwise it stays a lead, Unconfirmed, or is skipped as creator chatter.
     {"name": "Sim creators (YouTube)", "sections": "D", "merge": True, "priority_hours": 30, "home": "https://www.youtube.com/@PlanetCoaster",
-     "youtube": ["PlanetCoaster", "BenjisAdventures", "RudiRennkamel", "NerdChacho", "Geekism", "Channel5Gaming",
-                 "DigitalDan", "Silvarret", "PixelWess", "MaskedBandit", "JLWGames", "Corvus"]},
+     "feeds": [
+               "https://www.youtube.com/feeds/videos.xml?channel_id=UCzpQvNnyoKgpu0lJdeXbFmQ"  # Planet Coaster 2 (official),
+               "https://www.youtube.com/feeds/videos.xml?channel_id=UCs9i_iUEMv5ZSqUvt-9tOew"  # Benji's Adventures,
+               "https://www.youtube.com/feeds/videos.xml?channel_id=UC7cJdusA0kUuRb4EJix8j1w"  # Rudi Rennkamel,
+               "https://www.youtube.com/feeds/videos.xml?channel_id=UC4EUXrCSgY4X-ecLVDCA27g"  # Nerdchacho,
+               "https://www.youtube.com/feeds/videos.xml?channel_id=UCyIz8ItMLR9ru19bAWCUiug"  # Geekism,
+               "https://www.youtube.com/feeds/videos.xml?channel_id=UCF1M91ptiuNID6VfxtdRWow"  # Channel5 Gaming
+     ]},
     {"name": "Reddit (sim games)", "sections": "D", "merge": True, "priority_hours": 30, "home": "https://www.reddit.com/r/PlanetCoaster/",
      "feeds": ["https://www.reddit.com/r/PlanetCoaster/top/.rss?t=week", "https://www.reddit.com/r/ThemeParkTycoon2/top/.rss?t=week",
                "https://www.reddit.com/r/Parkitect/top/.rss?t=week"]},
