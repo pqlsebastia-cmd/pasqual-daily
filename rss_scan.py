@@ -123,10 +123,13 @@ OUTLETS = [
     {"name": "Scott Gustin", "sections": "A,C", "merge": True, "home": "https://scottgustin.substack.com/",
      "feeds": ["https://bsky.app/profile/scottgustin.com/rss", "https://scottgustin.substack.com/feed"]},
     {"name": "WDWMagic forums", "sections": "A,C", "home": "https://forums.wdwmagic.com/",
+     "title_filter": r"rumou?r|tracker|announc|permit|construction|coming|replac|clos|new |land\b|attraction|ride|coaster|"
+                     r"Magic Kingdom|EPCOT|Hollywood Studios|Animal Kingdom|Disneyland|California Adventure|Universal|"
+                     r"Epic Universe|Imagineer|D'Amaro|Iger|refurb|expansion",
      "feeds": ["https://forums.wdwmagic.com/forums/-/index.rss", "https://forums.wdwmagic.com/index.rss"]},
     {"name": "Rumor search (Google News)", "sections": "C", "google_news": True, "merge": True,
      "home": "https://news.google.com/search?q=theme+park+rumor",
-     "feeds": ["https://news.google.com/rss/search?q=(%22theme+park%22+OR+Disney+OR+Universal+OR+%22Six+Flags%22+OR+Merlin+OR+SeaWorld+OR+Efteling+OR+%22Europa-Park%22)+(rumor+OR+rumored+OR+reportedly+OR+%22sources+say%22+OR+permit+OR+leak)+when:2d&hl=en-US&gl=US&ceid=US:en"]},
+     "feeds": ["https://news.google.com/rss/search?q=(%22theme+park%22+OR+%22Magic+Kingdom%22+OR+EPCOT+OR+%22Epic+Universe%22+OR+Disneyland+OR+%22Universal+Studios%22+OR+%22Six+Flags%22+OR+%22Europa-Park%22+OR+Efteling)+(rumor+OR+rumored+OR+reportedly+OR+%22sources+say%22+OR+permit+OR+leak)+when:2d&hl=en-US&gl=US&ceid=US:en"]},
     {"name": "Park news creators (YouTube)", "sections": "A,B,C", "merge": True, "home": "https://www.youtube.com/@DSNYNewscast",
      "feeds": [
                "https://www.youtube.com/feeds/videos.xml?channel_id=UCRH49DSFyl8oPwsiHyZ9O0g",  # DSNY Newscast
@@ -335,6 +338,8 @@ def parse_feed(xml_bytes):
                 source_url = child.attrib.get("url", "")
         if not url and guid.startswith("http"):
             url = guid
+        if not title and summary and url:  # Bluesky posts have no title: use the post text
+            title = summary[:140] + ("..." if len(summary) > 140 else "")
         if title and url:
             it = {"title": " ".join(title.split()), "url": url, "published": parse_date(best_date)}
             if summary and summary.lower() not in title.lower():
@@ -544,7 +549,10 @@ def _keep(outlet, items, now, hours, res, extra_note=False):
     """Filter items to the window and fill res. Date-only items sit at noon UTC of their day."""
     cutoff = now - timedelta(hours=hours)
     res["total_items"] = len(items)
+    title_re = re.compile(outlet["title_filter"], re.I) if outlet.get("title_filter") else None
     for it in items:
+        if title_re and not title_re.search(it["title"]):
+            continue  # off-topic thread (games, sports, chit chat)
         pub = it["published"]
         if pub is None or pub < cutoff or pub > now + timedelta(hours=12):
             continue  # undated, too old, or future-dated
