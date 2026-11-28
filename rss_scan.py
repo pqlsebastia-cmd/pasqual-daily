@@ -330,6 +330,10 @@ def parse_feed(xml_bytes):
                 for g in child:
                     if local(g.tag) == "description":
                         summary = clean_text("".join(g.itertext()))[:600]
+            elif name == "author" and not source:  # YouTube/Atom: channel or writer name
+                for g in child:
+                    if local(g.tag) == "name" and (g.text or "").strip():
+                        source = g.text.strip()
             elif name == "source":
                 source = (child.text or "").strip()
                 source_url = child.attrib.get("url", "")
